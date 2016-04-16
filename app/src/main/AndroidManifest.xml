@@ -21,38 +21,78 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <!--TODO needs parent activity implementation for when we know flow of app-->
         <activity
             android:name=".ForgotLogin"
-            android:label="@string/app_name">
-        </activity>
-        <activity
-            android:name=".ILearnActivity"
-            android:label="@string/app_name" >
-        </activity>
-        <activity
-            android:name=".LibraryActivity"
-            android:label="@string/app_name" >
-        </activity>
-        <activity
-            android:name=".UCRMapActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:parentActivityName="theunderground.com.ucrmap.LoginActivity">
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="theunderground.com.ucrmap.LoginActivity" />
         </activity>
         <activity
             android:name=".AccountActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:parentActivityName="theunderground.com.ucrmap.LoginActivity">
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="theunderground.com.ucrmap.LoginActivity" />
         </activity>
         <activity
+            android:name=".ILearnActivity"
+            android:label="@string/app_name"
+            android:parentActivityName="theunderground.com.ucrmap.AccountActivity">
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="theunderground.com.ucrmap.AccountActivity" />
+        </activity>
+        <activity
+            android:name=".LibraryActivity"
+            android:label="@string/app_name"
+            android:parentActivityName="theunderground.com.ucrmap.AccountActivity">
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="theunderground.com.ucrmap.AccountActivity" />
+        </activity>
+        <activity
+            android:name=".UCRMapActivity"
+            android:label="@string/app_name"
+            android:parentActivityName="theunderground.com.ucrmap.AccountActivity">
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="theunderground.com.ucrmap.AccountActivity" />
+        </activity>
+
+        <activity
             android:name=".CampusSafetyActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:parentActivityName="theunderground.com.ucrmap.AccountActivity">
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="theunderground.com.ucrmap.AccountActivity" />
         </activity>
         <activity
             android:name=".ContactUsActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:parentActivityName="theunderground.com.ucrmap.AccountActivity">
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="theunderground.com.ucrmap.AccountActivity" />
         </activity>
         <activity
             android:name=".DinningHallActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:parentActivityName="theunderground.com.ucrmap.AccountActivity">
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="theunderground.com.ucrmap.AccountActivity" />
         </activity>
 
     </application>

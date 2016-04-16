@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array
+        name="menu_array">
+        <item
+            >Home</item>
+        <item
+            >UCR Map</item>
+        <item
+            >Campus Safety</item>
+        <item
+            >ILearn</item>
+        <item
+            >Dining Hall Menu's</item>
+        <item
+            >Library Registration System</item>
+        <item
+            >Contact Us</item>
+        <item
+            >Sign Out</item>
+    </string-array>
+</resources>

@@ -1,5 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="24sp"
+        android:text="Drop us a line"
+        android:id="@+id/textView6"
+        android:layout_marginLeft="10dip"
+        android:layout_marginTop="15dip"
+        android:layout_alignParentStart="true" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:background="@color/material_blue_grey_800"
+        android:layout_below="@+id/textView6"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:layout_below="@+id/textView6"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="5dip"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="5dip"
+        android:src="@drawable/contact" />
+    <!-- TODO Need to update the email-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="NULL"
+        android:id="@+id/emailLink"
+        android:layout_below="@+id/textView6"
+        android:layout_marginTop="5dip"
+        android:layout_toEndOf="@+id/imageView"
+        android:clickable="true"
+        android:layout_marginLeft="10dip"
+        android:textColor="#ff2482f9" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="24sp"
+        android:text="Extras"
+        android:id="@+id/textView8"
+        android:layout_below="@+id/emailLink"
+        android:layout_marginLeft="10dip"
+        android:layout_marginTop="15dip"
+        android:layout_alignParentStart="true" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:background="@color/material_blue_grey_800"
+        android:layout_below="@+id/textView8"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_alignParentStart="true" />
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView2"
+        android:layout_below="@+id/textView8"
+        android:layout_marginTop="10dip"
+        android:layout_marginRight="5dip"
+        android:layout_marginLeft="10dip"
+        android:layout_marginBottom="10dip"
+        android:layout_alignParentStart="true"
+        android:src="@drawable/logout" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Logout"
+        android:id="@+id/logOutText"
+        android:layout_below="@+id/textView8"
+        android:layout_toEndOf="@+id/imageView2"
+        android:clickable="true"
+        android:layout_marginTop="10dip"
+        android:layout_marginLeft="10dip"
+        android:textColor="#ff2482f9" />
+
 
 </RelativeLayout>
