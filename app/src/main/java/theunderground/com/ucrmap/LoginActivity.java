@@ -26,6 +26,8 @@ import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
 import java.util.Iterator;
+import com.mongodb.*;
+import java.net.UnknownHostException;
 
 /**
  * Created by Larry Parsons on 4/14/2016.
@@ -36,7 +38,7 @@ public class LoginActivity extends Activity {
     public static final String USER_ID_PREF = "user";
 
     private EditText mUserId = null;
-    private Button mLoginButton = null;
+    private Button mLoginButton = null; //match with the ones made
     private TextView mForgotId = null;
     private JSONObject userObject = null;
     SharedPreferences prefs = null;
@@ -55,6 +57,7 @@ public class LoginActivity extends Activity {
         if (networkInfo != null && networkInfo.isConnected()) {
             //TODO Implement the data base to log in people
             //new UserDownloadTask(this).execute(getString(R.string.users_url));
+            //if it connects --- look up
         } else {
             Toast.makeText(this, "Unable to connect to the network. Please try again later", Toast.LENGTH_LONG);
         }
@@ -99,6 +102,9 @@ public class LoginActivity extends Activity {
                 //TODO The users_url is to the database
                 //URL url = new URL(getString(R.string.users_url));
                 //urlConnection = url.openConnection();
+                //MongoClientURI uri  = new MongoClientURI("mongodb://user:pass@host:port/db");
+                //MongoClient client = new MongoClient(uri);
+                //DB db = client.getDB(uri.getDatabase());
 
                 InputStream in = new BufferedInputStream(urlConnection.getInputStream());
                 BufferedReader r = new BufferedReader(new InputStreamReader(in));
