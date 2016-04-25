@@ -9,7 +9,8 @@ import android.widget.TextView;
  */
 public class CampusSafetyActivity extends Activity{
     TextView mCallUCPD = null;
-    //TextView mEmailCSES = null;
+    TextView mCallCSES = null;
+    TextView mCall911 = null;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -17,6 +18,7 @@ public class CampusSafetyActivity extends Activity{
         setContentView(R.layout.campus_safety_activity_layout);
 
         mCallUCPD = (TextView)findViewById(R.id.callUCPD);
-        //mEmailCSES = (TextView)findViewById(R.id.emailCSES);
+        mCallCSES = (TextView)findViewById(R.id.callCSES);
+        mCallCSES = (TextView)findViewById(R.id.call911);
     }
 }

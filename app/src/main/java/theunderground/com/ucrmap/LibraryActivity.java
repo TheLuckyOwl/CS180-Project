@@ -15,9 +15,8 @@ public class LibraryActivity extends Activity {
         setContentView(R.layout.library_activity_layout);
 
         String url = "http://ucr.evanced.info/dibs/Login";
-        WebView view = (WebView) this.findViewById(R.id.webView);
+        WebView view = (WebView) this.findViewById(R.id.libView);
         view.loadUrl(url);
-
 
     }
 }
