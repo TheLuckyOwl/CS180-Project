@@ -12,6 +12,8 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Button;
+
 
 /**
  * Created by Larry Parsons on 4/14/2016.
@@ -25,6 +27,7 @@ public class AccountActivity extends Activity {
     private ListView mDrawerList = null;
     //==================================
 
+    private Button mButton = null;
 
     @Override
     protected void onCreate(Bundle saveInstanceState){
@@ -36,6 +39,14 @@ public class AccountActivity extends Activity {
         mMenuTitles = getResources().getStringArray(R.array.menu_array);
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mDrawerList = (ListView) findViewById(R.id.left_drawer);
+
+        mButton = (Button)this.findViewById(R.id.button);
+        mButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mDrawerLayout.openDrawer(mDrawerList);
+            }
+        });
 
         // set a custom shadow that overlays the main content when the drawer opens
         mDrawerLayout.setDrawerShadow(R.drawable.drawer_shadow, GravityCompat.START);

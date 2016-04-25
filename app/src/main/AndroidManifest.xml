@@ -16,10 +16,10 @@
         <activity
             android:name=".LoginActivity"
             android:label="@string/app_name" >
-            <intent-filter>
+            <!-- <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            </intent-filter> -->
         </activity>
         <activity
             android:name=".ForgotLogin"
@@ -33,7 +33,12 @@
         <activity
             android:name=".AccountActivity"
             android:label="@string/app_name"
+
             android:parentActivityName="theunderground.com.ucrmap.LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
             <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

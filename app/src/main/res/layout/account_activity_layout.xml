@@ -10,6 +10,13 @@
         android:layout_height="match_parent">
 
 
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="menu"
+            android:id="@+id/button"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true" />
     </RelativeLayout>
     <!-- The navigation drawer -->
     <!-- TODO We should put images into the drawer list also-->
