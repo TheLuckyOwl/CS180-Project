@@ -39,17 +39,17 @@ public class DinningHallActivity extends Activity {
                 new TabsWizardModel("Bytes", R.drawable.bytes),
                 new TabsWizardModel("Ivan's", R.drawable.ivan),
                 new TabsWizardModel("Subway", R.drawable.subway),
-                new TabsWizardModel("AI Scotty's", R.drawable.habanero),
-                new TabsWizardModel("AI Scotty's", R.drawable.hub),
-                new TabsWizardModel("AI Scotty's", R.drawable.panda),
-                new TabsWizardModel("AI Scotty's", R.drawable.pandasushi),
-                new TabsWizardModel("AI Scotty's", R.drawable.fiamma),
-                new TabsWizardModel("AI Scotty's", R.drawable.grill),
-                new TabsWizardModel("AI Scotty's", R.drawable.coffeebean),
-                new TabsWizardModel("AI Scotty's", R.drawable.chameleon),
-                new TabsWizardModel("AI Scotty's", R.drawable.moomoo),
-                new TabsWizardModel("AI Scotty's", R.drawable.highlander),
-                new TabsWizardModel("AI Scotty's", R.drawable.beartracks),
+                new TabsWizardModel("Habanero's", R.drawable.habanero),
+                new TabsWizardModel("HUB2GO", R.drawable.hub),
+                new TabsWizardModel("Panda Express", R.drawable.panda),
+                new TabsWizardModel("Panda Express Sushi", R.drawable.pandasushi),
+                new TabsWizardModel("La Fiamma", R.drawable.fiamma),
+                new TabsWizardModel("The Grill", R.drawable.grill),
+                new TabsWizardModel("Coffee Bean", R.drawable.coffeebean),
+                new TabsWizardModel("Chameleon", R.drawable.chameleon),
+                new TabsWizardModel("Moo Moo", R.drawable.moomoo),
+                new TabsWizardModel("Highlander", R.drawable.highlander),
+                new TabsWizardModel("Bear Tracks", R.drawable.beartracks),
         };
         mAdapter = new TabWizardAdapter(dininghall_data);
         // 2. set layoutManger
@@ -79,8 +79,84 @@ public class DinningHallActivity extends Activity {
         if (firstChoice == 0){
             i.putExtra("Path", "file:///android_asset/ai.html");
         }
-
-        else if ()
+        else if (firstChoice == 1){
+            i.putExtra("Path", "file:///android_asset/lothian.html");
+        }
+        else if (firstChoice == 2){
+            i.putExtra("Path", "file:///android_asset/spinelli.html");
+        }
+        else if (firstChoice == 3){
+            i.putExtra("Path", "file:///android_asset/gmshop.html");
+        }
+        else if (firstChoice == 4){
+            i.putExtra("Path", "file:///android_asset/gmsizzle.html");
+        }
+        else if (firstChoice == 5){
+            i.putExtra("Path", "file:///android_asset/gmsavor.html");
+        }
+        else if (firstChoice == 6){
+            i.putExtra("Path", "file:///android_asset/gmstarbucks.html");
+        }
+        else if (firstChoice == 7){
+            i.putExtra("Path", "file:///android_asset/hubscot.html");
+        }
+        else if (firstChoice == 8){
+            i.putExtra("Path", "file:///android_asset/aiscot.html");
+        }
+        else if (firstChoice == 9){
+            i.putExtra("Path", "file:///android_asset/lothianscot.html");
+        }
+        else if (firstChoice == 10){
+            i.putExtra("Path", "file:///android_asset/gmscot.html");
+        }
+        else if (firstChoice == 11){
+            i.putExtra("Path", "file:///android_asset/medschot.html");
+        }
+        else if (firstChoice == 12){
+            i.putExtra("Path", "file:///android_asset/barn.html");
+        }
+        else if (firstChoice == 13){
+            i.putExtra("Path", "file:///android_asset/bytes.html");
+        }
+        else if (firstChoice == 14){
+            i.putExtra("Path", "file:///android_asset/ivan.html");
+        }
+        else if (firstChoice == 15){
+            i.putExtra("Path", "file:///android_asset/subway.html");
+        }
+        else if (firstChoice == 16){
+            i.putExtra("Path", "file:///android_asset/habanero.html");
+        }
+        else if (firstChoice == 17){
+            i.putExtra("Path", "file:///android_asset/hub.html");
+        }
+        else if (firstChoice == 18){
+            i.putExtra("Path", "file:///android_asset/panda.html");
+        }
+        else if (firstChoice == 19){
+            i.putExtra("Path", "file:///android_asset/pandasushi.html");
+        }
+        else if (firstChoice == 20){
+            i.putExtra("Path", "file:///android_asset/fiamma.html");
+        }
+        else if (firstChoice == 21){
+            i.putExtra("Path", "file:///android_asset/grill.html");
+        }
+        else if (firstChoice == 22){
+            i.putExtra("Path", "file:///android_asset/coffeebean.html");
+        }
+        else if (firstChoice == 23){
+            i.putExtra("Path", "file:///android_asset/chameleon.html");
+        }
+        else if (firstChoice == 24){
+            i.putExtra("Path", "file:///android_asset/moomoo.html");
+        }
+        else if (firstChoice == 25){
+            i.putExtra("Path", "file:///android_asset/highlander.html");
+        }
+        else if (firstChoice == 26){
+            i.putExtra("Path", "file:///android_asset/beartracks.html");
+        }
         startActivity(i);
     }
 }
