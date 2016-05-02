@@ -13,4 +13,5 @@
     <string name="Reg_register">Register:</string>
     <string name="Reg_fname">First Name:</string>
     <string name="Reg_Mi">Middle Initial:</string>
+    <string name="title_activity_ucrmap">Map Of UCR</string>
 </resources>
