@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
-    >
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent" android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        >
 
     <ImageButton
         android:layout_width="40dp"
@@ -35,33 +40,42 @@
         android:layout_above="@+id/buttonBar"
         android:layout_below="@+id/scheduleTitle"
         />
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dip"
-        android:orientation="horizontal"
-        android:weightSum="2"
-        android:showDividers="beginning"
-        android:background="#ffffff"
-        android:id = "@+id/buttonBar"
-        android:layout_alignParentBottom="true">
-
-        <Button
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/addClass"
-            android:text="Add Class"
-            android:background="#002e62"
-            android:textColor="#fbb713"
-            android:layout_weight="1"/>
+            android:layout_height="50dip"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:showDividers="beginning"
+            android:background="#ffffff"
+            android:id = "@+id/buttonBar"
+            android:layout_alignParentBottom="true">
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/removeClass"
-            android:text="Remove Class"
-            android:background="#002e62"
-            android:textColor="#fbb713"
-            android:layout_weight="1"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/addClass"
+                android:text="Add Class"
+                android:background="#002e62"
+                android:textColor="#fbb713"
+                android:layout_weight="1"/>
 
-    </LinearLayout>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/removeClass"
+                android:text="Remove Class"
+                android:background="#002e62"
+                android:textColor="#fbb713"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
     </RelativeLayout>
+    <ListView android:id="@+id/left_drawer"
+        android:layout_width="240dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:choiceMode="singleChoice"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0dp"
+        android:background="#111"/>
+</android.support.v4.widget.DrawerLayout>

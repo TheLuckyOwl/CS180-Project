@@ -20,6 +20,9 @@ import android.widget.Button;
  * Created by Larry Parsons on 4/14/2016.
  */
 public class AccountActivity extends Activity {
+
+
+    //TODO Need to make the back presses null as well as clicking on the class your in, in the drawer layout
     //TODO Need to make navigation drawer a seperate interface to be implemented.
     SharedPreferences prefs = null;
     //for the Navigation Drawer
