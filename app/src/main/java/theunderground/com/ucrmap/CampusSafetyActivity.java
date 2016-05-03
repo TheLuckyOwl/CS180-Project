@@ -4,14 +4,23 @@ import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.v4.widget.DrawerLayout;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.ListView;
 import android.widget.TextView;
 
 /**
  * Created by Larry Parsons on 4/14/2016.
  */
 public class CampusSafetyActivity extends Activity{
+    //for the Navigation Drawer
+    private String[] mMenuTitles = null;
+    private DrawerLayout mDrawerLayout = null;
+    private ListView mDrawerList = null;
+    private ImageButton mButton = null;
+    //==================================
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
