@@ -18,7 +18,8 @@ public class AddClassActivity extends Activity {
     protected void onCreate(Bundle saveInstanceState) {
         super.onCreate(saveInstanceState);
         setContentView(R.layout.add_class_layout);
-
+        mAdd = (Button)findViewById(R.id.addClass);
+        mCancel= (Button)findViewById(R.id.cancel);
         mAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

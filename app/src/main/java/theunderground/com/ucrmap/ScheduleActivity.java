@@ -17,11 +17,10 @@ import android.widget.Button;
 public class ScheduleActivity extends Activity {
     private Button mAddButton = null;
     private Button mRemoveButton = null;
-
+    //TODO Disable Back button presseds from the Add class activity, this messes up the back stack
     @Override
     protected void onCreate(Bundle savedInstanceState)  {
         super.onCreate(savedInstanceState);
-        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.schedule_activity_layout);
         Bundle extras = getIntent().getExtras();
         mAddButton = (Button)findViewById(R.id.addClass);
@@ -47,26 +46,15 @@ public class ScheduleActivity extends Activity {
         mAddButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                showAddClassPage();
+                startActivity(new Intent(ScheduleActivity.this, AddClassActivity.class));
             }
         });
 
         mRemoveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                showRemoveClassPage();
+                startActivity(new Intent(ScheduleActivity.this, RemoveClassActivity.class));
             }
         });
     }
-
-    private void showAddClassPage() {
-        Intent i = new Intent(this, AddClassActivity.class);
-        startActivity(i);
-    }
-
-    private void showRemoveClassPage() {
-        Intent i = new Intent(this, RemoveClassActivity.class);
-        startActivity(i);
-    }
-
 }

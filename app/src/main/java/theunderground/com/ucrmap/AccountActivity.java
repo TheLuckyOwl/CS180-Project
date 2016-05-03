@@ -20,7 +20,7 @@ import android.widget.Button;
  * Created by Larry Parsons on 4/14/2016.
  */
 public class AccountActivity extends Activity {
-
+    //TODO Need to make navigation drawer a seperate interface to be implemented.
     SharedPreferences prefs = null;
     //for the Navigation Drawer
     private String[] mMenuTitles = null;
@@ -35,6 +35,13 @@ public class AccountActivity extends Activity {
         super.onCreate(saveInstanceState);
         prefs = this.getSharedPreferences("Login", Context.MODE_PRIVATE);
         setContentView(R.layout.account_activity_layout);
+        mscheduleButton = (Button)this.findViewById(R.id.scheduleButton);
+        mscheduleButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(AccountActivity.this, ScheduleActivity.class));
+            }
+        });
 
         //Navigation Drawer Definitions
         mMenuTitles = getResources().getStringArray(R.array.menu_array);
@@ -50,21 +57,12 @@ public class AccountActivity extends Activity {
             }
         });
 
-        mscheduleButton = (Button)this.findViewById(R.id.scheduleButton);
-        mscheduleButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(AccountActivity.this, ScheduleActivity.class));
-            }
-        });
-
         // set a custom shadow that overlays the main content when the drawer opens
         mDrawerLayout.setDrawerShadow(R.drawable.drawer_shadow, GravityCompat.START);
         // set up the drawer's list view with items and click listener
         mDrawerList.setAdapter(new ArrayAdapter<String>(this,
                 R.layout.drawer_list_item, mMenuTitles));
         mDrawerList.setOnItemClickListener(new DrawerItemClickListener());
-
         //================================================================================
 
     }
