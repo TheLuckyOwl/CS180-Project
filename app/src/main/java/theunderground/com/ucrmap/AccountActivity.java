@@ -11,6 +11,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.Button;
 
@@ -27,7 +28,7 @@ public class AccountActivity extends Activity {
     private ListView mDrawerList = null;
     //==================================
 
-    private Button mButton = null;
+    private ImageButton mButton = null;
 
     @Override
     protected void onCreate(Bundle saveInstanceState){
@@ -40,7 +41,7 @@ public class AccountActivity extends Activity {
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mDrawerList = (ListView) findViewById(R.id.left_drawer);
 
-        mButton = (Button)this.findViewById(R.id.button);
+        mButton = (ImageButton) this.findViewById(R.id.button);
         mButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
