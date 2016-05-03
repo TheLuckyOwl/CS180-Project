@@ -29,7 +29,10 @@ public class AccountActivity extends Activity {
     //==================================
 
     private ImageButton mButton = null;
+<<<<<<< HEAD
     private Button mscheduleButton = null;
+=======
+>>>>>>> origin/master
 
     @Override
     protected void onCreate(Bundle saveInstanceState){
@@ -42,7 +45,11 @@ public class AccountActivity extends Activity {
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mDrawerList = (ListView) findViewById(R.id.left_drawer);
 
+<<<<<<< HEAD
         mButton = (ImageButton)this.findViewById(R.id.button);
+=======
+        mButton = (ImageButton) this.findViewById(R.id.button);
+>>>>>>> origin/master
         mButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
