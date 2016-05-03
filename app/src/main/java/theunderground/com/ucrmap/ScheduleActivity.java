@@ -23,14 +23,13 @@ public class ScheduleActivity extends Activity {
         super.onCreate(savedInstanceState);
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.schedule_activity_layout);
-        final Bundle extras = getIntent().getExtras();
+        Bundle extras = getIntent().getExtras();
         mAddButton = (Button)findViewById(R.id.addClass);
         mRemoveButton = (Button)findViewById(R.id.removeClass);
 
         RecyclerView recyclerView = (RecyclerView) this.findViewById(R.id.listView);
 
         ScheduleAdapter mAdapter;
-
         ScheduleModel dummyData[] = {new ScheduleModel("Dummy Class Data", "Dummy Day", "Dummy Time"),
                 new ScheduleModel("yay", "yay2", "yay3"),
                 new ScheduleModel("what's", "up", "larry!")

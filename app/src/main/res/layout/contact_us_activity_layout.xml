@@ -33,12 +33,11 @@
         android:layout_marginLeft="10dip"
         android:layout_marginRight="5dip"
         android:src="@drawable/contact" />
-    <!-- TODO Need to update the email-->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="NULL"
+        android:text="theucrmap@gmail.com"
         android:id="@+id/emailLink"
         android:layout_below="@+id/textView6"
         android:layout_marginTop="5dip"

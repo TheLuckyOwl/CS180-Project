@@ -1,7 +1,11 @@
 package theunderground.com.ucrmap;
 
 import android.app.Activity;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 
 /**
@@ -10,26 +14,28 @@ import android.widget.Button;
 public class AddClassActivity extends Activity {
     private Button mAdd = null;
     private Button mCancel = null;
+    @Override
+    protected void onCreate(Bundle saveInstanceState) {
+        super.onCreate(saveInstanceState);
+        setContentView(R.layout.add_class_layout);
 
-    mAdd.setOnClickListener(new OnClickListener() {
-        @Override
-        public void onClick(View view) {
-            showScheduleActivity();
-        }
-    });
+        mAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showScheduleActivity();
+            }
+        });
 
-    mCancel.setOnClickListener(new OnClickListener() {
-        @Override
-        public void onClick(View view) {
-            showCancelActivity();
-        }
-    });
+        mCancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showCancelActivity();
+            }
+        });
+    }
 
     private void showScheduleActivity() {
         Intent i = new Intent(this, ScheduleActivity.class);
-        i.putExtra("Class", );
-        i.putExtra("Time", );
-        i.putExtra("Day", );
         startActivity(i);
     }
 

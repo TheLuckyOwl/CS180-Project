@@ -24,18 +24,16 @@ public class ContactUsActivity extends Activity {
 
         mEmail = (TextView)findViewById(R.id.emailLink);
         mLogOut = (TextView)findViewById(R.id.logOutText);
+        mEmail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Something to do
+                Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts(
+                        "mailto",getString(R.string.support_email), null));
+                startActivity(Intent.createChooser(emailIntent, "Send email..."));
+            }
+        });
 
-        //TODO need to create an email for the contact us for the App
-//        mEmail.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                // Something to do
-//                Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts(
-//                        "mailto",getString(R.string.support_email), null));
-//                startActivity(Intent.createChooser(emailIntent, "Send email..."));
-//            }
-//        });
-//
         mLogOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
