@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="#005cab">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dip"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="2dp"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:layout_weight="1"
+        android:showDividers="beginning"
+        android:background="#ffffff"
+        android:id = "@+id/titleBar">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="#ffffff"
+            android:text="CLASS"
+            android:id="@+id/classTitle"
+            android:textSize="30sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="#ffffff"
+            android:text="DAYS"
+            android:id="@+id/dayTitle"
+            android:textSize="30sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="#ffffff"
+            android:text="TIME"
+            android:id="@+id/timeTitle"
+            android:textSize="30sp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dip"
+        android:layout_below="@+id/borderView"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:layout_weight="1"
+        android:showDividers="beginning"
+        android:background="#ffffff"
+        android:id = "@+id/classBar1">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="#ffffff"
+            android:hint="ie. CS 100"
+            android:id="@+id/addClassRow1"
+            android:textSize="22sp" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="#ffffff"
+            android:hint="ie. MWF"
+            android:id="@+id/addDayRow1"
+            android:textSize="22sp"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="#ffffff"
+            android:hint="1:10-3:00 pm"
+            android:id="@+id/addTimeRow1"
+            android:textSize="22sp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dip"
+        android:layout_below="@+id/view1"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:layout_weight="1"
+        android:showDividers="beginning"
+        android:background="#ffffff"
+        android:id = "@+id/classBar2">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="#ffffff"
+            android:hint="ie. CS 100"
+            android:id="@+id/addClassRow2"
+            android:textSize="22sp" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="#ffffff"
+            android:hint="ie. MWF"
+            android:id="@+id/addDayRow2"
+            android:textSize="22sp"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="#ffffff"
+            android:hint="1:10-3:00 pm"
+            android:id="@+id/addTimeRow2"
+            android:textSize="22sp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dip"
+        android:layout_below="@+id/view2"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:layout_weight="1"
+        android:showDividers="beginning"
+        android:background="#ffffff"
+        android:id = "@+id/classBar3">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="#ffffff"
+            android:hint="ie. CS 100"
+            android:id="@+id/addClassRow3"
+            android:textSize="22sp" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="#ffffff"
+            android:hint="ie. MWF"
+            android:id="@+id/addDayRow3"
+            android:textSize="22sp"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="#ffffff"
+            android:hint="1:10-3:00 pm"
+            android:id="@+id/addTimeRow3"
+            android:textSize="22sp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dip"
+        android:layout_below="@+id/view3"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:layout_weight="1"
+        android:showDividers="beginning"
+        android:background="#ffffff"
+        android:id = "@+id/classBar4">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="#ffffff"
+            android:hint="ie. CS 100"
+            android:id="@+id/addClassRow4"
+            android:textSize="22sp"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="#ffffff"
+            android:hint="ie. MWF"
+            android:id="@+id/addDayRow4"
+            android:textSize="22sp"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="#ffffff"
+            android:hint="1:10-3:00 pm"
+            android:id="@+id/addTimeRow4"
+            android:textSize="22sp"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:layout_below="@+id/titleBar"
+        android:layout_marginBottom="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:background="@color/ripple_material_light"
+        android:id="@+id/borderView" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:layout_below="@+id/classBar1"
+        android:layout_marginBottom="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:background="@color/ripple_material_light"
+        android:id="@+id/view1" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:layout_below="@+id/classBar2"
+        android:layout_marginBottom="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:background="@color/ripple_material_light"
+        android:id="@+id/view2" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:layout_below="@+id/classBar3"
+        android:layout_marginBottom="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:background="@color/ripple_material_light"
+        android:id="@+id/view3" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:layout_below="@+id/classBar4"
+        android:layout_marginBottom="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:background="@color/ripple_material_light"
+        android:id="@+id/view4" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:showDividers="beginning"
+        android:background="#ffffff"
+        android:id = "@+id/buttonBar"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/addClass"
+            android:text="Add"
+            android:background="#002e62"
+            android:textColor="#fbb713"
+            android:layout_weight="1"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/cancel"
+            android:text="Cancel"
+            android:background="#002e62"
+            android:textColor="#fbb713"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+    </RelativeLayout>

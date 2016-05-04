@@ -11,6 +11,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.Button;
 
@@ -20,6 +21,9 @@ import android.widget.Button;
  */
 public class AccountActivity extends Activity {
 
+
+    //TODO Need to make the back presses null as well as clicking on the class your in, in the drawer layout
+    //TODO Need to make navigation drawer a seperate interface to be implemented.
     SharedPreferences prefs = null;
     //for the Navigation Drawer
     private String[] mMenuTitles = null;
@@ -27,20 +31,33 @@ public class AccountActivity extends Activity {
     private ListView mDrawerList = null;
     //==================================
 
+<<<<<<< HEAD
     private Button mButton = null;
     private Button mBLogin = null;
 
+=======
+    private ImageButton mButton = null;
+    private Button mscheduleButton = null;
+>>>>>>> origin/master
     @Override
     protected void onCreate(Bundle saveInstanceState){
         super.onCreate(saveInstanceState);
         prefs = this.getSharedPreferences("Login", Context.MODE_PRIVATE);
         setContentView(R.layout.account_activity_layout);
+        mscheduleButton = (Button)this.findViewById(R.id.scheduleButton);
+        mscheduleButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(AccountActivity.this, ScheduleActivity.class));
+            }
+        });
 
         //Navigation Drawer Definitions
         mMenuTitles = getResources().getStringArray(R.array.menu_array);
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mDrawerList = (ListView) findViewById(R.id.left_drawer);
 
+<<<<<<< HEAD
         mButton = (Button)this.findViewById(R.id.button);
         mBLogin = (Button)this.findViewById(R.id.button2);
 
@@ -53,6 +70,10 @@ public class AccountActivity extends Activity {
             }
         });
 
+=======
+        mButton = (ImageButton)this.findViewById(R.id.button);
+        mButton = (ImageButton) this.findViewById(R.id.button);
+>>>>>>> origin/master
         mButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -66,16 +87,9 @@ public class AccountActivity extends Activity {
         mDrawerList.setAdapter(new ArrayAdapter<String>(this,
                 R.layout.drawer_list_item, mMenuTitles));
         mDrawerList.setOnItemClickListener(new DrawerItemClickListener());
-
         //================================================================================
 
     }
-
-
-
-
-
-
     //======================================================================================
     /* The click listener for ListView in the navigation drawer */
     private class DrawerItemClickListener implements ListView.OnItemClickListener {

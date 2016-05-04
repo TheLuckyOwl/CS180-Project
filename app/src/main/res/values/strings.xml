@@ -13,5 +13,11 @@
     <string name="Reg_register">Register:</string>
     <string name="Reg_F_name">First Name:</string>
     <string name="Reg_Mi">Middle Initial:</string>
+<<<<<<< HEAD
     <string name="backReg">Back</string>
+=======
+    <string name="title_activity_ucrmap">Map Of UCR</string>
+    <string name="google_app_id">AIzaSyB0Fmm7HcwTu1vue0__ImDS9btiRKPP3yg</string>
+    <string name="support_email">theucrmap@gmail.com</string>
+>>>>>>> origin/master
 </resources>
