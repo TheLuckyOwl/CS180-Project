@@ -28,6 +28,7 @@ public class AccountActivity extends Activity {
     //==================================
 
     private Button mButton = null;
+    private Button mBLogin = null;
 
     @Override
     protected void onCreate(Bundle saveInstanceState){
@@ -41,6 +42,17 @@ public class AccountActivity extends Activity {
         mDrawerList = (ListView) findViewById(R.id.left_drawer);
 
         mButton = (Button)this.findViewById(R.id.button);
+        mBLogin = (Button)this.findViewById(R.id.button2);
+
+        mBLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(AccountActivity.this, LoginActivity.class);
+                i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                AccountActivity.this.startActivity(i);
+            }
+        });
+
         mButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

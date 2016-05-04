@@ -81,7 +81,8 @@
         android:layout_below="@+id/bLogin"
         android:layout_alignParentEnd="true"
         android:layout_toEndOf="@+id/bForgotLog"
-        android:background="#ffffff" />
+        android:background="#ffffff"
+        android:layout_alignParentStart="false" />
 
 
 </RelativeLayout>

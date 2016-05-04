@@ -5,12 +5,13 @@
     <string name="Password_text">Password:</string>
     <string name="login">Login</string>
     <string name="ForgotLog">Forgot your login information?</string>
-    <string name="login_register">Dont have an Account?</string>
+    <string name="login_register">Don\'t have an Account?</string>
     <string name="Forgot_sub">Submit</string>
     <string name="Forgot_email">Enter Email:</string>
     <string name="loginRecover">Login Recovery</string>
-    <string name="Reg_lname">Last Name:</string>
+    <string name="Reg_L_name">Last Name:</string>
     <string name="Reg_register">Register:</string>
-    <string name="Reg_fname">First Name:</string>
+    <string name="Reg_F_name">First Name:</string>
     <string name="Reg_Mi">Middle Initial:</string>
+    <string name="backReg">Back</string>
 </resources>

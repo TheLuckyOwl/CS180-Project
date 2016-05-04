@@ -39,7 +39,16 @@
         android:layout_height="wrap_content"
         android:text="@string/Forgot_sub"
         android:id="@+id/bRecover"
+        android:width="200dp"
         android:layout_below="@+id/etEmail"
-        android:layout_centerHorizontal="true"
-        android:width="200dp" />
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/backReg"
+        android:id="@+id/bBacRec"
+        android:layout_below="@+id/etEmail"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/bRecover" />
 </RelativeLayout>

@@ -17,6 +17,14 @@
             android:id="@+id/button"
             android:layout_centerVertical="true"
             android:layout_alignParentEnd="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:id="@+id/button2"
+            android:layout_below="@+id/button"
+            android:layout_alignEnd="@+id/button" />
     </RelativeLayout>
     <!-- The navigation drawer -->
     <!-- TODO We should put images into the drawer list also-->
