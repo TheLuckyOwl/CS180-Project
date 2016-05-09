@@ -23,7 +23,7 @@ public class AccountActivity extends Activity {
 
 
     //TODO Need to make the back presses null as well as clicking on the class your in, in the drawer layout
-    //TODO Need to make navigation drawer a seperate interface to be implemented.
+    //TODO Need to make navigation drawer a separate interface to be implemented.
     SharedPreferences prefs = null;
     //for the Navigation Drawer
     private String[] mMenuTitles = null;
@@ -31,14 +31,9 @@ public class AccountActivity extends Activity {
     private ListView mDrawerList = null;
     //==================================
 
-<<<<<<< HEAD
-    private Button mButton = null;
-    private Button mBLogin = null;
-
-=======
     private ImageButton mButton = null;
     private Button mscheduleButton = null;
->>>>>>> origin/master
+    private Button mLoginButton = null;
     @Override
     protected void onCreate(Bundle saveInstanceState){
         super.onCreate(saveInstanceState);
@@ -51,29 +46,21 @@ public class AccountActivity extends Activity {
                 startActivity(new Intent(AccountActivity.this, ScheduleActivity.class));
             }
         });
+        mLoginButton = (Button)this.findViewById(R.id.Bloginmain);
+        mLoginButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(AccountActivity.this, LoginActivity.class));
+            }
+        });
 
         //Navigation Drawer Definitions
         mMenuTitles = getResources().getStringArray(R.array.menu_array);
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mDrawerList = (ListView) findViewById(R.id.left_drawer);
 
-<<<<<<< HEAD
-        mButton = (Button)this.findViewById(R.id.button);
-        mBLogin = (Button)this.findViewById(R.id.button2);
-
-        mBLogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(AccountActivity.this, LoginActivity.class);
-                i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                AccountActivity.this.startActivity(i);
-            }
-        });
-
-=======
         mButton = (ImageButton)this.findViewById(R.id.button);
         mButton = (ImageButton) this.findViewById(R.id.button);
->>>>>>> origin/master
         mButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

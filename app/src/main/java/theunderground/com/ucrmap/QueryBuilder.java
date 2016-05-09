@@ -39,6 +39,12 @@ public class QueryBuilder {
         return "?apiKey="+getApiKey();
     }
 
+    public String docApiKeyUrl(String docid)
+    {
+        return "/"+docid+"?apiKey="+getApiKey();
+    }
+
+
     /**
      * Returns the docs101 collection
      * @return
@@ -63,6 +69,10 @@ public class QueryBuilder {
         return getBaseUrl()+documentRequest()+docApiKeyUrl();
     }
 
+    public String buildContactsUpdateURL(String doc_id)
+    {
+        return getBaseUrl()+documentRequest()+docApiKeyUrl(doc_id);
+    }
     /**
      * Formats the contact details for MongoHQ Posting
      * @param contact: Details of the person
@@ -70,12 +80,107 @@ public class QueryBuilder {
      */
     public String createContact(User contact)
     {
-        return String
-                .format("{\"FirstName\" : \"%s\", "
+        return String.format("{\"FirstName\" : \"%s\", "
                         + "\"MiddleInitial\" : \"%s\", "
                         + "\"LastName\" : \"%s\", "
                         + "\"UserName\" : \"%s\", "
-                        + "\"Password\" : \"%s\"}",
-                        contact.First_name, contact.Middle_initial, contact.Last_name, contact.Username, contact.Password );
+                        + "\"Password\" : \"%s\", "
+                        + "\"ilearnUser\" : \"%s\", "
+                        + "\"ilearnPass\" : \"%s\", "
+                        + "\"Class1\" : "
+                        +"{\"Data\" : \"%s\", "
+                        +"\"Day\" : \"%s\", "
+                        + "\"Time\" : \"%s\"}}",
+                        //+ "\"Class2\" : "
+                        //+"{\"Data\" : \"%s\", "
+                        //+"\"Day\" : \"%s\", "
+                        //+ "\"Time\" : \"%s\"}, "
+                        //+ "\"Class3\" : "
+                        //+"{\"Data\" : \"%s\", "
+                        //+"\"Day\" : \"%s\", "
+                        //+ "\"Time\" : \"%s\"}, "
+                        //+ "\"Class4\" : "
+                        //+"{\"Data\" : \"%s\", "
+                        //+"\"Day\" : \"%s\", "
+                        //+ "\"Time\" : \"%s\"}, "
+                        //+ "\"Class5\" : "
+                        //+"{\"Data\" : \"%s\", "
+                        //+"\"Day\" : \"%s\", "
+                        //+ "\"Time\" : \"%s\"}, "
+                        //+ "\"Class6\" : "
+                        //+"{\"Data\" : \"%s\", "
+                        //+"\"Day\" : \"%s\", "
+                        //+ "\"Time\" : \"%s\"}, "
+                        //+ "\"Class7\" : "
+                        //+"{\"Data\" : \"%s\", "
+                        //+"\"Day\" : \"%s\", "
+                        //+ "\"Time\" : \"%s\"}, "
+                        //+ "\"Class8\" : "
+                        //+"{\"Data\" : \"%s\", "
+                        //+"\"Day\" : \"%s\", "
+                        //+ "\"Time\" : \"%s\"}, "
+                        //+ "\"Class9\" : "
+                        //+"{\"Data\" : \"%s\", "
+                        //+"\"Day\" : \"%s\", "
+                        //+ "\"Time\" : \"%s\"}, "
+                        //+ "\"Class10\" : "
+                        //+"{\"Data\" : \"%s\", "
+                        //+"\"Day\" : \"%s\", "
+                        //+ "\"Time\" : \"%s\"}} "
+                        contact.First_name, contact.Middle_initial, contact.Last_name, contact.Username, contact.Password,
+                        contact.IlearnUser, contact.IlearnPass, contact.getClass1Data(), contact.getClass1Day(), contact.getClass1Time());
+    }
+    public String setUserData(User contact)
+    {
+        return String.format("{ \"$set\" : "
+                + "{\"FirstName\" : \"%s\", "
+                + "\"MiddleInitial\" : \"%s\", "
+                + "\"LastName\" : \"%s\", "
+                + "\"UserName\" : \"%s\", "
+                + "\"Password\" : \"%s\", "
+                + "\"ilearnUser\" : \"%s\", "
+                + "\"ilearnPass\" : \"%s\", "
+                + "\"Class1\" : "
+                +"{\"Data\" : \"%s\", "
+                +"\"Day\" : \"%s\", "
+                + "\"Time\" : \"%s\"}}" + "}",
+                //+ "\"Class2\" : "
+                //+"{\"Data\" : \"%s\", "
+                //+"\"Day\" : \"%s\", "
+                //+ "\"Time\" : \"%s\"}, "
+                //+ "\"Class3\" : "
+                //+"{\"Data\" : \"%s\", "
+                //+"\"Day\" : \"%s\", "
+                //+ "\"Time\" : \"%s\"}, "
+                //+ "\"Class4\" : "
+                //+"{\"Data\" : \"%s\", "
+                //+"\"Day\" : \"%s\", "
+                //+ "\"Time\" : \"%s\"}, "
+                //+ "\"Class5\" : "
+                //+"{\"Data\" : \"%s\", "
+                //+"\"Day\" : \"%s\", "
+                //+ "\"Time\" : \"%s\"}, "
+                //+ "\"Class6\" : "
+                //+"{\"Data\" : \"%s\", "
+                //+"\"Day\" : \"%s\", "
+                //+ "\"Time\" : \"%s\"}, "
+                //+ "\"Class7\" : "
+                //+"{\"Data\" : \"%s\", "
+                //+"\"Day\" : \"%s\", "
+                //+ "\"Time\" : \"%s\"}, "
+                //+ "\"Class8\" : "
+                //+"{\"Data\" : \"%s\", "
+                //+"\"Day\" : \"%s\", "
+                //+ "\"Time\" : \"%s\"}, "
+                //+ "\"Class9\" : "
+                //+"{\"Data\" : \"%s\", "
+                //+"\"Day\" : \"%s\", "
+                //+ "\"Time\" : \"%s\"}, "
+                //+ "\"Class10\" : "
+                //+"{\"Data\" : \"%s\", "
+                //+"\"Day\" : \"%s\", "
+                //+ "\"Time\" : \"%s\"}} "
+                contact.First_name, contact.Middle_initial, contact.Last_name, contact.Username, contact.Password,
+                contact.IlearnUser, contact.IlearnPass, contact.getClass1Data(), contact.getClass1Day(), contact.getClass1Time());
     }
 }

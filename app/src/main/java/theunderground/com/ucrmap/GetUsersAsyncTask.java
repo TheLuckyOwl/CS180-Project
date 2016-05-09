@@ -55,6 +55,7 @@ public class GetUsersAsyncTask extends AsyncTask<User, Void, ArrayList<User>>{
 
             for (Object obj : contacts) {
                 DBObject userObj = (DBObject) obj;
+                DBObject Csub1 = (DBObject)userObj.get("Class1");
 
                 User temp = new User();
                 temp.setDoc_id(userObj.get("_id").toString());
@@ -63,7 +64,11 @@ public class GetUsersAsyncTask extends AsyncTask<User, Void, ArrayList<User>>{
                 temp.setMiddle_initial(userObj.get("MiddleInitial").toString());
                 temp.setUsername(userObj.get("UserName").toString());
                 temp.setPassword(userObj.get("Password").toString());
-
+                temp.setIlearnUser(userObj.get("ilearnUser").toString());
+                temp.setIlearnPass(userObj.get("ilearnPass").toString());
+                temp.setClass1Data(Csub1.get("Data").toString());
+                temp.setClass1Day(Csub1.get("Day").toString());
+                temp.setClass1Day(Csub1.get("Time").toString());
                 Users.add(temp);
             }
 

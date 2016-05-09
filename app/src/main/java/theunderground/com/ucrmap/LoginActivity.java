@@ -64,7 +64,8 @@ public class LoginActivity extends Activity {
     private Button mForgotId = null;
     private Button mRegister = null;
     ArrayList<User> returnValues = new ArrayList<User>();
-
+    public static String LoggedUser;
+    public String Name;
     private boolean checkUserId(String userId, String userPass) {
         //User Ids must be at least 6 characters long add this to the register check before uncommenting it
         if (userId.length() < 6) {
@@ -87,6 +88,8 @@ public class LoginActivity extends Activity {
             {
                 if(x.getPassword().equals(userPass))
                 {
+                    LoggedUser = x.getUsername();
+                    Name = x.getFirst_name();
                     return true;
                 }
             }
@@ -114,6 +117,7 @@ public class LoginActivity extends Activity {
                 if (mUserId.getText() == null) {
                     Toast.makeText(LoginActivity.this, "Please enter a valid ID", Toast.LENGTH_LONG).show();
                 } else if (checkUserId(mUserId.getText().toString(), mPassword.getText().toString())) {
+                    Toast.makeText(LoginActivity.this, "Welcome " + Name , Toast.LENGTH_LONG).show();
                     Intent i = new Intent(LoginActivity.this, AccountActivity.class);
                     i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     startActivity(i);

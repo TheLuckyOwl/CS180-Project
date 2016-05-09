@@ -18,6 +18,9 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ListView;
 
+import java.util.ArrayList;
+import java.util.concurrent.ExecutionException;
+
 /**
  * Created by Dharti on 5/1/2016.
  */
@@ -31,6 +34,9 @@ public class ScheduleActivity extends Activity {
     private String[] mMenuTitles = null;
     private DrawerLayout mDrawerLayout = null;
     private ListView mDrawerList = null;
+    private User CurrentUser = new User();
+    private String LoggedinUser = LoginActivity.LoggedUser;
+    ArrayList<User> returnValues = new ArrayList<User>();
     //==================================
     //TODO Disable Back button presseds from the Add class activity, this messes up the back stack
     @Override
@@ -44,8 +50,28 @@ public class ScheduleActivity extends Activity {
 
         RecyclerView recyclerView = (RecyclerView) this.findViewById(R.id.listView);
 
+        GetUsersAsyncTask task = new GetUsersAsyncTask();
+        try {
+            returnValues = task.execute().get();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }
+        for(User x: returnValues)
+        {
+            {
+                if(x.getUsername().equals(LoggedinUser))
+                {
+                    CurrentUser.setClass1Data(x.getClass1Data());
+                    CurrentUser.setClass1Day(x.getClass1Day());
+                    CurrentUser.setClass1Time(x.getClass1Time());
+                }
+            }
+        }
+
         ScheduleAdapter mAdapter;
-        ScheduleModel dummyData[] = {new ScheduleModel("Dummy Class Data", "Dummy Day", "Dummy Time"),
+        ScheduleModel dummyData[] = {new ScheduleModel(CurrentUser.getClass1Data(), CurrentUser.getClass1Day() , CurrentUser.getClass1Time()),
                 new ScheduleModel("yay", "yay2", "yay3"),
                 new ScheduleModel("what's", "up", "larry!")
         };
