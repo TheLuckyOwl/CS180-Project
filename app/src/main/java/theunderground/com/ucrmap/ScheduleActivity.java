@@ -66,14 +66,20 @@ public class ScheduleActivity extends Activity {
                     CurrentUser.setClass1Data(x.getClass1Data());
                     CurrentUser.setClass1Day(x.getClass1Day());
                     CurrentUser.setClass1Time(x.getClass1Time());
+                    CurrentUser.setClass2Data(x.getClass2Data());
+                    CurrentUser.setClass2Day(x.getClass2Day());
+                    CurrentUser.setClass2Time(x.getClass2Time());
+                    CurrentUser.setClass3Data(x.getClass3Data());
+                    CurrentUser.setClass3Day(x.getClass3Day());
+                    CurrentUser.setClass3Time(x.getClass3Time());
                 }
             }
         }
 
         ScheduleAdapter mAdapter;
         ScheduleModel dummyData[] = {new ScheduleModel(CurrentUser.getClass1Data(), CurrentUser.getClass1Day() , CurrentUser.getClass1Time()),
-                new ScheduleModel("yay", "yay2", "yay3"),
-                new ScheduleModel("what's", "up", "larry!")
+                new ScheduleModel(CurrentUser.getClass2Data(), CurrentUser.getClass2Day() , CurrentUser.getClass2Time()),
+                new ScheduleModel(CurrentUser.getClass3Data(), CurrentUser.getClass3Day() , CurrentUser.getClass3Time())
         };
 
         mAdapter = new ScheduleAdapter(dummyData);
