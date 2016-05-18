@@ -34,6 +34,7 @@ public class AccountActivity extends Activity {
     private ImageButton mButton = null;
     private Button mscheduleButton = null;
     private Button mLoginButton = null;
+    private Button mSettingsButton = null;
     @Override
     protected void onCreate(Bundle saveInstanceState){
         super.onCreate(saveInstanceState);
@@ -51,6 +52,13 @@ public class AccountActivity extends Activity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(AccountActivity.this, LoginActivity.class));
+            }
+        });
+        mSettingsButton = (Button)this.findViewById(R.id.BSettingsMain);
+        mSettingsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(AccountActivity.this, SettingsActivity.class));
             }
         });
 

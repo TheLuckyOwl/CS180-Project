@@ -37,6 +37,17 @@
             -->
         </activity>
         <activity
+            android:name=".SettingsActivity"
+            android:label="@string/app_name">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity
             android:name=".ForgotLogin"
             android:label="@string/app_name"
             android:parentActivityName=".LoginActivity">
@@ -156,6 +167,11 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="theunderground.com.ucrmap.ScheduleActivity" />
         </activity>
+
+        <!--<uses-permission android:name="android.permission.VIBRATE" />-->
+        <!--<uses-permission android:name="com.android.alarm.permission.SET_ALARM"/>-->
+        <receiver android:name=".AlarmReceiver" >
+        </receiver>
 
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.

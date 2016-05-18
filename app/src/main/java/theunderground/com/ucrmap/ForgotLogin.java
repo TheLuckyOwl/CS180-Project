@@ -21,7 +21,6 @@ public class ForgotLogin extends Activity {
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.forgot_login_layout);
         TopText = (TextView) findViewById(R.id.tvTopBanner);
         LoginText = (TextView) findViewById(R.id.tvLoginRecovery);

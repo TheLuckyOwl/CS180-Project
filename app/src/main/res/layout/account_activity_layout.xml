@@ -35,6 +35,14 @@
             android:layout_below="@+id/scheduleButton"
             android:layout_centerHorizontal="true" />
 
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="settings"
+            android:id="@+id/BSettingsMain"
+            android:layout_below="@+id/Bloginmain"
+            android:layout_centerHorizontal="true" />
+
     </RelativeLayout>
     <!-- The navigation drawer -->
     <!-- TODO We should put images into the drawer list also-->
