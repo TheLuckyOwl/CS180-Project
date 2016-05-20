@@ -5,6 +5,7 @@ package theunderground.com.ucrmap;
  */
 public class Classroom {
     public String doc_id = "";
+    public String Building_name = "";
     public String Classroom_name = "";
     public String Comment1 = "";
     public String Comment2 = "";
@@ -19,6 +20,8 @@ public class Classroom {
 
     public String getDoc_id() { return doc_id; }
     public void setDoc_id(String doc_id) {this.doc_id = doc_id; }
+    public String getBuilding_name() {return Building_name;}
+    public void setBuilding_name(String building_name) { this.Building_name = building_name;}
     public String getClassroom_name() { return Classroom_name;}
     public void setClassroom_name(String classroom_name) { this.Classroom_name = classroom_name; }
     public String getComment1() { return Comment1;}

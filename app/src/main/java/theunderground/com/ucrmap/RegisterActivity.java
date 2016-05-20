@@ -41,7 +41,7 @@ import com.mongodb.*;
  */
 public class RegisterActivity extends Activity{
     Button bSubmit,bBack;
-    EditText etFirst, etMI, etLast, etUsername, etPassword;
+    EditText etFirst, etMI, etLast, etUsername, etPassword, etIlearnUser, etIlearnPass;
     TextView tvReg, tvFName,tvInitial, tvLname, tvUser, tvPass;
     ArrayList<User> returnValues = new ArrayList<User>();
 
@@ -54,6 +54,8 @@ public class RegisterActivity extends Activity{
         etLast = (EditText) this.findViewById(R.id.etLast);
         etUsername = (EditText) this.findViewById(R.id.etUsername);
         etPassword = (EditText) this.findViewById(R.id.etPassword);
+        etIlearnUser = (EditText) this.findViewById(R.id.etIlearnUser);
+        etIlearnPass = (EditText) this.findViewById(R.id.etIlearnPass);
         bSubmit = (Button) this.findViewById(R.id.bSubmit);
         bBack = (Button) this.findViewById(R.id.bBackReg);
         tvFName = (TextView) this.findViewById(R.id.tvF_Name);
@@ -63,7 +65,6 @@ public class RegisterActivity extends Activity{
         tvUser = (TextView) this.findViewById(R.id.tvUser);
         tvPass = (TextView) this.findViewById(R.id.tvPassword);
 
-
         bSubmit.setOnClickListener (new View.OnClickListener(){
             public void onClick(View v){
                 final String FirstName = etFirst.getText().toString();
@@ -71,6 +72,8 @@ public class RegisterActivity extends Activity{
                 final String LastName = etLast.getText().toString();
                 final String UserName = etUsername.getText().toString();
                 final String Password = etPassword.getText().toString();
+                final String IlearnUserF = etIlearnUser.getText().toString();
+                final String IlearnPassF = etIlearnPass.getText().toString();
 
                 if(UserName.length() >= 6) {
                     GetUsersAsyncTask task = new GetUsersAsyncTask();
@@ -98,6 +101,8 @@ public class RegisterActivity extends Activity{
                         contact.Last_name = LastName;
                         contact.Username = UserName;
                         contact.Password = Password;
+                        contact.IlearnUser = IlearnUserF;
+                        contact.IlearnPass = IlearnPassF;
 
                         SaveAsyncTask tsk = new SaveAsyncTask();
                         tsk.execute(contact);

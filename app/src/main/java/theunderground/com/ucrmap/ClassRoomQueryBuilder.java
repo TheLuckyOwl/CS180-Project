@@ -52,6 +52,7 @@ public class ClassRoomQueryBuilder {
     public String createContact(Classroom contact) // change to classroom class and edit for what is needed
     {
         return String.format("{\"Classroom\" : \"%s\", "
+                        + "\"Building\" : \"%s\", "
                         + "\"Comment1\" : \"%s\", "
                         + "\"Comment2\" : \"%s\", "
                         + "\"Comment3\" : \"%s\", "
@@ -62,14 +63,15 @@ public class ClassRoomQueryBuilder {
                         + "\"Comment8\" : \"%s\", "
                         + "\"Comment9\" : \"%s\", "
                         + "\"Comment10\" : \"%s\"}",
-                        contact.Classroom_name, contact.Comment1, contact.Comment2, contact.Comment3, contact.Comment4,
+                        contact.Classroom_name, contact.Building_name, contact.Comment1, contact.Comment2, contact.Comment3, contact.Comment4,
                         contact.Comment5, contact.Comment6, contact.Comment7, contact.Comment8, contact.Comment9,
                         contact.Comment10 );
     }
-    public String setUserData(Classroom contact) //copy top
+    public String setUserData(Classroom contact)
     {
         return String.format("{ \"$set\" : "
                         + "{\"Classroom\" : \"%s\", "
+                        + "\"Building\" : \"%s\", "
                         + "\"Comment1\" : \"%s\", "
                         + "\"Comment2\" : \"%s\", "
                         + "\"Comment3\" : \"%s\", "
@@ -80,7 +82,7 @@ public class ClassRoomQueryBuilder {
                         + "\"Comment8\" : \"%s\", "
                         + "\"Comment9\" : \"%s\", "
                         + "\"Comment10\" : \"%s\"}}",
-                        contact.Classroom_name, contact.Comment1, contact.Comment2, contact.Comment3, contact.Comment4,
+                        contact.Classroom_name,contact.Building_name, contact.Comment1, contact.Comment2, contact.Comment3, contact.Comment4,
                         contact.Comment5, contact.Comment6, contact.Comment7, contact.Comment8, contact.Comment9,
                         contact.Comment10 );
     }

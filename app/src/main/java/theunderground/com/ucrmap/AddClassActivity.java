@@ -227,24 +227,6 @@ public class AddClassActivity extends Activity {
                 }
                 else
                 {
-                    if(InputCount == 1)
-                    {
-                        Toast.makeText(AddClassActivity.this, "One" , Toast.LENGTH_SHORT).show();
-                    }
-                    else if(InputCount == 2)
-                    {
-                        Toast.makeText(AddClassActivity.this, "Two" , Toast.LENGTH_SHORT).show();
-                    }
-                    else if(InputCount == 3)
-                    {
-                        Toast.makeText(AddClassActivity.this, "Three" , Toast.LENGTH_SHORT).show();
-                    }
-                    else
-                    {
-                        Toast.makeText(AddClassActivity.this, "Four" , Toast.LENGTH_SHORT).show();
-                    }
-
-
                     if(EmptyCount == 10 && InputCount == 1)
                     {
                         CurrentUser.setClass1Data(row1Data);
