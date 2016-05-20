@@ -35,6 +35,8 @@ public class AccountActivity extends Activity {
     private Button mscheduleButton = null;
     private Button mLoginButton = null;
     private Button mSettingsButton = null;
+    private Button mRoomsButton = null;
+
     @Override
     protected void onCreate(Bundle saveInstanceState){
         super.onCreate(saveInstanceState);
@@ -59,6 +61,14 @@ public class AccountActivity extends Activity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(AccountActivity.this, SettingsActivity.class));
+            }
+        });
+
+        mRoomsButton = (Button)this.findViewById(R.id.room);
+        mRoomsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(AccountActivity.this, RateRoomActivity.class));
             }
         });
 
