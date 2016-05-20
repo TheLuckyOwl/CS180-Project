@@ -206,7 +206,7 @@ public class DinningHallActivity extends Activity {
             i.putExtra("Path", "file:///android_asset/gmscot.html");
         }
         else if (firstChoice == 11){
-            i.putExtra("Path", "file:///android_asset/medschot.html");
+            i.putExtra("Path", "file:///android_asset/medscot.html");
         }
         else if (firstChoice == 12){
             i.putExtra("Path", "file:///android_asset/barn.html");
