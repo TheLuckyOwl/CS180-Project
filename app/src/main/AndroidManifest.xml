@@ -131,6 +131,16 @@
                 android:value="theunderground.com.ucrmap.AccountActivity" />
         </activity>
         <activity
+            android:name=".AddRoomActivity"
+            android:label="@string/app_name"
+            android:parentActivityName=".RateRoomActivity">
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="theunderground.com.ucrmap.RateRoomActivity" />
+        </activity>
+        <activity
             android:name=".DinningHallActivity"
             android:label="@string/app_name"
             android:parentActivityName=".AccountActivity">
