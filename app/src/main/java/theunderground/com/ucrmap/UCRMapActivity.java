@@ -37,11 +37,18 @@ public class UCRMapActivity extends FragmentActivity implements OnMapReadyCallba
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
-
-        // Add a marker in Sydney and move the camera
         LatLng ucr = new LatLng(33.973661, -117.3281893);
-        mMap.addMarker(new MarkerOptions().position(ucr).title("University of California Riverside"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(ucr));
+        mMap.getUiSettings().setIndoorLevelPickerEnabled(true);
+        mMap.getUiSettings().setCompassEnabled(false);
+        mMap.getUiSettings().setAllGesturesEnabled(false);
+        mMap.getUiSettings().setZoomControlsEnabled(true);
+        mMap.getUiSettings().setZoomGesturesEnabled(true);
+        mMap.getUiSettings().setScrollGesturesEnabled(true);
+        mMap.getUiSettings().setMapToolbarEnabled(true);
         mMap.setBuildingsEnabled(true);
+        mMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
+        mMap.moveCamera(CameraUpdateFactory.zoomTo(17));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(ucr));
+        //mMap.addMarker(new MarkerOptions().position(ucr).title("University of California Riverside"));
     }
 }
