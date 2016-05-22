@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array
+        name="serviceArray">
+        <item index="0">Orbach Library</item>
+        <item index="1">Mon-Thurs: 7:30AM-Midnight, Fri: 7:30AM-6PM, Sat: 9AM-5PM, Sun: 1PM-Midnight</item>
+
+        <item index="0">Rivera Library</item>
+        <item index="1">Mon-Thurs: 7:30AM-Midnight, Fri: 7:30AM-6PM, Sat: 9AM-5PM, Sun: 1PM-Midnight</item>
+
+        <item index="0">Student Services</item>
+        <item index="1">Mon-Fri: 9AM-5PM</item>
+
+        <item index="0">Bookstore</item>
+        <item index="1">Mon-Fri: 8AM-6PM, Sat: 9AM-3PM, Sun: CLOSED</item>
+
+        <item index="0">SRC</item>
+        <item index="1">Mon-Thurs: 6AM-12AM, Fri: 6AM-9PM, Sat: 9AM-9PM, Sun: 9AM-12AM</item>
+
+        <item index="0">Botanical Gardens</item>
+        <item index="1">Mon-Sun: 8AM-5PM</item>
+    </string-array>
+</resources>

@@ -17,4 +17,39 @@
     <string name="title_activity_ucrmap">Map Of UCR</string>
     <string name="google_app_id">AIzaSyB0Fmm7HcwTu1vue0__ImDS9btiRKPP3yg</string>
     <string name="support_email">theucrmap@gmail.com</string>
+    <string-array name="Building_Names">
+        <item>WCH</item>
+        <item>MSE</item>
+        <item>INTS</item>
+        <item>INTN</item>
+        <item>OLMH</item>
+        <item>ANDHL</item>
+        <item>BOYHL</item>
+        <item>ARTS</item>
+        <item>ATH</item>
+        <item>BATCH</item>
+        <item>HOUSE</item>
+        <item>BRNHL</item>
+        <item>SURGE</item>
+        <item>CHEM</item>
+        <item>ENTOM</item>
+        <item>ENTMU</item>
+        <item>GENOM</item>
+        <item>GEOL</item>
+        <item>WAT</item>
+        <item>CHPHL</item>
+        <item>HUMN</item>
+        <item>HMNSS</item>
+        <item>LFSC</item>
+        <item>PHY</item>
+        <item>PRCE</item>
+        <item>PSYCH</item>
+        <item>SCLAB1</item>
+        <item>SPTH</item>
+        <item>SPR</item>
+        <item>BARN</item>
+        <item>UNLH</item>
+        <item>UV</item>
+        <item>CHUNG</item>
+    </string-array>
 </resources>
