@@ -17,6 +17,8 @@
     <string name="title_activity_ucrmap">Map Of UCR</string>
     <string name="google_app_id">AIzaSyB0Fmm7HcwTu1vue0__ImDS9btiRKPP3yg</string>
     <string name="support_email">theucrmap@gmail.com</string>
+    <string name="titleSize">36sp</string>
+
     <string-array name="Building_Names">
         <item>WCH</item>
         <item>MSE</item>

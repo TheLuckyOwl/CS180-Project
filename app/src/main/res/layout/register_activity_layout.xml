@@ -1,18 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="@string/Reg_register"
+        android:textSize="36sp"
         android:id="@+id/tvReg"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:height="50dp"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:textColor="@color/colorTextDark"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -23,7 +27,9 @@
         android:layout_alignParentStart="true"
         android:layout_below="@+id/tvReg"
         android:layout_toStartOf="@+id/tvM_Initial"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:textColor="@color/colorText"
+        android:layout_marginBottom="6dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -32,7 +38,9 @@
         android:text="@string/Reg_Mi"
         android:id="@+id/tvM_Initial"
         android:layout_below="@+id/tvReg"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/colorText"
+        android:layout_marginBottom="6dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -43,7 +51,8 @@
         android:layout_below="@+id/tvReg"
         android:layout_alignParentEnd="true"
         android:layout_toEndOf="@+id/tvM_Initial"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:textColor="@color/colorText"/>
 
     <EditText
         android:layout_width="wrap_content"
@@ -53,7 +62,8 @@
         android:id="@+id/etFirst"
         android:layout_below="@+id/tvF_Name"
         android:layout_alignParentStart="true"
-        android:layout_toStartOf="@+id/tvM_Initial" />
+        android:layout_toStartOf="@+id/tvM_Initial"
+        android:textColor="@color/colorText"/>
 
     <EditText
         android:layout_width="wrap_content"
@@ -63,7 +73,8 @@
         android:id="@+id/etMI"
         android:layout_alignTop="@+id/etFirst"
         android:layout_toEndOf="@+id/etFirst"
-        android:width="80dp" />
+        android:width="80dp"
+        android:textColor="@color/colorText"/>
 
     <EditText
         android:layout_width="wrap_content"
@@ -73,7 +84,8 @@
         android:id="@+id/etLast"
         android:layout_alignTop="@+id/etMI"
         android:layout_alignParentEnd="true"
-        android:layout_toEndOf="@+id/etMI" />
+        android:layout_toEndOf="@+id/etMI"
+        android:textColor="@color/colorText"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -83,7 +95,10 @@
         android:id="@+id/tvUser"
         android:layout_below="@+id/etFirst"
         android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:textColor="@color/colorText"
+        android:layout_marginTop="6dp"
+        android:layout_marginLeft="4dp" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -93,7 +108,9 @@
         android:id="@+id/etUsername"
         android:layout_below="@+id/tvUser"
         android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:textColor="@color/colorText"
+        android:layout_marginLeft="4dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -103,7 +120,10 @@
         android:id="@+id/tvPassword"
         android:layout_below="@+id/etUsername"
         android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:textColor="@color/colorText"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="6dp" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -113,7 +133,9 @@
         android:id="@+id/etPassword"
         android:layout_below="@+id/tvPassword"
         android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:textColor="@color/colorText"
+        android:layout_marginLeft="4dp" />
 
     <Button
         android:layout_width="wrap_content"
@@ -122,7 +144,8 @@
         android:id="@+id/bSubmit"
         android:layout_below="@+id/etIlearnPass"
         android:layout_toStartOf="@+id/etMI"
-        android:layout_marginTop="42dp" />
+        android:layout_marginTop="42dp"
+        android:textColor="@color/colorText"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -130,7 +153,9 @@
         android:text="@string/backReg"
         android:id="@+id/bBackReg"
         android:layout_alignBottom="@+id/bSubmit"
-        android:layout_toEndOf="@+id/etMI" />
+        android:layout_toEndOf="@+id/etMI"
+        android:textColor="@color/colorText"
+        />
 
     <TextView
         android:layout_width="wrap_content"
@@ -140,7 +165,10 @@
         android:id="@+id/tvOp"
         android:layout_below="@+id/etPassword"
         android:layout_alignParentStart="true"
-        android:layout_alignEnd="@+id/etLast" />
+        android:layout_alignEnd="@+id/etLast"
+        android:textColor="@color/colorText"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="6dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -149,7 +177,9 @@
         android:text="Ilearn Username:"
         android:id="@+id/tvIlearnUser"
         android:layout_below="@+id/tvOp"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:textColor="@color/colorText"
+        android:layout_marginLeft="4dp" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -157,7 +187,9 @@
         android:id="@+id/etIlearnUser"
         android:layout_below="@+id/tvIlearnUser"
         android:layout_alignParentStart="true"
-        android:layout_alignEnd="@+id/etLast" />
+        android:layout_alignEnd="@+id/etLast"
+        android:textColor="@color/colorText"
+        android:layout_marginLeft="4dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -166,7 +198,9 @@
         android:text="Ilearn Password:"
         android:id="@+id/tvIlearnPass"
         android:layout_below="@+id/tvOp2"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:textColor="@color/colorText"
+        android:layout_marginLeft="4dp" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -176,7 +210,9 @@
         android:id="@+id/etIlearnPass"
         android:layout_below="@+id/tvIlearnPass"
         android:layout_alignParentStart="true"
-        android:layout_alignEnd="@+id/etLast" />
+        android:layout_alignEnd="@+id/etLast"
+        android:textColor="@color/colorText"
+        android:layout_marginLeft="4dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -186,6 +222,9 @@
         android:id="@+id/tvOp2"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/etIlearnUser"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:textColor="@color/colorText"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="6dp" />
 
 </RelativeLayout>

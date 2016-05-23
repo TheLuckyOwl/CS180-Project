@@ -7,6 +7,8 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM"/>
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but you must specify either coarse or fine
@@ -28,25 +30,13 @@
         <activity
             android:name=".LoginActivity"
             android:label="@string/app_name">
-
-            <!--
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-            -->
-        </activity>
-        <activity
-            android:name=".SettingsActivity"
-            android:label="@string/app_name">
 
-            <!--
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            -->
         </activity>
+
         <activity
             android:name=".ForgotLogin"
             android:label="@string/app_name"
@@ -70,11 +60,6 @@
             android:name=".AccountActivity"
             android:label="@string/app_name"
             android:parentActivityName=".LoginActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
             <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -187,11 +172,15 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="theunderground.com.ucrmap.ScheduleActivity" />
         </activity>
+        <!--
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/app_name">
 
-        <!--<uses-permission android:name="android.permission.VIBRATE" />-->
-        <!--<uses-permission android:name="com.android.alarm.permission.SET_ALARM"/>-->
+        </activity>
         <receiver android:name=".AlarmReceiver" >
         </receiver>
+        -->
 
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
