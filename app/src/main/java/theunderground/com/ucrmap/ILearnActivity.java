@@ -40,7 +40,7 @@ public class ILearnActivity extends Activity {
             }
         }
 
-        String url = "https://ilearn.ucr.edu";
+        String url = "https://ilearn.ucr.edu/webapps/bb-auth-provider-cas-bb_bb60/execute/casLogin?cmd=login&authProviderId=_102_1&redirectUrl=https%3A%2F%2Filearn.ucr.edu%2F\"";
         WebView view = (WebView) this.findViewById(R.id.webView);
         view.loadUrl(url);
 
