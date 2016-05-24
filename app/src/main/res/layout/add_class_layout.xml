@@ -57,35 +57,47 @@
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:inputType="textPersonName"
             android:layout_weight="1"
             android:gravity="center"
             android:hint="ie. CS 100"
             android:textColorHint="@color/colorTextHint"
             android:id="@+id/addClassRow1"
             android:textSize="20sp"
-            android:textColor="@color/colorText"/>
+            android:textColor="@color/colorText"
+            android:nextFocusRight="@+id/addDayRow1"
+            android:selectAllOnFocus="true"
+            android:imeOptions="actionNext"/>
 
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:inputType="textPersonName"
             android:layout_weight="1"
             android:gravity="center"
             android:hint="ie. MWF"
             android:textColorHint="@color/colorTextHint"
             android:id="@+id/addDayRow1"
             android:textSize="20sp"
-            android:textColor="@color/colorText"/>
+            android:textColor="@color/colorText"
+            android:nextFocusRight="@+id/addTimeRow1"
+            android:selectAllOnFocus="true"
+            android:imeOptions="actionNext"/>
 
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:inputType="textPersonName"
             android:layout_weight="1"
             android:gravity="center"
             android:hint="1:10-3:00 pm"
             android:textColorHint="@color/colorTextHint"
             android:id="@+id/addTimeRow1"
             android:textSize="20sp"
-            android:textColor="@color/colorText"/>
+            android:textColor="@color/colorText"
+            android:nextFocusDown="@+id/addClassRow2"
+            android:selectAllOnFocus="true"
+            android:imeOptions="actionNext" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -100,35 +112,47 @@
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:inputType="textPersonName"
             android:layout_weight="1"
             android:gravity="center"
             android:hint="ie. CS 100"
             android:textColorHint="@color/colorTextHint"
             android:id="@+id/addClassRow2"
             android:textSize="20sp"
-            android:textColor="@color/colorText"/>
+            android:textColor="@color/colorText"
+            android:nextFocusRight="@+id/addDayRow2"
+            android:selectAllOnFocus="true"
+            android:imeOptions="actionNext"/>
 
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:inputType="textPersonName"
             android:layout_weight="1"
             android:gravity="center"
             android:hint="ie. MWF"
             android:textColorHint="@color/colorTextHint"
             android:id="@+id/addDayRow2"
             android:textSize="20sp"
-            android:textColor="@color/colorText"/>
+            android:textColor="@color/colorText"
+            android:nextFocusRight="@+id/addTimeRow2"
+            android:selectAllOnFocus="true"
+            android:imeOptions="actionNext"/>
 
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:inputType="textPersonName"
             android:layout_weight="1"
             android:gravity="center"
             android:hint="1:10-3:00 pm"
             android:textColorHint="@color/colorTextHint"
             android:id="@+id/addTimeRow2"
             android:textSize="20sp"
-            android:textColor="@color/colorText"/>
+            android:textColor="@color/colorText"
+            android:nextFocusDown="@+id/addClassRow3"
+            android:selectAllOnFocus="true"
+            android:imeOptions="actionNext"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -143,35 +167,47 @@
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:inputType="textPersonName"
             android:layout_weight="1"
             android:gravity="center"
             android:hint="ie. CS 100"
             android:textColorHint="@color/colorTextHint"
             android:id="@+id/addClassRow3"
             android:textSize="20sp"
-            android:textColor="@color/colorText"/>
+            android:textColor="@color/colorText"
+            android:nextFocusRight="@+id/addDayRow3"
+            android:selectAllOnFocus="true"
+            android:imeOptions="actionNext"/>
 
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:inputType="textPersonName"
             android:layout_weight="1"
             android:gravity="center"
             android:hint="ie. MWF"
             android:textColorHint="@color/colorTextHint"
             android:id="@+id/addDayRow3"
             android:textSize="20sp"
-            android:textColor="@color/colorText"/>
+            android:textColor="@color/colorText"
+            android:nextFocusRight="@+id/addTimeRow3"
+            android:selectAllOnFocus="true"
+            android:imeOptions="actionNext"/>
 
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:inputType="textPersonName"
             android:layout_weight="1"
             android:gravity="center"
             android:hint="1:10-3:00 pm"
             android:textColorHint="@color/colorTextHint"
             android:id="@+id/addTimeRow3"
             android:textSize="20sp"
-            android:textColor="@color/colorText"/>
+            android:textColor="@color/colorText"
+            android:nextFocusDown="@+id/addClassRow4"
+            android:selectAllOnFocus="true"
+            android:imeOptions="actionNext"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -186,28 +222,37 @@
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:inputType="textPersonName"
             android:layout_weight="1"
             android:gravity="center"
             android:hint="ie. CS 100"
             android:textColorHint="@color/colorTextHint"
             android:id="@+id/addClassRow4"
             android:textSize="20sp"
-            android:textColor="@color/colorText"/>
+            android:textColor="@color/colorText"
+            android:nextFocusRight="@+id/addDayRow4"
+            android:selectAllOnFocus="true"
+            android:imeOptions="actionNext"/>
 
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:inputType="textPersonName"
             android:layout_weight="1"
             android:gravity="center"
             android:hint="ie. MWF"
             android:textColorHint="@color/colorTextHint"
             android:id="@+id/addDayRow4"
             android:textSize="20sp"
-            android:textColor="@color/colorText"/>
+            android:textColor="@color/colorText"
+            android:nextFocusRight="@+id/addTimeRow4"
+            android:selectAllOnFocus="true"
+            android:imeOptions="actionNext"/>
 
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:inputType="textPersonName"
             android:layout_weight="1"
             android:gravity="center"
             android:hint="1:10-3:00 pm"
