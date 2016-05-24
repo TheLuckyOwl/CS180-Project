@@ -24,7 +24,8 @@
                 android:layout_height="0dp"
                 android:layout_weight="1.8"
                 android:id="@+id/friendsButton"
-                />
+                android:src="@drawable/icon_friend"
+                android:scaleType="center"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -46,6 +47,8 @@
                 android:layout_height="0dp"
                 android:layout_weight="1.8"
                 android:id="@+id/mapButton"
+                android:src="@drawable/icon_map"
+                android:scaleType="center"
                 />
             <TextView
                 android:layout_width="match_parent"
@@ -67,6 +70,8 @@
                 android:layout_height="0dp"
                 android:layout_weight="1.8"
                 android:id="@+id/scheduleButton"
+                android:src="@drawable/icon_schedule"
+                android:scaleType="center"
                 />
             <TextView
                 android:layout_width="match_parent"
@@ -94,6 +99,8 @@
                 android:layout_height="0dp"
                 android:layout_weight="1.8"
                 android:id="@+id/iLearnButton"
+                android:src="@drawable/icon_ilearn"
+                android:scaleType="center"
                 />
             <TextView
                 android:layout_width="match_parent"
@@ -116,6 +123,8 @@
                 android:layout_height="0dp"
                 android:layout_weight="1.8"
                 android:id="@+id/professorButton"
+                android:src="@drawable/icon_professor"
+                android:scaleType="center"
                 />
             <TextView
                 android:layout_width="match_parent"
@@ -137,6 +146,8 @@
                 android:layout_height="0dp"
                 android:layout_weight="1.8"
                 android:id="@+id/roomButton"
+                android:src="@drawable/icon_room"
+                android:scaleType="center"
                 />
             <TextView
                 android:layout_width="match_parent"
@@ -164,6 +175,8 @@
                 android:layout_height="0dp"
                 android:layout_weight="1.8"
                 android:id="@+id/menuButton"
+                android:src="@drawable/icon_food"
+                android:scaleType="center"
                 />
             <TextView
                 android:layout_width="match_parent"
@@ -186,6 +199,8 @@
                 android:layout_height="0dp"
                 android:layout_weight="1.8"
                 android:id="@+id/hoursButton"
+                android:src="@drawable/icon_time"
+                android:scaleType="center"
                 />
             <TextView
                 android:layout_width="match_parent"
@@ -207,6 +222,8 @@
                 android:layout_height="0dp"
                 android:layout_weight="1.8"
                 android:id="@+id/foodTruckButton"
+                android:src="@drawable/icon_truck"
+                android:scaleType="center"
                 />
             <TextView
                 android:layout_width="match_parent"
@@ -234,6 +251,8 @@
                 android:layout_height="0dp"
                 android:layout_weight="1.8"
                 android:id="@+id/libraryButton"
+                android:src="@drawable/icon_books"
+                android:scaleType="center"
                 />
             <TextView
                 android:layout_width="match_parent"
@@ -256,6 +275,8 @@
                 android:layout_height="0dp"
                 android:layout_weight="1.8"
                 android:id="@+id/aboutButton"
+                android:src="@drawable/icon_settings"
+                android:scaleType="center"
                 />
             <TextView
                 android:layout_width="match_parent"
@@ -277,6 +298,8 @@
                 android:layout_height="0dp"
                 android:layout_weight="1.8"
                 android:id="@+id/safetyButton"
+                android:src="@drawable/icon_safety"
+                android:scaleType="center"
                 />
             <TextView
                 android:layout_width="match_parent"

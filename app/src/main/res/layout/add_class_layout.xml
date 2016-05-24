@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="match_parent"
-    android:background="#005cab">
+    android:background="@color/colorPrimaryDark">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="30dip"
+        android:layout_height="50dp"
         android:layout_alignParentTop="true"
-        android:layout_marginBottom="2dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
         android:orientation="horizontal"
         android:weightSum="3"
         android:layout_weight="1"
         android:showDividers="beginning"
-        android:background="#ffffff"
         android:id = "@+id/titleBar">
 
         <TextView
@@ -19,40 +19,39 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:background="#ffffff"
             android:text="CLASS"
+            android:textColor="@color/colorTextDark"
             android:id="@+id/classTitle"
-            android:textSize="30sp" />
+            android:textSize="36sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:background="#ffffff"
             android:text="DAYS"
+            android:textColor="@color/colorTextDark"
             android:id="@+id/dayTitle"
-            android:textSize="30sp"/>
+            android:textSize="36sp"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:background="#ffffff"
             android:text="TIME"
+            android:textColor="@color/colorTextDark"
             android:id="@+id/timeTitle"
-            android:textSize="30sp"/>
+            android:textSize="36sp"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="30dip"
+        android:layout_height="40dp"
         android:layout_below="@+id/borderView"
         android:orientation="horizontal"
         android:weightSum="3"
         android:layout_weight="1"
         android:showDividers="beginning"
-        android:background="#ffffff"
         android:id = "@+id/classBar1">
 
         <EditText
@@ -60,40 +59,42 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:background="#ffffff"
             android:hint="ie. CS 100"
+            android:textColorHint="@color/colorTextHint"
             android:id="@+id/addClassRow1"
-            android:textSize="22sp" />
+            android:textSize="20sp"
+            android:textColor="@color/colorText"/>
 
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:background="#ffffff"
             android:hint="ie. MWF"
+            android:textColorHint="@color/colorTextHint"
             android:id="@+id/addDayRow1"
-            android:textSize="22sp"/>
+            android:textSize="20sp"
+            android:textColor="@color/colorText"/>
 
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:background="#ffffff"
             android:hint="1:10-3:00 pm"
+            android:textColorHint="@color/colorTextHint"
             android:id="@+id/addTimeRow1"
-            android:textSize="22sp"/>
+            android:textSize="20sp"
+            android:textColor="@color/colorText"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="30dip"
+        android:layout_height="40dp"
         android:layout_below="@+id/view1"
         android:orientation="horizontal"
         android:weightSum="3"
         android:layout_weight="1"
         android:showDividers="beginning"
-        android:background="#ffffff"
         android:id = "@+id/classBar2">
 
         <EditText
@@ -101,40 +102,42 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:background="#ffffff"
             android:hint="ie. CS 100"
+            android:textColorHint="@color/colorTextHint"
             android:id="@+id/addClassRow2"
-            android:textSize="22sp" />
+            android:textSize="20sp"
+            android:textColor="@color/colorText"/>
 
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:background="#ffffff"
             android:hint="ie. MWF"
+            android:textColorHint="@color/colorTextHint"
             android:id="@+id/addDayRow2"
-            android:textSize="22sp"/>
+            android:textSize="20sp"
+            android:textColor="@color/colorText"/>
 
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:background="#ffffff"
             android:hint="1:10-3:00 pm"
+            android:textColorHint="@color/colorTextHint"
             android:id="@+id/addTimeRow2"
-            android:textSize="22sp"/>
+            android:textSize="20sp"
+            android:textColor="@color/colorText"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="30dip"
+        android:layout_height="40dip"
         android:layout_below="@+id/view2"
         android:orientation="horizontal"
         android:weightSum="3"
         android:layout_weight="1"
         android:showDividers="beginning"
-        android:background="#ffffff"
         android:id = "@+id/classBar3">
 
         <EditText
@@ -142,40 +145,42 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:background="#ffffff"
             android:hint="ie. CS 100"
+            android:textColorHint="@color/colorTextHint"
             android:id="@+id/addClassRow3"
-            android:textSize="22sp" />
+            android:textSize="20sp"
+            android:textColor="@color/colorText"/>
 
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:background="#ffffff"
             android:hint="ie. MWF"
+            android:textColorHint="@color/colorTextHint"
             android:id="@+id/addDayRow3"
-            android:textSize="22sp"/>
+            android:textSize="20sp"
+            android:textColor="@color/colorText"/>
 
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:background="#ffffff"
             android:hint="1:10-3:00 pm"
+            android:textColorHint="@color/colorTextHint"
             android:id="@+id/addTimeRow3"
-            android:textSize="22sp"/>
+            android:textSize="20sp"
+            android:textColor="@color/colorText"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="30dip"
+        android:layout_height="40dip"
         android:layout_below="@+id/view3"
         android:orientation="horizontal"
         android:weightSum="3"
         android:layout_weight="1"
         android:showDividers="beginning"
-        android:background="#ffffff"
         android:id = "@+id/classBar4">
 
         <EditText
@@ -183,30 +188,33 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:background="#ffffff"
             android:hint="ie. CS 100"
+            android:textColorHint="@color/colorTextHint"
             android:id="@+id/addClassRow4"
-            android:textSize="22sp"/>
+            android:textSize="20sp"
+            android:textColor="@color/colorText"/>
 
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:background="#ffffff"
             android:hint="ie. MWF"
+            android:textColorHint="@color/colorTextHint"
             android:id="@+id/addDayRow4"
-            android:textSize="22sp"/>
+            android:textSize="20sp"
+            android:textColor="@color/colorText"/>
 
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:background="#ffffff"
             android:hint="1:10-3:00 pm"
+            android:textColorHint="@color/colorTextHint"
             android:id="@+id/addTimeRow4"
-            android:textSize="22sp"/>
+            android:textSize="20sp"
+            android:textColor="@color/colorText"/>
     </LinearLayout>
     <View
         android:layout_width="match_parent"
@@ -259,7 +267,6 @@
         android:orientation="horizontal"
         android:weightSum="2"
         android:showDividers="beginning"
-        android:background="#ffffff"
         android:id = "@+id/buttonBar"
         android:layout_alignParentBottom="true">
 
@@ -268,8 +275,7 @@
             android:layout_height="match_parent"
             android:id="@+id/addClass"
             android:text="Add"
-            android:background="#002e62"
-            android:textColor="#fbb713"
+            android:textColor="@color/colorText"
             android:layout_weight="1"/>
 
         <Button
@@ -277,8 +283,7 @@
             android:layout_height="match_parent"
             android:id="@+id/cancel"
             android:text="Cancel"
-            android:background="#002e62"
-            android:textColor="#fbb713"
+            android:textColor="@color/colorText"
             android:layout_weight="1"/>
 
     </LinearLayout>

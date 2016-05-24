@@ -172,7 +172,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="theunderground.com.ucrmap.ScheduleActivity" />
         </activity>
-        <!--
+
         <activity
             android:name=".SettingsActivity"
             android:label="@string/app_name">
@@ -180,7 +180,34 @@
         </activity>
         <receiver android:name=".AlarmReceiver" >
         </receiver>
-        -->
+        <activity
+            android:name=".FoodTruckLocations"
+            android:label="@string/app_name"
+            android:parentActivityName="theunderground.com.ucrmap.AccountActivity">
+        <!-- Parent activity meta-data to support 4.0 and lower -->
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="theunderground.com.ucrmap.AccountActivity" />
+        </activity>
+        <activity
+            android:name=".ServiceHours"
+            android:label="@string/app_name"
+            android:parentActivityName="theunderground.com.ucrmap.AccountActivity">
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="theunderground.com.ucrmap.AccountActivity" />
+        </activity>
+        <activity
+            android:name=".RateMyProfessor"
+            android:label="@string/app_name"
+            android:parentActivityName="theunderground.com.ucrmap.AccountActivity">
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="theunderground.com.ucrmap.AccountActivity" />
+        </activity>
+
 
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
