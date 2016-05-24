@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -60,12 +61,15 @@ public class LoginActivity extends Activity {
     private TextView mWelcome = null;
     private TextView mUser = null;
     private TextView mPass = null;
+    private CheckBox mLog = null;
     private Button mLoginButton = null; //match with the ones made
     private Button mForgotId = null;
     private Button mRegister = null;
+    private
     ArrayList<User> returnValues = new ArrayList<User>();
     public static String LoggedUser;
     public String Name;
+
     private boolean checkUserId(String userId, String userPass) {
         //User Ids must be at least 6 characters long add this to the register check before uncommenting it
         if (userId.length() < 6) {
@@ -98,6 +102,22 @@ public class LoginActivity extends Activity {
         return false;
     }
 
+    public void save(String user, String pass)
+    {
+        SharedPreferences sharedPref = getSharedPreferences("LogData", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPref.edit();
+        editor.putBoolean("Logged", true);
+        editor.putString("Username", user);
+        editor.putString("Password", pass);
+        editor.apply();
+    }
+
+    public Boolean load()
+    {
+        SharedPreferences sharedPref = getSharedPreferences("LogData", Context.MODE_PRIVATE);
+        return sharedPref.getBoolean("Logged", false);
+    }
+
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_activity_layout);
@@ -109,17 +129,33 @@ public class LoginActivity extends Activity {
         mForgotId = (Button)findViewById(R.id.bForgotLog);
         mLoginButton = (Button)findViewById(R.id.bLogin);
         mRegister = (Button)findViewById(R.id.bRegister);
+        mLog = (CheckBox) findViewById(R.id.cbLog);
+        if(load())
+        {
+            SharedPreferences sharedPref = getSharedPreferences("LogData", Context.MODE_PRIVATE);
+            mUserId.setText(sharedPref.getString("Username", ""));
+            mPassword.setText(sharedPref.getString("Password", ""));
+        }
+
 
         mLoginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (mUserId.getText() == null) {
                     Toast.makeText(LoginActivity.this, "Please enter a valid ID", Toast.LENGTH_LONG).show();
-                } else if (checkUserId(mUserId.getText().toString(), mPassword.getText().toString())) {
+                } else if (checkUserId(mUserId.getText().toString(), mPassword.getText().toString()) && mLog.isChecked()) {
                     Toast.makeText(LoginActivity.this, "Welcome " + Name , Toast.LENGTH_LONG).show();
+                    save(mUserId.getText().toString(),mPassword.getText().toString());
                     Intent i = new Intent(LoginActivity.this, AccountActivity.class);
                     i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     startActivity(i);
+                } else if (checkUserId(mUserId.getText().toString(), mPassword.getText().toString()) && mLog.isChecked())
+                {
+                    Toast.makeText(LoginActivity.this, "Welcome " + Name, Toast.LENGTH_LONG).show();
+                    Intent i = new Intent(LoginActivity.this, AccountActivity.class);
+                    i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                    startActivity(i);
+
                 } else {
                     Toast.makeText(LoginActivity.this, "Invalid ID - Please try again", Toast.LENGTH_LONG).show();
                 }
