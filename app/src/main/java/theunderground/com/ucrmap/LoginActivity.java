@@ -104,7 +104,6 @@ public class LoginActivity extends Activity {
 
         mUserId = (EditText)findViewById(R.id.etUsername);
         mPassword = (EditText)findViewById(R.id.etPassword);
-        mWelcome = (TextView)findViewById(R.id.tvWelcome);
         mUser = (TextView)findViewById(R.id.tvLogin_text);
         mPass = (TextView)findViewById(R.id.tvPassword_text);
         mForgotId = (Button)findViewById(R.id.bForgotLog);

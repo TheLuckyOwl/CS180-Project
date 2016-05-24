@@ -4,16 +4,10 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.net.Uri;
 import android.os.Bundle;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
-import android.widget.ListView;
-import android.widget.Button;
+
 
 
 /**
@@ -22,138 +16,129 @@ import android.widget.Button;
 public class AccountActivity extends Activity {
 
 
-    //TODO Need to make the back presses null as well as clicking on the class your in, in the drawer layout
-    //TODO Need to make navigation drawer a separate interface to be implemented.
     SharedPreferences prefs = null;
-    //for the Navigation Drawer
-    private String[] mMenuTitles = null;
-    private DrawerLayout mDrawerLayout = null;
-    private ListView mDrawerList = null;
-    //==================================
-
-    private ImageButton mButton = null;
-    private Button mscheduleButton = null;
-    private Button mLoginButton = null;
-    private Button mSettingsButton = null;
-    private Button mRoomsButton = null;
-
+    private ImageButton mFriendsButton = null;
+    private ImageButton mMapButton = null;
+    private ImageButton mScheduleButton = null;
+    private ImageButton mLibraryButton = null;
+    private ImageButton mRoomsButton = null;
+    private ImageButton mILearnButton = null;
+    private ImageButton mProfessorButton = null;
+    private ImageButton mFoodMenuButton = null;
+    private ImageButton mBuildingHoursButton = null;
+    private ImageButton mFoodTruckButton = null;
+    private ImageButton mAboutButton = null;
+    private ImageButton mSafetyButton = null;
+    private ImageButton mSignOutButton = null;
     @Override
     protected void onCreate(Bundle saveInstanceState){
         super.onCreate(saveInstanceState);
         prefs = this.getSharedPreferences("Login", Context.MODE_PRIVATE);
         setContentView(R.layout.account_activity_layout);
-        mscheduleButton = (Button)this.findViewById(R.id.scheduleButton);
-        mscheduleButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(AccountActivity.this, ScheduleActivity.class));
-            }
-        });
-        mLoginButton = (Button)this.findViewById(R.id.Bloginmain);
-        mLoginButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(AccountActivity.this, LoginActivity.class));
-            }
-        });
-        mSettingsButton = (Button)this.findViewById(R.id.BSettingsMain);
-        mSettingsButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(AccountActivity.this, SettingsActivity.class));
-            }
-        });
 
-        mRoomsButton = (Button)this.findViewById(R.id.room);
+        mFriendsButton = (ImageButton)this.findViewById(R.id.friendsButton);
+        mMapButton = (ImageButton)this.findViewById(R.id.mapButton);
+        mScheduleButton = (ImageButton)this.findViewById(R.id.scheduleButton);
+
+        mILearnButton = (ImageButton)this.findViewById(R.id.iLearnButton);
+        mProfessorButton = (ImageButton)this.findViewById(R.id.professorButton);
+        mRoomsButton = (ImageButton)this.findViewById(R.id.roomButton);
+
+        mFoodMenuButton = (ImageButton)this.findViewById(R.id.menuButton);
+        mBuildingHoursButton = (ImageButton)this.findViewById(R.id.hoursButton);
+        mFoodTruckButton = (ImageButton)this.findViewById(R.id.foodTruckButton);
+
+        mLibraryButton = (ImageButton)this.findViewById(R.id.libraryButton);
+        mAboutButton = (ImageButton)this.findViewById(R.id.aboutButton);
+        mSafetyButton = (ImageButton)this.findViewById(R.id.safetyButton);
+
+        mSignOutButton = (ImageButton)this.findViewById(R.id.logoutButton);
+
+        mFriendsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view){
+                //startActivity((new Intent(AccountActivity.this, )));
+            }
+        });
+        mMapButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view){
+                startActivity((new Intent(AccountActivity.this, UCRMapActivity.class)));
+            }
+        });
+        mScheduleButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view){
+                startActivity((new Intent(AccountActivity.this, ScheduleActivity.class)));
+            }
+        });
+        mILearnButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view){
+                startActivity((new Intent(AccountActivity.this, ILearnActivity.class)));
+            }
+        });
+        mProfessorButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view){
+                startActivity((new Intent(AccountActivity.this, RateMyProfessor.class)));
+            }
+        });
         mRoomsButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                startActivity(new Intent(AccountActivity.this, RateRoomActivity.class));
+            public void onClick(View view){
+                startActivity((new Intent(AccountActivity.this, RateRoomActivity.class)));
             }
         });
-
-        //Navigation Drawer Definitions
-        mMenuTitles = getResources().getStringArray(R.array.menu_array);
-        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
-        mDrawerList = (ListView) findViewById(R.id.left_drawer);
-
-        mButton = (ImageButton)this.findViewById(R.id.button);
-        mButton = (ImageButton) this.findViewById(R.id.button);
-        mButton.setOnClickListener(new View.OnClickListener() {
+        mFoodMenuButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                mDrawerLayout.openDrawer(mDrawerList);
+            public void onClick(View view){
+                startActivity((new Intent(AccountActivity.this, DinningHallActivity.class)));
+            }
+        });
+        mBuildingHoursButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view){
+                startActivity((new Intent(AccountActivity.this, ServiceHours.class)));
+            }
+        });
+        mFoodTruckButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view){
+                startActivity((new Intent(AccountActivity.this, FoodTruckLocations.class)));
+            }
+        });
+        mLibraryButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view){
+                startActivity((new Intent(AccountActivity.this, LibraryActivity.class)));
+            }
+        });
+        mAboutButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view){
+                startActivity((new Intent(AccountActivity.this, ContactUsActivity.class)));
+            }
+        });
+        mSafetyButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view){
+                startActivity((new Intent(AccountActivity.this, CampusSafetyActivity.class)));
+            }
+        });
+        mSignOutButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view){
+                SharedPreferences.Editor editor = prefs.edit();
+                editor.putString(LoginActivity.USER_ID_PREF, null);
+                editor.putBoolean(LoginActivity.LOGGED_IN_PREF, false);
+                editor.commit();
+
+                Intent i = new Intent(AccountActivity.this, LoginActivity.class);
+                i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(i);
             }
         });
 
-        // set a custom shadow that overlays the main content when the drawer opens
-        mDrawerLayout.setDrawerShadow(R.drawable.drawer_shadow, GravityCompat.START);
-        // set up the drawer's list view with items and click listener
-        mDrawerList.setAdapter(new ArrayAdapter<String>(this,
-                R.layout.drawer_list_item, mMenuTitles));
-        mDrawerList.setOnItemClickListener(new DrawerItemClickListener());
-        //================================================================================
-
     }
-    //======================================================================================
-    /* The click listener for ListView in the navigation drawer */
-    private class DrawerItemClickListener implements ListView.OnItemClickListener {
-        @Override
-        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-            selectItem(position);
-        }
-    }
-
-    private void selectItem(int position) {
-        //Home
-        if(position == 0){
-            Intent i = new Intent(this, AccountActivity.class);
-            startActivity(i);
-        }
-        //UCR Map
-        else if(position == 1){
-            Intent i = new Intent(this, UCRMapActivity.class);
-            startActivity(i);
-        }
-        //Campus Safety
-        else if(position == 2){
-            Intent i = new Intent(this, CampusSafetyActivity.class);
-            startActivity(i);
-        }
-        //ILearn
-        if(position == 3){
-            Intent i = new Intent(this, ILearnActivity.class);
-            startActivity(i);
-        }
-        //Dining Hall
-        else if(position == 4){
-            Intent i = new Intent(this, DinningHallActivity.class);
-            startActivity(i);
-        }
-        //Library Registration
-        else if(position == 5){
-            Intent i = new Intent(this, LibraryActivity.class);
-            startActivity(i);
-        }
-        //Contact Us
-        else if(position == 6){
-            Intent i = new Intent(this, ContactUsActivity.class);
-            startActivity(i);
-        }
-        //Sign Out
-        else if(position == 7){
-            // Clear out the shared preferences.
-            SharedPreferences.Editor editor = prefs.edit();
-            editor.putString(LoginActivity.USER_ID_PREF, null);
-            editor.putBoolean(LoginActivity.LOGGED_IN_PREF, false);
-            editor.commit();
-
-            Intent i = new Intent(this, LoginActivity.class);
-            i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-            startActivity(i);
-        }
-        mDrawerLayout.closeDrawer(mDrawerList);
-    }
-
-
 }
