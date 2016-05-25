@@ -28,7 +28,6 @@ import java.util.concurrent.ExecutionException;
 public class ScheduleActivity extends Activity {
     private Button mAddButton = null;
     private Button mRemoveButton = null;
-    private ImageButton mButton = null;
     SharedPreferences prefs = null;
     private User CurrentUser = new User();
     private String LoggedinUser = LoginActivity.LoggedUser;

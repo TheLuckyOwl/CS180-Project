@@ -16,7 +16,8 @@
         android:textAlignment="center"
         android:textColor="@color/colorTextDark"
         android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp" />
+        android:layout_marginBottom="20dp"
+        android:textStyle="bold" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -29,7 +30,8 @@
         android:layout_toStartOf="@+id/tvM_Initial"
         android:textAlignment="center"
         android:textColor="@color/colorText"
-        android:layout_marginBottom="6dp" />
+        android:layout_marginBottom="6dp"
+        android:textStyle="bold" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -40,7 +42,8 @@
         android:layout_below="@+id/tvReg"
         android:layout_centerHorizontal="true"
         android:textColor="@color/colorText"
-        android:layout_marginBottom="6dp" />
+        android:layout_marginBottom="6dp"
+        android:textStyle="bold" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -52,7 +55,8 @@
         android:layout_alignParentEnd="true"
         android:layout_toEndOf="@+id/tvM_Initial"
         android:textAlignment="center"
-        android:textColor="@color/colorText"/>
+        android:textColor="@color/colorText"
+        android:textStyle="bold" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -104,7 +108,8 @@
         android:layout_alignParentEnd="true"
         android:textColor="@color/colorText"
         android:layout_marginTop="6dp"
-        android:layout_marginLeft="4dp" />
+        android:layout_marginLeft="4dp"
+        android:textStyle="bold" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -129,7 +134,8 @@
         android:layout_alignParentEnd="true"
         android:textColor="@color/colorText"
         android:layout_marginLeft="4dp"
-        android:layout_marginTop="6dp" />
+        android:layout_marginTop="6dp"
+        android:textStyle="bold" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -150,7 +156,11 @@
         android:id="@+id/bSubmit"
         android:textColor="@color/colorText"
         android:layout_below="@+id/etIlearnPass"
-        android:layout_toStartOf="@+id/etMI" />
+        android:layout_toStartOf="@+id/etMI"
+        android:layout_marginTop="42dp"
+        android:textColor="@color/colorText"
+        android:textStyle="bold" />
+
 
     <Button
         android:layout_width="wrap_content"
@@ -160,7 +170,7 @@
         android:layout_alignBottom="@+id/bSubmit"
         android:layout_toEndOf="@+id/etMI"
         android:textColor="@color/colorText"
-        />
+        android:textStyle="bold" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -182,9 +192,8 @@
         android:id="@+id/tvIlearnUser"
         android:textColor="@color/colorText"
         android:layout_marginLeft="4dp"
-        android:layout_below="@+id/tvOp"
-        android:layout_alignEnd="@+id/etEmailReg"
-        android:layout_alignParentStart="true" />
+        android:textStyle="bold"
+        android:layout_alignEnd="@+id/tvOp" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -208,9 +217,8 @@
         android:id="@+id/tvIlearnPass"
         android:textColor="@color/colorText"
         android:layout_marginLeft="4dp"
-        android:layout_below="@+id/tvOp2"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentStart="true" />
+        android:textStyle="bold"
+        android:layout_alignParentEnd="true" />
 
     <EditText
         android:layout_width="wrap_content"
