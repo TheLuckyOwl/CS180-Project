@@ -87,7 +87,7 @@
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Keep me logged in"
+        android:text="Keep login information"
         android:id="@+id/cbLog"
         android:layout_alignParentEnd="true"
         android:layout_below="@+id/etPassword"
