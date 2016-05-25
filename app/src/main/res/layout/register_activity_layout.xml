@@ -155,12 +155,9 @@
         android:text="@string/Forgot_sub"
         android:id="@+id/bSubmit"
         android:textColor="@color/colorText"
+        android:textStyle="bold"
         android:layout_below="@+id/etIlearnPass"
-        android:layout_toStartOf="@+id/etMI"
-        android:layout_marginTop="42dp"
-        android:textColor="@color/colorText"
-        android:textStyle="bold" />
-
+        android:layout_toStartOf="@+id/etMI" />
 
     <Button
         android:layout_width="wrap_content"
@@ -181,8 +178,8 @@
         android:textColor="@color/colorText"
         android:layout_marginLeft="4dp"
         android:layout_below="@+id/etEmailReg"
-        android:layout_alignParentStart="true"
-        android:layout_alignEnd="@+id/tvIlearnUser" />
+        android:layout_alignEnd="@+id/etLast"
+        android:layout_alignParentStart="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -193,7 +190,9 @@
         android:textColor="@color/colorText"
         android:layout_marginLeft="4dp"
         android:textStyle="bold"
-        android:layout_alignEnd="@+id/tvOp" />
+        android:layout_below="@+id/tvOp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -218,7 +217,9 @@
         android:textColor="@color/colorText"
         android:layout_marginLeft="4dp"
         android:textStyle="bold"
-        android:layout_alignParentEnd="true" />
+        android:layout_below="@+id/tvOp2"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -229,8 +230,8 @@
         android:textColor="@color/colorText"
         android:layout_marginLeft="4dp"
         android:layout_below="@+id/tvIlearnPass"
-        android:layout_alignParentStart="true"
-        android:layout_alignEnd="@+id/tvIlearnPass" />
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -241,7 +242,7 @@
         android:textColor="@color/colorText"
         android:layout_marginLeft="4dp"
         android:layout_below="@+id/etIlearnUser"
-        android:layout_alignEnd="@+id/etIlearnUser"
+        android:layout_alignEnd="@+id/etLast"
         android:layout_alignParentStart="true" />
 
     <TextView
@@ -251,8 +252,11 @@
         android:text="Email:"
         android:id="@+id/tvEmailReg"
         android:textColor="@color/colorText"
+        android:layout_marginLeft="4dp"
+        android:textStyle="bold"
         android:layout_below="@+id/etPassword"
-        android:layout_alignStart="@+id/etPassword" />
+        android:layout_alignEnd="@+id/etLast"
+        android:layout_alignParentStart="true" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -261,8 +265,9 @@
         android:ems="10"
         android:id="@+id/etEmailReg"
         android:textColor="@color/colorText"
+        android:layout_marginLeft="4dp"
         android:layout_below="@+id/tvEmailReg"
-        android:layout_alignEnd="@+id/etPassword"
-        android:layout_alignStart="@+id/tvEmailReg" />
+        android:layout_alignEnd="@+id/etLast"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>
