@@ -55,6 +55,7 @@ public class UpdateIlearnActivity extends Activity {
                     CurrentUser.setPassword(x.getPassword());
                     CurrentUser.setIlearnUser(x.getIlearnUser());
                     CurrentUser.setIlearnPass(x.getIlearnPass());
+                    CurrentUser.setEmail(x.getEmail());
                     CurrentUser.setClass1Data(x.getClass1Data());
                     CurrentUser.setClass1Day(x.getClass1Day());
                     CurrentUser.setClass1Time(x.getClass1Time());
@@ -85,6 +86,26 @@ public class UpdateIlearnActivity extends Activity {
                     CurrentUser.setClass10Data(x.getClass10Data());
                     CurrentUser.setClass10Day(x.getClass10Day());
                     CurrentUser.setClass10Time(x.getClass10Time());
+                    CurrentUser.setFriend1Name(x.getFriend1Name());
+                    CurrentUser.setFriend1Accesss(x.getFriend1Access());
+                    CurrentUser.setFriend2Name(x.getFriend2Name());
+                    CurrentUser.setFriend2Accesss(x.getFriend2Access());
+                    CurrentUser.setFriend3Name(x.getFriend3Name());
+                    CurrentUser.setFriend3Accesss(x.getFriend3Access());
+                    CurrentUser.setFriend4Name(x.getFriend4Name());
+                    CurrentUser.setFriend4Accesss(x.getFriend4Access());
+                    CurrentUser.setFriend5Name(x.getFriend5Name());
+                    CurrentUser.setFriend5Accesss(x.getFriend5Access());
+                    CurrentUser.setFriend6Name(x.getFriend6Name());
+                    CurrentUser.setFriend6Accesss(x.getFriend6Access());
+                    CurrentUser.setFriend7Name(x.getFriend7Name());
+                    CurrentUser.setFriend7Accesss(x.getFriend7Access());
+                    CurrentUser.setFriend8Name(x.getFriend8Name());
+                    CurrentUser.setFriend8Accesss(x.getFriend8Access());
+                    CurrentUser.setFriend9Name(x.getFriend9Name());
+                    CurrentUser.setFriend9Accesss(x.getFriend9Access());
+                    CurrentUser.setFriend10Name(x.getFriend10Name());
+                    CurrentUser.setFriend10Accesss(x.getFriend10Access());
                 }
             }
         }
@@ -103,7 +124,7 @@ public class UpdateIlearnActivity extends Activity {
                     UpdateUser tsk = new UpdateUser();
                     tsk.execute(CurrentUser);
 
-                    Toast.makeText(UpdateIlearnActivity.this, "Updated Successfully", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(UpdateIlearnActivity.this, "Updated Successfully", Toast.LENGTH_LONG).show();
                     Intent i = new Intent(UpdateIlearnActivity.this, ContactUsActivity.class);
                     UpdateIlearnActivity.this.startActivity(i);
                 }

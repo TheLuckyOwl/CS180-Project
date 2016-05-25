@@ -144,13 +144,17 @@ public class LoginActivity extends Activity {
                 if (mUserId.getText() == null) {
                     Toast.makeText(LoginActivity.this, "Please enter a valid ID", Toast.LENGTH_LONG).show();
                 } else if (checkUserId(mUserId.getText().toString(), mPassword.getText().toString()) && mLog.isChecked()) {
-                    Toast.makeText(LoginActivity.this, "Welcome " + Name , Toast.LENGTH_LONG).show();
                     save(mUserId.getText().toString(),mPassword.getText().toString());
+                    Toast.makeText(LoginActivity.this, "Welcome " + Name , Toast.LENGTH_LONG).show();
                     Intent i = new Intent(LoginActivity.this, AccountActivity.class);
                     i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     startActivity(i);
-                } else if (checkUserId(mUserId.getText().toString(), mPassword.getText().toString()) && mLog.isChecked())
+                } else if (checkUserId(mUserId.getText().toString(), mPassword.getText().toString()) && !mLog.isChecked())
                 {
+                    SharedPreferences sharedPref = getSharedPreferences("LogData", Context.MODE_PRIVATE);
+                    SharedPreferences.Editor editor = sharedPref.edit();
+                    editor.putBoolean("Logged", false);
+                    editor.apply();
                     Toast.makeText(LoginActivity.this, "Welcome " + Name, Toast.LENGTH_LONG).show();
                     Intent i = new Intent(LoginActivity.this, AccountActivity.class);
                     i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);

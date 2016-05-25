@@ -87,12 +87,12 @@
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Keep me logged in"
+        android:text="Save Login Information"
         android:id="@+id/cbLog"
         android:layout_alignParentEnd="true"
         android:layout_below="@+id/etPassword"
         android:layout_alignStart="@+id/etPassword"
-        android:checked="false" />
+        android:checked="true" />
 
 
 </RelativeLayout>

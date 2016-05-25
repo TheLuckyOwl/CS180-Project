@@ -58,6 +58,7 @@ public class QueryBuilder {
                         + "\"Password\" : \"%s\", "
                         + "\"ilearnUser\" : \"%s\", "
                         + "\"ilearnPass\" : \"%s\", "
+                        + "\"Email\" : \"%s\", "
                         + "\"Class1\" : "
                         +"{\"Data\" : \"%s\", "
                         +"\"Day\" : \"%s\", "
@@ -97,9 +98,39 @@ public class QueryBuilder {
                         + "\"Class10\" : "
                         +"{\"Data\" : \"%s\", "
                         +"\"Day\" : \"%s\", "
-                        + "\"Time\" : \"%s\"}}",
+                        + "\"Time\" : \"%s\"}, "
+                        + "\"Friend1\" : "
+                        +"{\"Name\" : \"%s\", "
+                        + "\"Access\" : \"%s\"}, "
+                        + "\"Friend2\" : "
+                        +"{\"Name\" : \"%s\", "
+                        + "\"Access\" : \"%s\"}, "
+                        + "\"Friend3\" : "
+                        +"{\"Name\" : \"%s\", "
+                        + "\"Access\" : \"%s\"}, "
+                        + "\"Friend4\" : "
+                        +"{\"Name\" : \"%s\", "
+                        + "\"Access\" : \"%s\"}, "
+                        + "\"Friend5\" : "
+                        +"{\"Name\" : \"%s\", "
+                        + "\"Access\" : \"%s\"}, "
+                        + "\"Friend6\" : "
+                        +"{\"Name\" : \"%s\", "
+                        + "\"Access\" : \"%s\"}, "
+                        + "\"Friend7\" : "
+                        +"{\"Name\" : \"%s\", "
+                        + "\"Access\" : \"%s\"}, "
+                        + "\"Friend8\" : "
+                        +"{\"Name\" : \"%s\", "
+                        + "\"Access\" : \"%s\"}, "
+                        + "\"Friend9\" : "
+                        +"{\"Name\" : \"%s\", "
+                        + "\"Access\" : \"%s\"}, "
+                        + "\"Friend10\" : "
+                        +"{\"Name\" : \"%s\", "
+                        + "\"Access\" : \"%s\"}}",
                         contact.First_name, contact.Middle_initial, contact.Last_name, contact.Username, contact.Password,
-                        contact.IlearnUser, contact.IlearnPass,
+                        contact.IlearnUser, contact.IlearnPass, contact.Email,
                         contact.getClass1Data(), contact.getClass1Day(), contact.getClass1Time(),
                         contact.getClass2Data(), contact.getClass2Day(), contact.getClass2Time(),
                         contact.getClass3Data(), contact.getClass3Day(), contact.getClass3Time(),
@@ -109,7 +140,17 @@ public class QueryBuilder {
                         contact.getClass7Data(), contact.getClass7Day(), contact.getClass7Time(),
                         contact.getClass8Data(), contact.getClass8Day(), contact.getClass8Time(),
                         contact.getClass9Data(), contact.getClass9Day(), contact.getClass9Time(),
-                        contact.getClass10Data(), contact.getClass10Day(), contact.getClass10Time());
+                        contact.getClass10Data(), contact.getClass10Day(), contact.getClass10Time(),
+                        contact.getFriend1Name(), contact.getFriend1Access(),
+                        contact.getFriend2Name(), contact.getFriend2Access(),
+                        contact.getFriend3Name(), contact.getFriend3Access(),
+                        contact.getFriend4Name(), contact.getFriend4Access(),
+                        contact.getFriend5Name(), contact.getFriend5Access(),
+                        contact.getFriend6Name(), contact.getFriend6Access(),
+                        contact.getFriend7Name(), contact.getFriend7Access(),
+                        contact.getFriend8Name(), contact.getFriend8Access(),
+                        contact.getFriend9Name(), contact.getFriend9Access(),
+                        contact.getFriend10Name(), contact.getFriend10Access());
     }
     public String setUserData(User contact)
     {
@@ -121,10 +162,11 @@ public class QueryBuilder {
                 + "\"Password\" : \"%s\", "
                 + "\"ilearnUser\" : \"%s\", "
                 + "\"ilearnPass\" : \"%s\", "
+                + "\"Email\" : \"%s\", "
                 + "\"Class1\" : "
                 +"{\"Data\" : \"%s\", "
                 +"\"Day\" : \"%s\", "
-                + "\"Time\" : \"%s\"}, "
+                + "\"Time\" : \"%s\"} ,"
                 + "\"Class2\" : "
                 +"{\"Data\" : \"%s\", "
                 +"\"Day\" : \"%s\", "
@@ -160,9 +202,39 @@ public class QueryBuilder {
                 + "\"Class10\" : "
                 +"{\"Data\" : \"%s\", "
                 +"\"Day\" : \"%s\", "
-                + "\"Time\" : \"%s\"}}" + "}",
+                + "\"Time\" : \"%s\"}, "
+                + "\"Friend1\" : "
+                +"{\"Name\" : \"%s\", "
+                + "\"Access\" : \"%s\"}, "
+                + "\"Friend2\" : "
+                +"{\"Name\" : \"%s\", "
+                + "\"Access\" : \"%s\"}, "
+                + "\"Friend3\" : "
+                +"{\"Name\" : \"%s\", "
+                + "\"Access\" : \"%s\"}, "
+                + "\"Friend4\" : "
+                +"{\"Name\" : \"%s\", "
+                + "\"Access\" : \"%s\"}, "
+                + "\"Friend5\" : "
+                +"{\"Name\" : \"%s\", "
+                + "\"Access\" : \"%s\"}, "
+                + "\"Friend6\" : "
+                +"{\"Name\" : \"%s\", "
+                + "\"Access\" : \"%s\"}, "
+                + "\"Friend7\" : "
+                +"{\"Name\" : \"%s\", "
+                + "\"Access\" : \"%s\"}, "
+                + "\"Friend8\" : "
+                +"{\"Name\" : \"%s\", "
+                + "\"Access\" : \"%s\"}, "
+                + "\"Friend9\" : "
+                +"{\"Name\" : \"%s\", "
+                + "\"Access\" : \"%s\"}, "
+                + "\"Friend10\" : "
+                +"{\"Name\" : \"%s\", "
+                + "\"Access\" : \"%s\"}}" + "}",
                 contact.First_name, contact.Middle_initial, contact.Last_name, contact.Username, contact.Password,
-                contact.IlearnUser, contact.IlearnPass,
+                contact.IlearnUser, contact.IlearnPass, contact.Email,
                 contact.getClass1Data(), contact.getClass1Day(), contact.getClass1Time(),
                 contact.getClass2Data(), contact.getClass2Day(), contact.getClass2Time(),
                 contact.getClass3Data(), contact.getClass3Day(), contact.getClass3Time(),
@@ -172,6 +244,16 @@ public class QueryBuilder {
                 contact.getClass7Data(), contact.getClass7Day(), contact.getClass7Time(),
                 contact.getClass8Data(), contact.getClass8Day(), contact.getClass8Time(),
                 contact.getClass9Data(), contact.getClass9Day(), contact.getClass9Time(),
-                contact.getClass10Data(), contact.getClass10Day(), contact.getClass10Time());
+                contact.getClass10Data(), contact.getClass10Day(), contact.getClass10Time(),
+                contact.getFriend1Name(), contact.getFriend1Access(),
+                contact.getFriend2Name(), contact.getFriend2Access(),
+                contact.getFriend3Name(), contact.getFriend3Access(),
+                contact.getFriend4Name(), contact.getFriend4Access(),
+                contact.getFriend5Name(), contact.getFriend5Access(),
+                contact.getFriend6Name(), contact.getFriend6Access(),
+                contact.getFriend7Name(), contact.getFriend7Access(),
+                contact.getFriend8Name(), contact.getFriend8Access(),
+                contact.getFriend9Name(), contact.getFriend9Access(),
+                contact.getFriend10Name(), contact.getFriend10Access());
     }
 }

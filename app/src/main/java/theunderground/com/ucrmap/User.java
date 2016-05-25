@@ -14,6 +14,7 @@ public class User {
     public String Password = "";
     public String IlearnUser = "";
     public String IlearnPass = "";
+    public String Email = "";
     public String[] Class1  = new String[]{"", "",""};
     public String[] Class2  = new String[]{"", "",""};
     public String[] Class3  = new String[]{"", "",""};
@@ -24,7 +25,18 @@ public class User {
     public String[] Class8  = new String[]{"", "",""};
     public String[] Class9  = new String[]{"", "",""};
     public String[] Class10  = new String[]{"", "",""};
+    public String[] friend1 = new String[]{"","NO"};
+    public String[] friend2 = new String[]{"","NO"};
+    public String[] friend3 = new String[]{"","NO"};
+    public String[] friend4 = new String[]{"","NO"};
+    public String[] friend5 = new String[]{"","NO"};
+    public String[] friend6 = new String[]{"","NO"};
+    public String[] friend7 = new String[]{"","NO"};
+    public String[] friend8 = new String[]{"","NO"};
+    public String[] friend9 = new String[]{"","NO"};
+    public String[] friend10 = new String[]{"","NO"};
 
+    //strings for single fields
     public String getDoc_id() {
         return doc_id;
     }
@@ -73,6 +85,10 @@ public class User {
     public void setIlearnPass(String ilearnPass) {
         this.IlearnPass = ilearnPass;
     }
+    public String getEmail() { return Email; }
+    public void setEmail(String email) { this.Email = email; }
+
+    //string arrays for embeded classes
     public String getClass1Data(){return Class1[0];}
     public void setClass1Data(String data){this.Class1[0] = data;}
     public String getClass1Day(){return Class1[1];}
@@ -133,4 +149,51 @@ public class User {
     public void setClass10Day(String day){this.Class10[1] = day;}
     public String getClass10Time(){return Class10[2];}
     public void setClass10Time(String time){this.Class10[2] = time;}
+
+    //strings for embeded Friends Names
+    public String getFriend1Name(){ return friend1[0]; }
+    public void setFriend1Name(String name) { this.friend1[0] = name; }
+    public String getFriend2Name(){ return friend2[0]; }
+    public void setFriend2Name(String name) { this.friend2[0] = name; }
+    public String getFriend3Name(){ return friend3[0]; }
+    public void setFriend3Name(String name) { this.friend3[0] = name; }
+    public String getFriend4Name(){ return friend4[0]; }
+    public void setFriend4Name(String name) { this.friend4[0] = name; }
+    public String getFriend5Name(){ return friend5[0]; }
+    public void setFriend5Name(String name) { this.friend5[0] = name; }
+    public String getFriend6Name(){ return friend6[0]; }
+    public void setFriend6Name(String name) { this.friend6[0] = name; }
+    public String getFriend7Name(){ return friend7[0]; }
+    public void setFriend7Name(String name) { this.friend7[0] = name; }
+    public String getFriend8Name(){ return friend8[0]; }
+    public void setFriend8Name(String name) { this.friend8[0] = name; }
+    public String getFriend9Name(){ return friend9[0]; }
+    public void setFriend9Name(String name) { this.friend9[0] = name; }
+    public String getFriend10Name(){ return friend10[0]; }
+    public void setFriend10Name(String name) { this.friend10[0] = name; }
+
+    //Strings for embeded Friends Access
+    public String getFriend1Access() { return friend1[1]; }
+    public void setFriend1Accesss(String access) { this.friend1[1] = access; }
+    public String getFriend2Access() { return friend2[1]; }
+    public void setFriend2Accesss(String access) { this.friend2[1] = access; }
+    public String getFriend3Access() { return friend3[1]; }
+    public void setFriend3Accesss(String access) { this.friend3[1] = access; }
+    public String getFriend4Access() { return friend4[1]; }
+    public void setFriend4Accesss(String access) { this.friend4[1] = access; }
+    public String getFriend5Access() { return friend5[1]; }
+    public void setFriend5Accesss(String access) { this.friend5[1] = access; }
+    public String getFriend6Access() { return friend6[1]; }
+    public void setFriend6Accesss(String access) { this.friend6[1] = access; }
+    public String getFriend7Access() { return friend7[1]; }
+    public void setFriend7Accesss(String access) { this.friend7[1] = access; }
+    public String getFriend8Access() { return friend8[1]; }
+    public void setFriend8Accesss(String access) { this.friend8[1] = access; }
+    public String getFriend9Access() { return friend9[1]; }
+    public void setFriend9Accesss(String access) { this.friend9[1] = access; }
+    public String getFriend10Access() { return friend10[1]; }
+    public void setFriend10Accesss(String access) { this.friend10[1] = access; }
+
+
+
 }

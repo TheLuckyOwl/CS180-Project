@@ -16,7 +16,6 @@ import com.mongodb.DBObject;
  */
 public class GetUsersAsyncTask extends AsyncTask<User, Void, ArrayList<User>>{
     static BasicDBObject user = null;
-    static String OriginalObject = "";
     static String server_output = null;
 
             QueryBuilder qb = new QueryBuilder();
@@ -45,7 +44,6 @@ public class GetUsersAsyncTask extends AsyncTask<User, Void, ArrayList<User>>{
                 server_output = temp_output;
             }
 
-            // create a basic db list
             String mongoarray = "{ artificial_basicdb_list: "+server_output+"}";
             Object o = com.mongodb.util.JSON.parse(mongoarray);
 
@@ -65,8 +63,20 @@ public class GetUsersAsyncTask extends AsyncTask<User, Void, ArrayList<User>>{
                 DBObject Csub8 = (DBObject)userObj.get("Class8");
                 DBObject Csub9 = (DBObject)userObj.get("Class9");
                 DBObject Csub10 = (DBObject)userObj.get("Class10");
+                DBObject Friend1 = (DBObject) userObj.get("Friend1");
+                DBObject Friend2 = (DBObject) userObj.get("Friend2");
+                DBObject Friend3 = (DBObject) userObj.get("Friend3");
+                DBObject Friend4 = (DBObject) userObj.get("Friend4");
+                DBObject Friend5 = (DBObject) userObj.get("Friend5");
+                DBObject Friend6 = (DBObject) userObj.get("Friend6");
+                DBObject Friend7 = (DBObject) userObj.get("Friend7");
+                DBObject Friend8 = (DBObject) userObj.get("Friend8");
+                DBObject Friend9 = (DBObject) userObj.get("Friend9");
+                DBObject Friend10 = (DBObject) userObj.get("Friend10");
+
 
                 User temp = new User();
+                //getting simple fields
                 temp.setDoc_id(userObj.get("_id").toString());
                 temp.setFirst_name(userObj.get("FirstName").toString());
                 temp.setLast_name(userObj.get("LastName").toString());
@@ -75,6 +85,8 @@ public class GetUsersAsyncTask extends AsyncTask<User, Void, ArrayList<User>>{
                 temp.setPassword(userObj.get("Password").toString());
                 temp.setIlearnUser(userObj.get("ilearnUser").toString());
                 temp.setIlearnPass(userObj.get("ilearnPass").toString());
+                temp.setEmail(userObj.get("Email").toString());
+                //getting embeded classes fields
                 temp.setClass1Data(Csub1.get("Data").toString());
                 temp.setClass1Day(Csub1.get("Day").toString());
                 temp.setClass1Time(Csub1.get("Time").toString());
@@ -105,6 +117,27 @@ public class GetUsersAsyncTask extends AsyncTask<User, Void, ArrayList<User>>{
                 temp.setClass10Data(Csub10.get("Data").toString());
                 temp.setClass10Day(Csub10.get("Day").toString());
                 temp.setClass10Time(Csub10.get("Time").toString());
+                //getting embedded friends fields
+                temp.setFriend1Name(Friend1.get("Name").toString());
+                temp.setFriend1Accesss(Friend1.get("Access").toString());
+                temp.setFriend2Name(Friend2.get("Name").toString());
+                temp.setFriend2Accesss(Friend2.get("Access").toString());
+                temp.setFriend3Name(Friend3.get("Name").toString());
+                temp.setFriend3Accesss(Friend3.get("Access").toString());
+                temp.setFriend4Name(Friend4.get("Name").toString());
+                temp.setFriend4Accesss(Friend4.get("Access").toString());
+                temp.setFriend5Name(Friend5.get("Name").toString());
+                temp.setFriend5Accesss(Friend5.get("Access").toString());
+                temp.setFriend6Name(Friend6.get("Name").toString());
+                temp.setFriend6Accesss(Friend6.get("Access").toString());
+                temp.setFriend7Name(Friend7.get("Name").toString());
+                temp.setFriend7Accesss(Friend7.get("Access").toString());
+                temp.setFriend8Name(Friend8.get("Name").toString());
+                temp.setFriend8Accesss(Friend8.get("Access").toString());
+                temp.setFriend9Name(Friend9.get("Name").toString());
+                temp.setFriend9Accesss(Friend9.get("Access").toString());
+                temp.setFriend10Name(Friend10.get("Name").toString());
+                temp.setFriend10Accesss(Friend10.get("Access").toString());
                 Users.add(temp);
             }
 

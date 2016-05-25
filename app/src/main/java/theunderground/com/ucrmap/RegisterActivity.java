@@ -41,7 +41,7 @@ import com.mongodb.*;
  */
 public class RegisterActivity extends Activity{
     Button bSubmit,bBack;
-    EditText etFirst, etMI, etLast, etUsername, etPassword, etIlearnUser, etIlearnPass;
+    EditText etFirst, etMI, etLast, etUsername, etPassword, etIlearnUser, etIlearnPass, etEmail;
     TextView tvReg, tvFName,tvInitial, tvLname, tvUser, tvPass;
     ArrayList<User> returnValues = new ArrayList<User>();
 
@@ -56,6 +56,7 @@ public class RegisterActivity extends Activity{
         etPassword = (EditText) this.findViewById(R.id.etPassword);
         etIlearnUser = (EditText) this.findViewById(R.id.etIlearnUser);
         etIlearnPass = (EditText) this.findViewById(R.id.etIlearnPass);
+        etEmail = (EditText) this.findViewById(R.id.etEmailReg);
         bSubmit = (Button) this.findViewById(R.id.bSubmit);
         bBack = (Button) this.findViewById(R.id.bBackReg);
         tvFName = (TextView) this.findViewById(R.id.tvF_Name);
@@ -74,6 +75,7 @@ public class RegisterActivity extends Activity{
                 final String Password = etPassword.getText().toString();
                 final String IlearnUserF = etIlearnUser.getText().toString();
                 final String IlearnPassF = etIlearnPass.getText().toString();
+                final String EmailF = etEmail.getText().toString();
 
                 if(UserName.length() >= 6) {
                     GetUsersAsyncTask task = new GetUsersAsyncTask();
@@ -95,26 +97,37 @@ public class RegisterActivity extends Activity{
                     if (Exists) {
                         Toast.makeText(RegisterActivity.this, "Username has been taken", Toast.LENGTH_LONG).show();
                     } else {
-                        User contact = new User();
-                        contact.First_name = FirstName;
-                        contact.Middle_initial = MiddleInitial;
-                        contact.Last_name = LastName;
-                        contact.Username = UserName;
-                        contact.Password = Password;
-                        contact.IlearnUser = IlearnUserF;
-                        contact.IlearnPass = IlearnPassF;
+                        if (!FirstName.equals("") && !MiddleInitial.equals("") && !LastName.equals("")
+                                && !UserName.equals("") && !Password.equals("") && !EmailF.equals(""))
+                        {
+                            User contact = new User();
+                            contact.First_name = FirstName;
+                            contact.Middle_initial = MiddleInitial;
+                            contact.Last_name = LastName;
+                            contact.Username = UserName;
+                            contact.Password = Password;
+                            contact.IlearnUser = IlearnUserF;
+                            contact.IlearnPass = IlearnPassF;
+                            contact.Email = EmailF;
 
-                        SaveAsyncTask tsk = new SaveAsyncTask();
-                        tsk.execute(contact);
-                        Toast.makeText(RegisterActivity.this, "Registered Successfully. Returning to Login", Toast.LENGTH_LONG).show();
-                        Intent i = new Intent(RegisterActivity.this, LoginActivity.class);
-                        i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                        RegisterActivity.this.startActivity(i);
+                            SaveAsyncTask tsk = new SaveAsyncTask();
+                            tsk.execute(contact);
+                            Toast.makeText(RegisterActivity.this, "Registered Successfully. Returning to Login", Toast.LENGTH_LONG).show();
+                            Intent i = new Intent(RegisterActivity.this, LoginActivity.class);
+                            i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                            RegisterActivity.this.startActivity(i);
+                        }
+                        else
+                        {
+                            Toast.makeText(RegisterActivity.this, "Please fill in all required fields", Toast.LENGTH_LONG).show();
+                        }
                     }
                 }
                 else
                 {
-                    Toast.makeText(RegisterActivity.this, "Invalid Username", Toast.LENGTH_LONG).show();
+                    if(UserName.length() < 6) {
+                        Toast.makeText(RegisterActivity.this, "Invalid Username", Toast.LENGTH_LONG).show();
+                    }
                 }
             }
         });

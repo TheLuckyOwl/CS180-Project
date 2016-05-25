@@ -148,10 +148,9 @@
         android:layout_height="wrap_content"
         android:text="@string/Forgot_sub"
         android:id="@+id/bSubmit"
+        android:textColor="@color/colorText"
         android:layout_below="@+id/etIlearnPass"
-        android:layout_toStartOf="@+id/etMI"
-        android:layout_marginTop="42dp"
-        android:textColor="@color/colorText"/>
+        android:layout_toStartOf="@+id/etMI" />
 
     <Button
         android:layout_width="wrap_content"
@@ -169,12 +168,11 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="(optional)"
         android:id="@+id/tvOp"
-        android:layout_below="@+id/etPassword"
-        android:layout_alignParentStart="true"
-        android:layout_alignEnd="@+id/etLast"
         android:textColor="@color/colorText"
         android:layout_marginLeft="4dp"
-        android:layout_marginTop="6dp" />
+        android:layout_below="@+id/etEmailReg"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/tvIlearnUser" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -182,25 +180,25 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Ilearn Username:"
         android:id="@+id/tvIlearnUser"
-        android:layout_below="@+id/tvOp"
-        android:layout_alignParentStart="true"
         android:textColor="@color/colorText"
         android:layout_marginLeft="4dp"
-        android:layout_alignEnd="@+id/tvOp" />
+        android:layout_below="@+id/tvOp"
+        android:layout_alignEnd="@+id/etEmailReg"
+        android:layout_alignParentStart="true" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:id="@+id/etIlearnUser"
-        android:layout_below="@+id/tvIlearnUser"
-        android:layout_alignParentStart="true"
-        android:layout_alignEnd="@+id/etLast"
         android:textColor="@color/colorText"
         android:layout_marginLeft="4dp"
         android:nextFocusDown="@+id/tvIlearnPass"
         android:selectAllOnFocus="true"
-        android:imeOptions="actionNext"/>
+        android:imeOptions="actionNext"
+        android:layout_below="@+id/tvIlearnUser"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -208,11 +206,11 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Ilearn Password:"
         android:id="@+id/tvIlearnPass"
-        android:layout_below="@+id/tvOp2"
-        android:layout_alignParentStart="true"
         android:textColor="@color/colorText"
         android:layout_marginLeft="4dp"
-        android:layout_alignParentEnd="true" />
+        android:layout_below="@+id/tvOp2"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -220,11 +218,11 @@
         android:inputType="textPassword"
         android:ems="10"
         android:id="@+id/etIlearnPass"
+        android:textColor="@color/colorText"
+        android:layout_marginLeft="4dp"
         android:layout_below="@+id/tvIlearnPass"
         android:layout_alignParentStart="true"
-        android:layout_alignEnd="@+id/etLast"
-        android:textColor="@color/colorText"
-        android:layout_marginLeft="4dp" />
+        android:layout_alignEnd="@+id/tvIlearnPass" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -232,11 +230,31 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="(optional)"
         android:id="@+id/tvOp2"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/etIlearnUser"
-        android:layout_alignParentEnd="true"
         android:textColor="@color/colorText"
         android:layout_marginLeft="4dp"
-        android:layout_marginTop="6dp" />
+        android:layout_below="@+id/etIlearnUser"
+        android:layout_alignEnd="@+id/etIlearnUser"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Email:"
+        android:id="@+id/tvEmailReg"
+        android:textColor="@color/colorText"
+        android:layout_below="@+id/etPassword"
+        android:layout_alignStart="@+id/etPassword" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/etEmailReg"
+        android:textColor="@color/colorText"
+        android:layout_below="@+id/tvEmailReg"
+        android:layout_alignEnd="@+id/etPassword"
+        android:layout_alignStart="@+id/tvEmailReg" />
 
 </RelativeLayout>
