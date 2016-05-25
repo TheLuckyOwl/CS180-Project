@@ -67,7 +67,10 @@
         android:layout_below="@+id/tvF_Name"
         android:layout_alignParentStart="true"
         android:layout_toStartOf="@+id/tvM_Initial"
-        android:textColor="@color/colorText"/>
+        android:textColor="@color/colorText"
+        android:nextFocusRight="@+id/etMI"
+        android:selectAllOnFocus="true"
+        android:imeOptions="actionNext"/>
 
     <EditText
         android:layout_width="wrap_content"
@@ -78,7 +81,10 @@
         android:layout_alignTop="@+id/etFirst"
         android:layout_toEndOf="@+id/etFirst"
         android:width="80dp"
-        android:textColor="@color/colorText"/>
+        android:textColor="@color/colorText"
+        android:nextFocusRight="@+id/etLast"
+        android:selectAllOnFocus="true"
+        android:imeOptions="actionNext" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -187,17 +193,25 @@
         android:layout_alignParentStart="true"
         android:textColor="@color/colorText"
         android:layout_marginLeft="4dp"
+<<<<<<< HEAD
         android:textStyle="bold" />
+=======
+        android:layout_alignEnd="@+id/tvOp" />
+>>>>>>> origin/master
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:inputType="textPersonName"
         android:id="@+id/etIlearnUser"
         android:layout_below="@+id/tvIlearnUser"
         android:layout_alignParentStart="true"
         android:layout_alignEnd="@+id/etLast"
         android:textColor="@color/colorText"
-        android:layout_marginLeft="4dp" />
+        android:layout_marginLeft="4dp"
+        android:nextFocusDown="@+id/tvIlearnPass"
+        android:selectAllOnFocus="true"
+        android:imeOptions="actionNext"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -209,7 +223,11 @@
         android:layout_alignParentStart="true"
         android:textColor="@color/colorText"
         android:layout_marginLeft="4dp"
+<<<<<<< HEAD
         android:textStyle="bold" />
+=======
+        android:layout_alignParentEnd="true" />
+>>>>>>> origin/master
 
     <EditText
         android:layout_width="wrap_content"

@@ -51,12 +51,10 @@
         android:layout_height="wrap_content"
         android:text="@string/login"
         android:id="@+id/bLogin"
-        android:layout_below="@+id/etPassword"
-        android:layout_alignParentStart="false"
-        android:layout_alignParentEnd="true"
-        android:layout_alignLeft="@+id/imageView5"
-        android:layout_marginTop="12dp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:layout_below="@+id/cbLog"
+        android:layout_alignStart="@+id/cbLog"
+        android:layout_alignEnd="@+id/cbLog" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -65,8 +63,8 @@
         android:text="@string/ForgotLog"
         android:id="@+id/bForgotLog"
         android:layout_below="@+id/bLogin"
-        android:layout_alignEnd="@+id/bLogin"
-        android:layout_alignStart="@+id/bLogin" />
+        android:layout_alignStart="@+id/bLogin"
+        android:layout_alignEnd="@+id/bLogin" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -76,7 +74,7 @@
         android:id="@+id/bRegister"
         android:layout_below="@+id/bForgotLog"
         android:layout_alignStart="@+id/bForgotLog"
-        android:layout_alignEnd="@+id/bForgotLog" />
+        android:layout_alignEnd="@+id/bLogin" />
 
     <ImageView
         android:layout_width="wrap_content"
@@ -85,6 +83,16 @@
         android:src="@drawable/highlanderwelcome"
         android:layout_alignParentTop="true"
         android:layout_marginStart="90dp"/>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Keep me logged in"
+        android:id="@+id/cbLog"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/etPassword"
+        android:layout_alignStart="@+id/etPassword"
+        android:checked="false" />
 
 
 </RelativeLayout>
