@@ -2,6 +2,7 @@ package theunderground.com.ucrmap;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
@@ -61,24 +62,25 @@ public class FoodTruckLocations extends Activity{
 
     }
     public void solutions(int firstChoice){
-        Intent i = new Intent(FoodTruckLocations.this, WebViewActivity.class);
-
+        Intent i = new Intent(Intent.ACTION_VIEW);
+        String url = null;
         if (firstChoice == 0){
-            i.putExtra("Path", "http://vcsaweb.ucr.edu/foodtruck-location/Home/GoogleMap?truckName=CulinaryChameleon");
-            i.putExtra("Title", "Chameleon");
+            url = "http://vcsaweb.ucr.edu/foodtruck-location/Home/GoogleMap?truckName=CulinaryChameleon";
+
         }
         else if (firstChoice == 1){
-            i.putExtra("Path", "http://vcsaweb.ucr.edu/foodtruck-location/Home/GoogleMap?truckName=moomoo");
-            i.putExtra("Title","MooMoo");
+            url = "http://vcsaweb.ucr.edu/foodtruck-location/Home/GoogleMap?truckName=moomoo";
         }
         else if (firstChoice == 2){
-            i.putExtra("Path", "http://vcsaweb.ucr.edu/foodtruck-location/Home/GoogleMap?truckName=tartan");
-            i.putExtra("Title","Tartan");
+            url = "http://vcsaweb.ucr.edu/foodtruck-location/Home/GoogleMap?truckName=tartan";
         }
         else if (firstChoice == 3){
-            i.putExtra("Path", "http://vcsaweb.ucr.edu/foodtruck-location/Home/GoogleMap?truckName=BearTracks");
-            i.putExtra("Title","Bear Tracks");
+            url = "http://vcsaweb.ucr.edu/foodtruck-location/Home/GoogleMap?truckName=BearTracks";
         }
+        if (!url.startsWith("https://") && !url.startsWith("http://")){
+            url = "http://" + url;
+        }
+        i.setData(Uri.parse(url));
         startActivity(i);
     }
     private void back(){
@@ -87,5 +89,4 @@ public class FoodTruckLocations extends Activity{
         startActivity(intent);
         finish();
     }
-
 }
