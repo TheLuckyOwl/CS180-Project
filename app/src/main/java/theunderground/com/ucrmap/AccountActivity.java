@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
+import java.util.ArrayList;
+import java.util.concurrent.ExecutionException;
 
 
 /**
@@ -75,13 +77,45 @@ public class AccountActivity extends Activity {
         mILearnButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
-                startActivity((new Intent(AccountActivity.this, ILearnActivity.class)));
+                User CurrentUser = new User();
+                String LoggedinUser = LoginActivity.LoggedUser;
+                ArrayList<User> returnValues = new ArrayList<User>();
+                GetUsersAsyncTask task = new GetUsersAsyncTask();
+                try {
+                    returnValues = task.execute().get();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                } catch (ExecutionException e) {
+                    e.printStackTrace();
+                }
+                for (User x : returnValues) {
+                    {
+                        if (x.getUsername().equals(LoggedinUser)) {
+                            CurrentUser.setIlearnUser(x.getIlearnUser());
+                            CurrentUser.setIlearnPass(x.getIlearnPass());
+                        }
+                    }
+                }
+                final String password = CurrentUser.getIlearnPass();
+                final String uname = CurrentUser.getIlearnUser();
+                Intent i = new Intent(AccountActivity.this, WebViewActivity.class);
+                i.putExtra("Path", "https://ilearn.ucr.edu/webapps/bb-auth-provider-cas-bb_bb60/execute/casLogin?cmd=login&authProviderId=_102_1&redirectUrl=https%3A%2F%2Filearn.ucr.edu%2F\"");
+                i.putExtra("Title", "ILearn");
+                i.putExtra("JavaScript", "javascript: {" +
+                        "document.getElementById('username').value = '" + uname + "';" +
+                        "document.getElementById('password').value = '" + password + "';" +
+                        "var frms = document.getElementsByName('loginForm');" +
+                        "frms[0].submit(); };");
+                startActivity(i);
             }
         });
         mProfessorButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
-                startActivity((new Intent(AccountActivity.this, RateMyProfessor.class)));
+                Intent i = new Intent(AccountActivity.this, WebViewActivity.class);
+                i.putExtra("Path", "http://www.ratemyprofessors.com/campusRatings.jsp?sid=1076");
+                i.putExtra("Title", "Rate My Professor");
+                startActivity(i);
             }
         });
         mRoomsButton.setOnClickListener(new View.OnClickListener() {
@@ -111,7 +145,10 @@ public class AccountActivity extends Activity {
         mLibraryButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
-                startActivity((new Intent(AccountActivity.this, LibraryActivity.class)));
+                Intent i = new Intent(AccountActivity.this, WebViewActivity.class);
+                i.putExtra("Path", "http://ucr.evanced.info/dibs/Login");
+                i.putExtra("Title", "Library Reservation");
+                startActivity(i);
             }
         });
         mAboutButton.setOnClickListener(new View.OnClickListener() {

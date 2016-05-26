@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
-    android:background="#ffffff">
+    android:background="@color/colorPrimary">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -11,7 +11,6 @@
         android:weightSum="3"
         android:layout_weight="1"
         android:showDividers="beginning"
-        android:background="#ffffff"
         android:id = "@+id/textBar">
 
         <TextView
@@ -19,30 +18,30 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:background="#ffffff"
             android:text="Class"
             android:id="@+id/classs"
-            android:textSize="24sp"/>
+            android:textSize="20sp"
+            android:textColor="@color/colorText"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:background="#ffffff"
             android:text="Day"
             android:id="@+id/day"
-            android:textSize="24sp"/>
+            android:textSize="20sp"
+            android:textColor="@color/colorText"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:background="#ffffff"
             android:text="Time"
             android:id="@+id/time"
-            android:textSize="24sp"/>
+            android:textSize="20sp"
+            android:textColor="@color/colorText"/>
     </LinearLayout>
 
     <View

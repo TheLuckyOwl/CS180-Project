@@ -22,8 +22,7 @@
             android:background="#ffffff"
             android:hint="ie. CS 100"
             android:id="@+id/classs"
-            android:textSize="22sp"
-            android:editable="true" />
+            android:textSize="22sp" />
 
         <EditText
             android:layout_width="wrap_content"

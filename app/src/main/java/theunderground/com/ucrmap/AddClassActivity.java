@@ -779,11 +779,15 @@ public class AddClassActivity extends Activity {
         if (findViewById(R.id.addDayRow3).toString() != null) {
             i.putExtra("DayRow3", findViewById(R.id.addDayRow3).toString());
         }
+        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(i);
+        finish();
     }
 
     private void showCancelActivity() {
-        Intent i = new Intent(this, ScheduleActivity.class);
-        startActivity(i);
+        Intent intent = new Intent(this, ScheduleActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
+        finish();
     }
 }
