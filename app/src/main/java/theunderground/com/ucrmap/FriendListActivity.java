@@ -23,8 +23,8 @@ public class FriendListActivity extends Activity{
     private User CurrentUser = new User();
     private String LoggedinUser = LoginActivity.LoggedUser;
     ArrayList<User> returnValues = new ArrayList<User>();
-    ArrayList<String> UsersToFind;
-    ArrayList<String[]> Friends;
+    ArrayList<String> UsersToFind = new ArrayList<String>();
+    ArrayList<String[]> Friends = new ArrayList<String[]>();
 
 
 
