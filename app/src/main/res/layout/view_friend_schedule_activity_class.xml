@@ -39,7 +39,7 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/addClass"
+            android:id="@+id/bBTSearch"
             android:text="Back to Search"
             android:textColor="@color/colorText"
             android:layout_weight="1"
@@ -48,11 +48,11 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/removeClass"
             android:text="Back to Friends List"
             android:textColor="@color/colorText"
             android:layout_weight="1"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:id="@+id/bFriendList" />
 
     </LinearLayout>
 

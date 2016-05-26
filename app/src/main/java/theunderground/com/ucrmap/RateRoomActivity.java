@@ -52,6 +52,8 @@ public class RateRoomActivity extends Activity {
                         if (x.getClassroom_name().equals(searchSplit[1])) {
                             isFound = true;
                             Intent i = new Intent(RateRoomActivity.this, RoomPageActivity.class);
+                            i.putExtra("BuildingName", searchSplit[0]);
+                            i.putExtra("ClassroomName", searchSplit[1]);
                             startActivity(i);
                         }
                     }

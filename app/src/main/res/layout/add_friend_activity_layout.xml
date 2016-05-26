@@ -19,22 +19,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/Forgot_sub"
-        android:id="@+id/bRecover"
+        android:id="@+id/bAdd"
         android:width="200dp"
         android:textColor="@color/colorText"
         android:textStyle="bold"
-        android:layout_below="@+id/etUserRec" />
+        android:layout_below="@+id/etFrAdd" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/backReg"
-        android:id="@+id/bBacRec"
+        android:id="@+id/bBacAdd"
         android:textColor="@color/colorText"
         android:textStyle="bold"
-        android:layout_alignTop="@+id/bRecover"
+        android:layout_alignTop="@+id/bAdd"
         android:layout_alignParentEnd="true"
-        android:layout_toEndOf="@+id/bRecover" />
+        android:layout_toEndOf="@+id/bAdd" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -46,7 +46,7 @@
         android:textColor="@color/colorText"
         android:textSize="16sp"
         android:layout_alignParentEnd="true"
-        android:layout_alignStart="@+id/bRecover"
+        android:layout_alignStart="@+id/bAdd"
         android:layout_below="@+id/AddFriendTitle" />
 
     <EditText
@@ -54,12 +54,12 @@
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:ems="10"
-        android:id="@+id/etUserRec"
+        android:id="@+id/etFrAdd"
         android:layout_below="@+id/tvUserRecov"
         android:layout_alignParentStart="true"
         android:textColor="@color/colorText"
         android:layout_marginBottom="6dp"
         android:layout_marginTop="6dp"
-        android:layout_alignEnd="@+id/bBacRec" />
+        android:layout_alignEnd="@+id/bBacAdd" />
 
 </RelativeLayout>

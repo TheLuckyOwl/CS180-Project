@@ -149,6 +149,30 @@ public class FriendListActivity extends Activity{
                 // ...
             }
         }));
+
+        mBackButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(FriendListActivity.this, AccountActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        mSearch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(FriendListActivity.this, FriendSearchActivity.class));
+            }
+        });
+
+        mAddFriend.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //startActivity(new Intent(FriendListActivity.this, AddFriendActivity.class));
+            }
+        });
     }
     public void solutions(int firstChoice){
         Intent i = new Intent(FriendListActivity.this, FriendsScheduleActivity.class);
