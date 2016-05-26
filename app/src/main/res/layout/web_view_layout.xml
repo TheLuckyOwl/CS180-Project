@@ -3,16 +3,30 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary">
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_alignBottom="@+id/libraryTitle"
+        android:layout_alignTop="@+id/libraryTitle"
+        android:scaleType="fitCenter"
+        android:tint="@color/colorTextDark"
+        android:src="@drawable/back"
+        android:background="@color/colorPrimary"
+        android:id="@+id/backButton" />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Library Activity"
+        android:text="THIS IS THE TITLE"
         android:textSize="30sp"
         android:id="@+id/libraryTitle"
         android:textAlignment="center"
-        android:textColor="@color/colorText" />
+        android:textColor="@color/colorTextDark"
+        android:textStyle="bold" />
+
     <WebView
-        android:id="@+id/libView"
+        android:id="@+id/displayView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/libraryTitle"

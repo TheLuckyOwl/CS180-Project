@@ -4,20 +4,31 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/colorPrimary"
-    android:layout_weight="0.3"
     android:id="@+id/map_title">
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_alignBottom="@+id/libraryTitle"
+        android:layout_alignTop="@+id/libraryTitle"
+        android:scaleType="fitCenter"
+        android:tint="@color/colorTextDark"
+        android:src="@drawable/back"
+        android:background="@color/colorPrimary"
+        android:id="@+id/backButton" />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="UCR Map"
         android:textSize="30sp"
-        android:id="@+id/diningTitle"
+        android:id="@+id/libraryTitle"
         android:textAlignment="center"
-        android:textColor="@color/colorText" />
+        android:textColor="@color/colorTextDark"
+        android:textStyle="bold" />
     <fragment
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:layout_alignParentStart="true"
+        android:layout_below="@+id/libraryTitle"
         android:id="@+id/map"
         android:name="com.google.android.gms.maps.SupportMapFragment"
         tools:context="theunderground.com.ucrmap.UCRMapActivity"/>

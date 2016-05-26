@@ -284,7 +284,7 @@
                 android:layout_weight="0.2"
                 android:textAlignment="center"
                 android:textColor="@color/colorText"
-                android:text="About"/>
+                android:text="Settings"/>
         </LinearLayout>
         <LinearLayout
             android:orientation="vertical"
@@ -329,12 +329,16 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_column="1"
-            android:layout_weight="2.40"
-            android:weightSum="2">
-            <ImageButton
+            android:layout_weight="2.40">
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
+                android:text="Log Out"
+                android:textSize="16sp"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:background="#505051"
                 android:id="@+id/logoutButton"
                 />
         </LinearLayout>

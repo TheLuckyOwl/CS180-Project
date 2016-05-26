@@ -170,7 +170,6 @@ public class LoginActivity extends Activity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(LoginActivity.this, ForgotLogin.class);
-                i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 LoginActivity.this.startActivity(i);
             }
         });
@@ -180,7 +179,6 @@ public class LoginActivity extends Activity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(LoginActivity.this, RegisterActivity.class);
-                i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 LoginActivity.this.startActivity(i);
             }
         });

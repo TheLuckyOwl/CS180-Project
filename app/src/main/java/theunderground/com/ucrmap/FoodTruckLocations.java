@@ -3,11 +3,7 @@ package theunderground.com.ucrmap;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MotionEvent;
 import android.view.View;
-import android.webkit.WebView;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -35,7 +31,7 @@ public class FoodTruckLocations extends Activity{
             @Override
             public void onClick(View view) {
                 String url = "http://vcsaweb.ucr.edu/foodtruck-location/Home/GoogleMap?truckName=moomoo";
-                Intent i = new Intent(FoodTruckLocations.this, MenuDisplay.class);
+                Intent i = new Intent(FoodTruckLocations.this, WebViewActivity.class);
                 i.putExtra("Path", url);
                 startActivity(i);
             }
@@ -46,7 +42,7 @@ public class FoodTruckLocations extends Activity{
             @Override
             public void onClick(View view) {
                 String url = "http://vcsaweb.ucr.edu/foodtruck-location/Home/GoogleMap?truckName=CulinaryChameleon";
-                Intent i = new Intent(FoodTruckLocations.this, MenuDisplay.class);
+                Intent i = new Intent(FoodTruckLocations.this, WebViewActivity.class);
                 i.putExtra("Path", url);
                 startActivity(i);
             }
@@ -57,7 +53,7 @@ public class FoodTruckLocations extends Activity{
             @Override
             public void onClick(View view) {
                 String url = "http://vcsaweb.ucr.edu/foodtruck-location/Home/GoogleMap?truckName=tartan";
-                Intent i = new Intent(FoodTruckLocations.this, MenuDisplay.class);
+                Intent i = new Intent(FoodTruckLocations.this, WebViewActivity.class);
                 i.putExtra("Path", url);
                 startActivity(i);
             }
@@ -68,7 +64,7 @@ public class FoodTruckLocations extends Activity{
             @Override
             public void onClick(View view) {
                 String url = "http://vcsaweb.ucr.edu/foodtruck-location/Home/GoogleMap?truckName=BearTracks";
-                Intent i = new Intent(FoodTruckLocations.this, MenuDisplay.class);
+                Intent i = new Intent(FoodTruckLocations.this, WebViewActivity.class);
                 i.putExtra("Path", url);
                 startActivity(i);
             }

@@ -440,7 +440,9 @@ public class RemoveClassActivity extends Activity{
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(RemoveClassActivity.this, ScheduleActivity.class);
+                i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
                 RemoveClassActivity.this.startActivity(i);
+                finish();
             }
         });
     }
