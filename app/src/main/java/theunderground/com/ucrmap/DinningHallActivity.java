@@ -13,8 +13,6 @@ import android.support.v7.widget.RecyclerView;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
-
 
 /**
  * Created by Larry Parsons on 4/14/2016.

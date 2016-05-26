@@ -1,0 +1,47 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="100dp"
+    android:background="@color/colorPrimary"
+    >
+
+    <TextView
+        android:id="@+id/descriptionText"
+        android:layout_width="fill_parent"
+        android:layout_height="32dip"
+        android:layout_below="@+id/tabTitle"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:text="Description"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="1dp"
+        android:textSize="14sp"
+        android:textColor="@color/colorText" />
+
+    <TextView
+        android:id="@+id/tabTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="1dp"
+        android:gravity="center_vertical"
+        android:text="Example application"
+        android:singleLine="true"
+        android:textSize="24sp"
+        android:textColor="@color/colorText"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:background="@color/ripple_material_light"
+        />
+
+</RelativeLayout> 
