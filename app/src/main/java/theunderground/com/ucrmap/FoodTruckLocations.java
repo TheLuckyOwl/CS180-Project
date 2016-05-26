@@ -4,13 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-<<<<<<< Updated upstream
-=======
-import android.webkit.WebView;
-import android.widget.Button;
 import android.widget.ImageButton;
->>>>>>> Stashed changes
-import android.widget.ImageView;
 import android.widget.TextView;
 
 

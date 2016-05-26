@@ -340,7 +340,7 @@
                 android:textStyle="bold"
                 android:background="#505051"
                 android:id="@+id/logoutButton"
-                />
+                android:clickable="true" />
         </LinearLayout>
         <LinearLayout
             android:orientation="vertical"
