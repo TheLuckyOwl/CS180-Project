@@ -60,7 +60,7 @@ public class AccountActivity extends Activity {
         mFriendsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
-                //startActivity((new Intent(AccountActivity.this, )));
+                startActivity((new Intent(AccountActivity.this, FriendListActivity.class)));
             }
         });
         mMapButton.setOnClickListener(new View.OnClickListener() {

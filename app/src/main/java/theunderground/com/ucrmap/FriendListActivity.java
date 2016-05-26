@@ -193,7 +193,19 @@ public class FriendListActivity extends Activity{
         {
             i.putExtra("FriendUserName", UsersToFind.get(9));
         }
-        //startActivity(i);
+        startActivity(i);
+        mBackButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                back();
+            }
+        });
+    }
+    private void back(){
+        Intent intent = new Intent(FriendListActivity.this, AccountActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
+        finish();
     }
 
 }
