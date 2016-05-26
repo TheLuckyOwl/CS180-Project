@@ -56,6 +56,11 @@ public class UpdateIlearnActivity extends Activity {
                     CurrentUser.setIlearnUser(x.getIlearnUser());
                     CurrentUser.setIlearnPass(x.getIlearnPass());
                     CurrentUser.setEmail(x.getEmail());
+                    CurrentUser.setPendingRequest1(x.getPendingRequest1());
+                    CurrentUser.setPendingRequest2(x.getPendingRequest2());
+                    CurrentUser.setPendingRequest3(x.getPendingRequest3());
+                    CurrentUser.setPendingRequest4(x.getPendingRequest4());
+                    CurrentUser.setPendingRequest5(x.getPendingRequest5());
                     CurrentUser.setClass1Data(x.getClass1Data());
                     CurrentUser.setClass1Day(x.getClass1Day());
                     CurrentUser.setClass1Time(x.getClass1Time());

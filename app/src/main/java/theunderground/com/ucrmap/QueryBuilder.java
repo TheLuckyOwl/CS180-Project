@@ -59,6 +59,11 @@ public class QueryBuilder {
                         + "\"ilearnUser\" : \"%s\", "
                         + "\"ilearnPass\" : \"%s\", "
                         + "\"Email\" : \"%s\", "
+                        + "\"PendingRequest1\" : \"%s\", "
+                        + "\"PendingRequest2\" : \"%s\", "
+                        + "\"PendingRequest3\" : \"%s\", "
+                        + "\"PendingRequest4\" : \"%s\", "
+                        + "\"PendingRequest5\" : \"%s\", "
                         + "\"Class1\" : "
                         +"{\"Data\" : \"%s\", "
                         +"\"Day\" : \"%s\", "
@@ -131,6 +136,8 @@ public class QueryBuilder {
                         + "\"Access\" : \"%s\"}}",
                         contact.First_name, contact.Middle_initial, contact.Last_name, contact.Username, contact.Password,
                         contact.IlearnUser, contact.IlearnPass, contact.Email,
+                        contact.getPendingRequest1(), contact.getPendingRequest2(), contact.getPendingRequest3(),
+                        contact.getPendingRequest4(), contact.getPendingRequest5(),
                         contact.getClass1Data(), contact.getClass1Day(), contact.getClass1Time(),
                         contact.getClass2Data(), contact.getClass2Day(), contact.getClass2Time(),
                         contact.getClass3Data(), contact.getClass3Day(), contact.getClass3Time(),
@@ -163,6 +170,11 @@ public class QueryBuilder {
                 + "\"ilearnUser\" : \"%s\", "
                 + "\"ilearnPass\" : \"%s\", "
                 + "\"Email\" : \"%s\", "
+                + "\"PendingRequest1\" : \"%s\", "
+                + "\"PendingRequest2\" : \"%s\", "
+                + "\"PendingRequest3\" : \"%s\", "
+                + "\"PendingRequest4\" : \"%s\", "
+                + "\"PendingRequest5\" : \"%s\", "
                 + "\"Class1\" : "
                 +"{\"Data\" : \"%s\", "
                 +"\"Day\" : \"%s\", "
@@ -235,6 +247,8 @@ public class QueryBuilder {
                 + "\"Access\" : \"%s\"}}" + "}",
                 contact.First_name, contact.Middle_initial, contact.Last_name, contact.Username, contact.Password,
                 contact.IlearnUser, contact.IlearnPass, contact.Email,
+                contact.getPendingRequest1(), contact.getPendingRequest2(), contact.getPendingRequest3(),
+                contact.getPendingRequest4(), contact.getPendingRequest5(),
                 contact.getClass1Data(), contact.getClass1Day(), contact.getClass1Time(),
                 contact.getClass2Data(), contact.getClass2Day(), contact.getClass2Time(),
                 contact.getClass3Data(), contact.getClass3Day(), contact.getClass3Time(),

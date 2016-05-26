@@ -15,6 +15,11 @@ public class User {
     public String IlearnUser = "";
     public String IlearnPass = "";
     public String Email = "";
+    public String PendingRequest1 = "";
+    public String PendingRequest2 = "";
+    public String PendingRequest3 = "";
+    public String PendingRequest4 = "";
+    public String PendingRequest5 = "";
     public String[] Class1  = new String[]{"", "",""};
     public String[] Class2  = new String[]{"", "",""};
     public String[] Class3  = new String[]{"", "",""};
@@ -194,6 +199,28 @@ public class User {
     public String getFriend10Access() { return friend10[1]; }
     public void setFriend10Accesss(String access) { this.friend10[1] = access; }
 
+    //Strings for Pending Requests getting
+    public String getPendingRequest1() {
+        return PendingRequest1;
+    }
+    public String getPendingRequest2() {
+        return PendingRequest2;
+    }
+    public String getPendingRequest3() {
+        return PendingRequest3;
+    }
+    public String getPendingRequest4() {
+        return PendingRequest4;
+    }
+    public String getPendingRequest5() {
+        return PendingRequest5;
+    }
 
-
+    //Strings for Setting Requests
+    public void setPendingRequest1(String pendingRequest1) { this.PendingRequest1 = pendingRequest1; }
+    public void setPendingRequest2(String pendingRequest2) { this.PendingRequest2 = pendingRequest2; }
+    public void setPendingRequest3(String pendingRequest3) { this.PendingRequest3 = pendingRequest3; }
+    public void setPendingRequest4(String pendingRequest4) { this.PendingRequest4 = pendingRequest4; }
+    public void setPendingRequest5(String pendingRequest5) { this.PendingRequest5 = pendingRequest5; }
 }
+

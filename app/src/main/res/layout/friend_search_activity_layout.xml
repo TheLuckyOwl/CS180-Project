@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Search for friend "
+        android:textSize="30sp"
+        android:id="@+id/scheduleTitle"
+        android:textAlignment="center"
+        android:textColor="@color/colorTextDark"
+        android:textStyle="bold"
+        android:textIsSelectable="false" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="ie. WCH 136"
+        android:id="@+id/etFSearch"
+        android:background="#333030"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:paddingLeft="18dp"
+        android:textColor="#ffffff"
+        android:layout_alignTop="@+id/bFSearch"
+        android:layout_alignParentStart="true"
+        android:layout_alignBottom="@+id/bFSearch"
+        android:layout_toStartOf="@+id/bFSearch" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="38dp"
+        android:layout_marginRight="5dp"
+        android:text="Go"
+        android:id="@+id/bFSearch"
+        android:textColor="@color/colorText"
+        android:textAlignment="center"
+        android:layout_below="@+id/scheduleTitle"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="71dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:id="@+id/bFBack"
+        android:width="200dp"
+        android:textColor="@color/colorText"
+        android:textStyle="bold"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add a Friend"
+        android:textSize="30sp"
+        android:id="@+id/AddFriendTitle"
+        android:textAlignment="center"
+        android:textColor="@color/colorTextDark"
+        android:textStyle="bold"
+        android:textIsSelectable="false" />
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Forgot_sub"
+        android:id="@+id/bRecover"
+        android:width="200dp"
+        android:textColor="@color/colorText"
+        android:textStyle="bold"
+        android:layout_below="@+id/etUserRec" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/backReg"
+        android:id="@+id/bBacRec"
+        android:textColor="@color/colorText"
+        android:textStyle="bold"
+        android:layout_alignTop="@+id/bRecover"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/bRecover" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Enter Username:"
+        android:textStyle="bold"
+        android:id="@+id/tvUserRecov"
+        android:textColor="@color/colorText"
+        android:textSize="16sp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignStart="@+id/bRecover"
+        android:layout_below="@+id/AddFriendTitle" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/etUserRec"
+        android:layout_below="@+id/tvUserRecov"
+        android:layout_alignParentStart="true"
+        android:textColor="@color/colorText"
+        android:layout_marginBottom="6dp"
+        android:layout_marginTop="6dp"
+        android:layout_alignEnd="@+id/bBacRec" />
+
+</RelativeLayout>

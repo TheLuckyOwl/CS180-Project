@@ -20,6 +20,7 @@ public class RateRoomActivity extends Activity {
     private Button mGo = null;
     private Button mAdd = null;
     private EditText mSearch = null;
+    private String LoggedinUser = LoginActivity.LoggedUser;
     private boolean isFound = false;
 
     @Override
