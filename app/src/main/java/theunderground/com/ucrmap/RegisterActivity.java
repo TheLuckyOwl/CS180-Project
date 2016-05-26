@@ -97,8 +97,7 @@ public class RegisterActivity extends Activity{
                     if (Exists) {
                         Toast.makeText(RegisterActivity.this, "Username has been taken", Toast.LENGTH_LONG).show();
                     } else {
-                        if (!FirstName.equals("") && !MiddleInitial.equals("") && !LastName.equals("")
-                                && !UserName.equals("") && !Password.equals("") && !EmailF.equals(""))
+                        if (!FirstName.equals("")  && !LastName.equals("") && !UserName.equals("") && !Password.equals("") && !EmailF.equals(""))
                         {
                             User contact = new User();
                             contact.First_name = FirstName;
@@ -126,7 +125,7 @@ public class RegisterActivity extends Activity{
                 else
                 {
                     if(UserName.length() < 6) {
-                        Toast.makeText(RegisterActivity.this, "Invalid Username", Toast.LENGTH_LONG).show();
+                        Toast.makeText(RegisterActivity.this, "Username must be at least 6 characters long", Toast.LENGTH_LONG).show();
                     }
                 }
             }
