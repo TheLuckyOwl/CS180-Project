@@ -16,11 +16,12 @@ import android.widget.TextView;
  */
 public class CampusSafetyActivity extends Activity{
 
+    private ImageButton mBackButton = null;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.campus_safety_activity_layout);
-
+        mBackButton = (ImageButton)findViewById(R.id.backButton);
         Button mCSES = (Button) findViewById(R.id.callCSES);
         Button mUCPD = (Button) findViewById(R.id.callUCPD);
         Button m911 = (Button) findViewById(R.id.call911);
@@ -54,5 +55,17 @@ public class CampusSafetyActivity extends Activity{
                 startActivity(i);
             }
         });
+        mBackButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                back();
+            }
+        });
+    }
+    private void back(){
+        Intent intent = new Intent(CampusSafetyActivity.this, AccountActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
+        finish();
     }
 }

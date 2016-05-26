@@ -2,7 +2,8 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/ScrollView01"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
+    android:layout_height="fill_parent"
+    android:background="@color/colorPrimary">
 
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
@@ -10,23 +11,30 @@
         android:orientation="vertical"
         android:paddingTop="20dp"
         android:paddingBottom="20dp">
-
-        <TextView
-            android:layout_width="match_parent"
+        <ImageButton
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_marginStart="10dp"
+            android:layout_alignBottom="@+id/textView3"
+            android:layout_alignTop="@+id/textView3"
+            android:scaleType="fitCenter"
+            android:tint="@color/colorTextDark"
+            android:src="@drawable/back"
+            android:background="@color/colorPrimary"
+            android:id="@+id/backButton" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
             android:text="Safety Resources"
             android:id="@+id/textView3"
-            android:singleLine="true"
-            android:background="#040056"
-            android:textColor="#ffffff"
-            android:textColorHighlight="#e7e8f0"
-            android:textSize="44sp"
-            android:textAlignment="center"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"
             android:layout_alignParentTop="true"
-            android:layout_alignParentStart="true" />
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:height="50dp"
+            android:textAlignment="center"
+            android:textColor="@color/colorTextDark"
+            android:textSize="36sp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -40,7 +48,8 @@
             android:layout_below="@+id/textView3"
             android:layout_alignParentStart="true"
             android:paddingBottom="15dp"
-            android:paddingRight="13dp" />
+            android:paddingRight="13dp"
+            android:textColor="@color/colorText" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -51,7 +60,8 @@
             android:layout_alignParentStart="true"
             android:paddingLeft="13dp"
             android:paddingRight="13dp"
-            android:paddingBottom="20dp" />
+            android:paddingBottom="20dp"
+            android:textColor="@color/colorText" />
 
         <Button
             android:layout_width="140dp"
@@ -62,7 +72,7 @@
             android:shadowColor="#c2c2c2"
             android:textAlignment="center"
             android:clickable="true"
-            android:textColor="#ffffff"
+            android:textColor="@color/colorText"
             android:layout_below="@+id/textView4"
             android:layout_centerHorizontal="true" />
 
@@ -76,7 +86,8 @@
             android:paddingLeft="13dp"
             android:paddingRight="13dp"
             android:paddingTop="20dp"
-            android:paddingBottom="5dp" />
+            android:paddingBottom="5dp"
+            android:textColor="@color/colorText" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -85,7 +96,7 @@
             android:id="@+id/textView9"
             android:layout_below="@+id/textView7"
             android:layout_alignParentStart="true"
-            android:textColor="#000aa6"
+            android:textColor="@color/colorPrimaryLight"
             android:paddingLeft="13dp"
             android:paddingRight="13dp"
             android:paddingBottom="5dp"
@@ -103,7 +114,8 @@
             android:paddingBottom="15dp"
             android:paddingRight="13dp"
             android:layout_below="@+id/textView9"
-            android:layout_alignParentStart="true" />
+            android:layout_alignParentStart="true"
+            android:textColor="@color/colorText" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -114,7 +126,8 @@
             android:paddingRight="13dp"
             android:paddingBottom="20dp"
             android:layout_below="@+id/textView10"
-            android:layout_alignParentStart="true" />
+            android:layout_alignParentStart="true"
+            android:textColor="@color/colorText" />
 
         <Button
             android:layout_width="100dp"
@@ -124,7 +137,7 @@
             android:background="#6a6a6a"
             android:textAlignment="center"
             android:clickable="true"
-            android:textColor="#ffffff"
+            android:textColor="@color/colorText"
             android:layout_below="@+id/textView11"
             android:layout_centerHorizontal="true" />
 
@@ -138,7 +151,8 @@
             android:paddingLeft="13dp"
             android:paddingRight="13dp"
             android:paddingTop="20dp"
-            android:paddingBottom="20dp" />
+            android:paddingBottom="20dp"
+            android:textColor="@color/colorText" />
 
         <Button
             android:layout_width="90dp"
@@ -148,7 +162,7 @@
             android:background="#dfb427"
             android:textAlignment="center"
             android:clickable="true"
-            android:textColor="#ffffff"
+            android:textColor="@color/colorText"
             android:layout_below="@+id/textView17"
             android:layout_centerHorizontal="true" />
 

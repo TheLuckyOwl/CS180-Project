@@ -1,27 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Update Ilearn Information"
+        android:text="Ilearn Information"
         android:id="@+id/tvIlearnUp"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:textColor="@color/colorTextDark"
+        android:textSize="36sp"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Updated Ilearn Username:"
+        android:text="Update Ilearn Username:"
         android:id="@+id/tvIlearnUName"
         android:layout_below="@+id/tvIlearnUp"
         android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:textColor="@color/colorText"
+        android:textSize="16sp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="20dp" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -31,17 +39,24 @@
         android:id="@+id/etUpdateU"
         android:layout_below="@+id/tvIlearnUName"
         android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:textColor="@color/colorText"
+        android:textSize="16sp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Updated Ilearn Password:"
+        android:text="Update Ilearn Password:"
         android:id="@+id/tvIlearnPWord"
         android:layout_below="@+id/etUpdateU"
         android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:textColor="@color/colorText"
+        android:textSize="16sp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="20dp"/>
 
     <EditText
         android:layout_width="wrap_content"
@@ -51,21 +66,31 @@
         android:id="@+id/etUpdateP"
         android:layout_below="@+id/tvIlearnPWord"
         android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:textColor="@color/colorText"
+        android:textSize="16sp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Submit"
         android:id="@+id/bUSubmit"
-        android:layout_below="@+id/etUpdateP"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:width="200dp"
+        android:textColor="@color/colorText"
+        android:textStyle="bold" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Cancel"
         android:id="@+id/bUCancel"
-        android:layout_below="@+id/bUSubmit"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/colorText"
+        android:textStyle="bold"
+        android:layout_toEndOf="@+id/bUSubmit" />
 </RelativeLayout>

@@ -11,6 +11,9 @@ import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.ImageButton;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 
 /**
@@ -20,7 +23,7 @@ public class DinningHallActivity extends Activity {
 
     SharedPreferences prefs = null;
     private ImageButton mBackButton = null;
-
+    private TextView mTitle = null;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -28,7 +31,8 @@ public class DinningHallActivity extends Activity {
         setContentView(R.layout.dinning_hall_activity_layout);
         RecyclerView recyclerView = (RecyclerView) this.findViewById(R.id.recyclerViewTab);
         TabWizardAdapter mAdapter;
-
+        mTitle = (TextView)findViewById(R.id.diningTitle);
+        mTitle.setText("Dining Halls");
         mBackButton = (ImageButton)findViewById(R.id.backButton);
         mBackButton.setOnClickListener(new View.OnClickListener(){
             @Override
