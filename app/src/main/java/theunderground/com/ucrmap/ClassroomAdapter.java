@@ -40,9 +40,7 @@ public class ClassroomAdapter extends RecyclerView.Adapter<ClassroomAdapter.View
         }
     }
     @Override
-    public int getItemCount() {
-        return 1;
-    }
+    public int getItemCount() { return itemsData.length; }
 
 
 }

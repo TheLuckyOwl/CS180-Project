@@ -59,6 +59,7 @@ public class GetClassroomAsyncTask extends AsyncTask<Classroom, Void, ArrayList<
                 Classroom temp = new Classroom();
                 temp.setDoc_id(userObj.get("_id").toString());
                 temp.setClassroom_name(userObj.get("Classroom").toString());
+                temp.setBuilding_name(userObj.get("Building").toString());
                 temp.setComment1(userObj.get("Comment1").toString());
                 temp.setComment2(userObj.get("Comment2").toString());
                 temp.setComment3(userObj.get("Comment3").toString());
@@ -69,6 +70,7 @@ public class GetClassroomAsyncTask extends AsyncTask<Classroom, Void, ArrayList<
                 temp.setComment8(userObj.get("Comment8").toString());
                 temp.setComment9(userObj.get("Comment9").toString());
                 temp.setComment10(userObj.get("Comment10").toString());
+                Class.add(temp);
             }
 
         }catch (Exception e) {

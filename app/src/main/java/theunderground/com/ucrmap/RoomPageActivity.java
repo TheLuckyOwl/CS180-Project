@@ -37,7 +37,7 @@ public class RoomPageActivity extends Activity {
         String Building_name = bundle.getString("BuildingName");
         String Classroom_name = bundle.getString("ClassroomName");
         RecyclerView recyclerView = (RecyclerView) this.findViewById(R.id.listView2);
-
+        mBackButton = (ImageButton) this.findViewById(R.id.backButton);
         mAddComm = (Button)findViewById(R.id.addComment);
 
         GetClassroomAsyncTask task = new GetClassroomAsyncTask();

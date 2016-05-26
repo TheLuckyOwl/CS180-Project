@@ -14,15 +14,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Enter Name"
-            android:id="@+id/textView" />
+            android:text="Enter Comment"
+            android:id="@+id/textView"
+            android:textColor="@color/colorText"/>
 
         <EditText
             android:id="@+id/editComm"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:hint="Enter text here.."
-            android:padding="10dp" />
+            android:padding="10dp"
+            android:textColor="@color/colorText"/>
     </LinearLayout>
 
 </RelativeLayout>

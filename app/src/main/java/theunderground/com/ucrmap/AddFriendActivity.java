@@ -134,7 +134,7 @@ public class AddFriendActivity extends Activity {
                 }
 
                 UpdateUser tsk = new UpdateUser();
-                tsk.execute(CurrentUser);
+                tsk.execute(FriendUser);
                 Toast.makeText(AddFriendActivity.this, "Sent Friend Request", Toast.LENGTH_LONG ).show();
             }
         });

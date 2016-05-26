@@ -138,6 +138,13 @@ public class GetUsersAsyncTask extends AsyncTask<User, Void, ArrayList<User>>{
                 temp.setFriend9Accesss(Friend9.get("Access").toString());
                 temp.setFriend10Name(Friend10.get("Name").toString());
                 temp.setFriend10Accesss(Friend10.get("Access").toString());
+
+                //strings for getting pending Requests
+                temp.setPendingRequest1(userObj.get("PendingRequest1").toString());
+                temp.setPendingRequest2(userObj.get("PendingRequest2").toString());
+                temp.setPendingRequest3(userObj.get("PendingRequest3").toString());
+                temp.setPendingRequest4(userObj.get("PendingRequest4").toString());
+                temp.setPendingRequest5(userObj.get("PendingRequest5").toString());
                 Users.add(temp);
             }
 

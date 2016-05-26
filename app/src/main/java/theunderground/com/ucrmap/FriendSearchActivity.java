@@ -20,7 +20,7 @@ public class FriendSearchActivity extends Activity {
     private Button mGo = null;
     private Button mBack = null;
     private EditText mSearch = null;
-    private User CurrentUser = null;
+    private User CurrentUser = new User();
     private Boolean found = false;
     private String LoggedinUser = LoginActivity.LoggedUser;
     ArrayList<User> returnValues = new ArrayList<User>();

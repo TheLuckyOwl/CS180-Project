@@ -32,7 +32,7 @@ public class Classroom {
     public void setComment3(String comment3) { this.Comment3 = comment3;}
     public String getComment4() { return Comment4;}
     public void setComment4(String comment4) { this.Comment4 = comment4;}
-    public String getComment5() { return Comment1;}
+    public String getComment5() { return Comment5;}
     public void setComment5(String comment5) { this.Comment5 = comment5;}
     public String getComment6() { return Comment6;}
     public void setComment6(String comment6) { this.Comment6 = comment6;}
