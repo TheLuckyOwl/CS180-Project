@@ -22,7 +22,7 @@ import android.widget.TextView;
                                                           int viewType) {
             // create a new view
             View itemLayoutView = LayoutInflater.from(parent.getContext())
-                    .inflate(R.layout.tabs_wizard_list_items, null);
+                    .inflate(R.layout.service_list_items, null);
 
             // create ViewHolder
 

@@ -7,16 +7,14 @@ import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
-import android.widget.ListView;
 import android.widget.TextView;
+
 
 /**
  * Created by Sara on 5/19/16.
  */
 public class ServiceHours extends Activity{
-    String[] serviceArray = {"Orbach Library","Rivera Library","Student Services", "Bookstore","SRC","Botanical Gardens"};
     private ImageButton mBackButton = null;
     private TextView mTitle = null;
 
@@ -36,10 +34,12 @@ public class ServiceHours extends Activity{
             }
         });
 
-        TabsServiceModel dininghall_data[] = {new TabsServiceModel("Orbach Library", "9-5pm"),
-                new TabsServiceModel("Moo Moo", R.drawable.moomoo),
-                new TabsServiceModel("Highlander", R.drawable.highlander),
-                new TabsServiceModel("Bear Tracks", R.drawable.beartracks),
+        TabsServiceModel dininghall_data[] = {new TabsServiceModel("Orbach Library", "M-R: 7:30a-12a, F: 7:30a-6p, Sat: 9a-5p, Sun: 1p-12a"),
+                new TabsServiceModel("Rivera Library", "M-R: 7:30a-12a, F: 7:30a-6p, Sat: 9a-5p, Sun: 1p-12a"),
+                new TabsServiceModel("Student Recreation Center", "M-R: 6a-12a, F: 6a-9p, Sat: 9a-9p, Sun: 9a-12a"),
+                new TabsServiceModel("Bookstore", "M-F: 8a-6p, Sat: 9a-3p, Sun: CLOSED"),
+                new TabsServiceModel("Student Services", "M-F: 9a-5p"),
+                new TabsServiceModel("Botanical Gardens", "Daily: 8a-5p"),
         };
         mAdapter = new TabServiceAdapter(dininghall_data);
         // 2. set layoutManger
