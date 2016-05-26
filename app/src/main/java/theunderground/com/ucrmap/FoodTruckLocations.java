@@ -4,8 +4,15 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+<<<<<<< Updated upstream
+=======
+import android.webkit.WebView;
+import android.widget.Button;
+import android.widget.ImageButton;
+>>>>>>> Stashed changes
 import android.widget.ImageView;
 import android.widget.TextView;
+
 
 /**
  * Created by Sara on 5/19/16.
@@ -16,10 +23,10 @@ public class FoodTruckLocations extends Activity{
     private TextView tv3;
     private TextView tv4;
 
-    private ImageView iv1;
-    private ImageView iv2;
-    private ImageView iv3;
-    private ImageView iv4;
+    private ImageButton iv1;
+    private ImageButton iv2;
+    private ImageButton iv3;
+    private ImageButton iv4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -4,53 +4,59 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <ImageButton
+        android:layout_width="64dip"
+        android:layout_height="64dip"
         android:id="@+id/imageView"
-        android:src="@drawable/moomoo"/>
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/imageView2"
-        android:src="@drawable/chameleon"/>
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/imageView3"
-        android:src="@drawable/highlander"/>
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/imageView4"
-        android:src="@drawable/beartracks"/>
+        android:background="@drawable/moomoo"
+        android:layout_gravity="center_horizontal" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Text"
+        android:text="MooMoo"
         android:id="@+id/textView"
         android:layout_gravity="center_horizontal" />
 
+    <ImageButton
+        android:layout_width="64dip"
+        android:layout_height="64dip"
+        android:id="@+id/imageView2"
+        android:background="@drawable/chameleon"
+        android:layout_gravity="center_horizontal" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Text"
+        android:text="Chameleon"
         android:id="@+id/textView2"
         android:layout_gravity="center_horizontal" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="New Text"
-        android:id="@+id/textView3"
+    <ImageButton
+        android:layout_width="64dip"
+        android:layout_height="64dip"
+        android:id="@+id/imageView3"
+        android:background="@drawable/highlander"
         android:layout_gravity="center_horizontal" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Text"
+        android:text="Highlander"
+        android:id="@+id/textView3"
+        android:layout_gravity="center_horizontal" />
+
+    <ImageButton
+        android:layout_width="64dip"
+        android:layout_height="50dip"
+        android:id="@+id/imageView4"
+        android:background="@drawable/beartracks"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bear Tracks"
         android:id="@+id/textView4"
         android:layout_gravity="center_horizontal" />
 </LinearLayout>
