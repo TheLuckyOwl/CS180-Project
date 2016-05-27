@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="match_parent"
-    android:background="#424040">
+    android:background="@color/colorPrimary">
 
     <TextView
         android:layout_width="match_parent"
@@ -9,13 +9,13 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Search For A Room"
         android:id="@+id/txtV"
-        android:textSize="50sp"
+        android:textSize="36sp"
         android:textAlignment="center"
-        android:paddingTop="30dp"
-        android:paddingBottom="8dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
-        android:textColor="#038412" />
+        android:textColor="@color/colorTextDark" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -23,7 +23,6 @@
         android:hint="ie. WCH 136"
         android:id="@+id/searchText"
         android:editable="true"
-        android:background="#333030"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_alignParentStart="true"
@@ -63,7 +62,7 @@
         android:textAlignment="center"
         android:gravity="center_horizontal"
         android:textSize="30sp"
-        android:textColor="#038312"
+        android:textColor="@color/colorText"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
 
