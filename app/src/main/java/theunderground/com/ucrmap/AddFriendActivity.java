@@ -136,6 +136,10 @@ public class AddFriendActivity extends Activity {
                 UpdateUser tsk = new UpdateUser();
                 tsk.execute(FriendUser);
                 Toast.makeText(AddFriendActivity.this, "Sent Friend Request", Toast.LENGTH_LONG ).show();
+                Intent intent = new Intent(AddFriendActivity.this, FriendListActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+                finish();
             }
         });
 
@@ -143,7 +147,9 @@ public class AddFriendActivity extends Activity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(AddFriendActivity.this, FriendListActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
+                finish();
             }
         });
 

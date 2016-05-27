@@ -96,7 +96,10 @@ public class AddRoomActivity extends Activity{
                         tsk.execute(newClass);
                         Toast.makeText(AddRoomActivity.this, "Created the class Successfully", Toast.LENGTH_SHORT).show();
                         Intent i = new Intent(AddRoomActivity.this, RateRoomActivity.class);
+                        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
                         startActivity(i);
+                        finish();
+
                     }
                 }
             }
