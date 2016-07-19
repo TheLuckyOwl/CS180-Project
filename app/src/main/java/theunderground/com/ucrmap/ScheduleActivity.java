@@ -55,44 +55,6 @@ public class ScheduleActivity extends Activity {
         } catch (ExecutionException e) {
             e.printStackTrace();
         }
-        for(User x: returnValues)
-        {
-            {
-                if(x.getUsername().equals(LoggedinUser))
-                {
-                    CurrentUser.setClass1Data(x.getClass1Data());
-                    CurrentUser.setClass1Day(x.getClass1Day());
-                    CurrentUser.setClass1Time(x.getClass1Time());
-                    CurrentUser.setClass2Data(x.getClass2Data());
-                    CurrentUser.setClass2Day(x.getClass2Day());
-                    CurrentUser.setClass2Time(x.getClass2Time());
-                    CurrentUser.setClass3Data(x.getClass3Data());
-                    CurrentUser.setClass3Day(x.getClass3Day());
-                    CurrentUser.setClass3Time(x.getClass3Time());
-                    CurrentUser.setClass4Data(x.getClass4Data());
-                    CurrentUser.setClass4Day(x.getClass4Day());
-                    CurrentUser.setClass4Time(x.getClass4Time());
-                    CurrentUser.setClass5Data(x.getClass5Data());
-                    CurrentUser.setClass5Day(x.getClass5Day());
-                    CurrentUser.setClass5Time(x.getClass5Time());
-                    CurrentUser.setClass6Data(x.getClass6Data());
-                    CurrentUser.setClass6Day(x.getClass6Day());
-                    CurrentUser.setClass6Time(x.getClass6Time());
-                    CurrentUser.setClass7Data(x.getClass7Data());
-                    CurrentUser.setClass7Day(x.getClass7Day());
-                    CurrentUser.setClass7Time(x.getClass7Time());
-                    CurrentUser.setClass8Data(x.getClass8Data());
-                    CurrentUser.setClass8Day(x.getClass8Day());
-                    CurrentUser.setClass8Time(x.getClass8Time());
-                    CurrentUser.setClass9Data(x.getClass9Data());
-                    CurrentUser.setClass9Day(x.getClass9Day());
-                    CurrentUser.setClass9Time(x.getClass9Time());
-                    CurrentUser.setClass10Data(x.getClass10Data());
-                    CurrentUser.setClass10Day(x.getClass10Day());
-                    CurrentUser.setClass10Time(x.getClass10Time());
-                }
-            }
-        }
 
         ScheduleAdapter mAdapter;
         ScheduleModel dummyData[] = {new ScheduleModel(CurrentUser.getClass1Data(), CurrentUser.getClass1Day() , CurrentUser.getClass1Time()),
@@ -136,6 +98,7 @@ public class ScheduleActivity extends Activity {
             }
         });
     }
+
     private void back(){
         Intent intent = new Intent(ScheduleActivity.this, AccountActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);

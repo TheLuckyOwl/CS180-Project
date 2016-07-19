@@ -34,12 +34,12 @@ public class ServiceHours extends Activity{
             }
         });
 
-        TabsServiceModel dininghall_data[] = {new TabsServiceModel("Orbach Library", "M-R: 7:30a-12a, F: 7:30a-6p, Sat: 9a-5p, Sun: 1p-12a"),
-                new TabsServiceModel("Rivera Library", "M-R: 7:30a-12a, F: 7:30a-6p, Sat: 9a-5p, Sun: 1p-12a"),
-                new TabsServiceModel("Student Recreation Center", "M-R: 6a-12a, F: 6a-9p, Sat: 9a-9p, Sun: 9a-12a"),
-                new TabsServiceModel("Bookstore", "M-F: 8a-6p, Sat: 9a-3p, Sun: CLOSED"),
-                new TabsServiceModel("Student Services", "M-F: 9a-5p"),
-                new TabsServiceModel("Botanical Gardens", "Daily: 8a-5p"),
+        TabsServiceModel dininghall_data[] = {new TabsServiceModel("Orbach Library", "Mon-Thurs: 7:30AM-12AM, Fri: 7:30AM-6PM, Sat: 9AM-5PM, Sun: 1PM-12AM"),
+                new TabsServiceModel("Rivera Library", "Mon-Thurs: 7:30AM-12AM, Fri: 7:30AM-6PM, Sat: 9AM-5PM, Sun: 1PM-12AM"),
+                new TabsServiceModel("Student Recreation Center", "Mon-Thurs: 6AM-12AM, Fri: 6AM-9PM, Sat: 9AM-9PM, Sun: 9AM-12AM"),
+                new TabsServiceModel("Bookstore", "Mon-Fri: 8AM-6PM, Sat: 9AM-3PM, Sun: CLOSED"),
+                new TabsServiceModel("Student Services", "Mon-Fri: 9AM-5PM"),
+                new TabsServiceModel("Botanical Gardens", "Daily: 8AM-5PM"),
         };
         mAdapter = new TabServiceAdapter(dininghall_data);
         // 2. set layoutManger

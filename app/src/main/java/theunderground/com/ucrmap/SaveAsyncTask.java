@@ -40,7 +40,6 @@ public class SaveAsyncTask extends AsyncTask<User, Void, Boolean> {
         } catch (Exception e) {
             //e.getCause();
             String val = e.getMessage();
-            String val2 = val;
             return false;
         }
     }

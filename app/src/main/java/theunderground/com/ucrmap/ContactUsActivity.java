@@ -65,34 +65,6 @@ public class ContactUsActivity extends Activity {
         } catch (ExecutionException e) {
             e.printStackTrace();
         }
-        for(User x: returnValues)
-        {
-            {
-                if(x.getUsername().equals(LoggedinUser))
-                {
-                    CurrentUser.setClass1Time(x.getClass1Time());
-                    CurrentUser.setClass1Day(x.getClass1Day());
-                    CurrentUser.setClass2Time(x.getClass2Time());
-                    CurrentUser.setClass2Day(x.getClass2Day());
-                    CurrentUser.setClass3Time(x.getClass3Time());
-                    CurrentUser.setClass3Day(x.getClass3Day());
-                    CurrentUser.setClass4Time(x.getClass4Time());
-                    CurrentUser.setClass4Day(x.getClass4Day());
-                    CurrentUser.setClass5Time(x.getClass5Time());
-                    CurrentUser.setClass5Day(x.getClass5Day());
-                    CurrentUser.setClass6Time(x.getClass6Time());
-                    CurrentUser.setClass6Day(x.getClass6Day());
-                    CurrentUser.setClass7Time(x.getClass7Time());
-                    CurrentUser.setClass7Day(x.getClass7Day());
-                    CurrentUser.setClass8Time(x.getClass8Time());
-                    CurrentUser.setClass8Day(x.getClass8Day());
-                    CurrentUser.setClass9Time(x.getClass9Time());
-                    CurrentUser.setClass9Day(x.getClass9Day());
-                    CurrentUser.setClass10Time(x.getClass10Time());
-                    CurrentUser.setClass10Day(x.getClass10Day());
-                }
-            }
-        }
 
         String class1 = CurrentUser.getClass1Time();
         String class2 = CurrentUser.getClass2Time();
@@ -114,7 +86,6 @@ public class ContactUsActivity extends Activity {
         final String[] tokenClass8 = class8.split("[ :-]");
         final String[] tokenClass9 = class9.split("[ :-]");
         final String[] tokenClass10 = class10.split("[ :-]");
-        final Calendar calendarTrial = Calendar.getInstance();
 
         if(!class1.equals(""))
         {

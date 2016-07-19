@@ -20,28 +20,13 @@ public class FriendListModel {
         return First;
     }
 
-    public void setFirst(String firstName)
-    {
-        this.First = firstName;
-    }
-
     public CharSequence getInitial()
     {
         return Initial;
     }
 
-    public void setInital(String initial)
-    {
-        this.Initial = initial;
-    }
-
     public CharSequence getLast()
     {
         return Last;
-    }
-
-    public void setLast(String last)
-    {
-        this.Last = last;
     }
 }

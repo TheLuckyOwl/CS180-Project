@@ -42,7 +42,6 @@ public class AddClassActivity extends Activity {
     private boolean[] In = new boolean[4];
     private boolean AllFull = false;
     private User CurrentUser = new User();
-    private String LoggedinUser = LoginActivity.LoggedUser;
     ArrayList<User> returnValues = new ArrayList<User>();
     private int EmptyCount = 0;
     private int InputCount = 0;
@@ -132,79 +131,6 @@ public class AddClassActivity extends Activity {
             e.printStackTrace();
         } catch (ExecutionException e) {
             e.printStackTrace();
-        }
-
-        for(User x: returnValues)
-        {
-            {
-                if(x.getUsername().equals(LoggedinUser))
-                {
-                    CurrentUser.setDoc_id(x.getDoc_id());
-                    CurrentUser.setFirst_name(x.getFirst_name());
-                    CurrentUser.setMiddle_initial(x.getMiddle_initial());
-                    CurrentUser.setLast_name(x.getLast_name());
-                    CurrentUser.setUsername(x.getUsername());
-                    CurrentUser.setPassword(x.getPassword());
-                    CurrentUser.setIlearnUser(x.getIlearnUser());
-                    CurrentUser.setIlearnPass(x.getIlearnPass());
-                    CurrentUser.setEmail(x.getEmail());
-                    CurrentUser.setPendingRequest1(x.getPendingRequest1());
-                    CurrentUser.setPendingRequest2(x.getPendingRequest2());
-                    CurrentUser.setPendingRequest3(x.getPendingRequest3());
-                    CurrentUser.setPendingRequest4(x.getPendingRequest4());
-                    CurrentUser.setPendingRequest5(x.getPendingRequest5());
-                    CurrentUser.setClass1Data(x.getClass1Data());
-                    CurrentUser.setClass1Day(x.getClass1Day());
-                    CurrentUser.setClass1Time(x.getClass1Time());
-                    CurrentUser.setClass2Data(x.getClass2Data());
-                    CurrentUser.setClass2Day(x.getClass2Day());
-                    CurrentUser.setClass2Time(x.getClass2Time());
-                    CurrentUser.setClass3Data(x.getClass3Data());
-                    CurrentUser.setClass3Day(x.getClass3Day());
-                    CurrentUser.setClass3Time(x.getClass3Time());
-                    CurrentUser.setClass4Data(x.getClass4Data());
-                    CurrentUser.setClass4Day(x.getClass4Day());
-                    CurrentUser.setClass4Time(x.getClass4Time());
-                    CurrentUser.setClass5Data(x.getClass5Data());
-                    CurrentUser.setClass5Day(x.getClass5Day());
-                    CurrentUser.setClass5Time(x.getClass5Time());
-                    CurrentUser.setClass6Data(x.getClass6Data());
-                    CurrentUser.setClass6Day(x.getClass6Day());
-                    CurrentUser.setClass6Time(x.getClass6Time());
-                    CurrentUser.setClass7Data(x.getClass7Data());
-                    CurrentUser.setClass7Day(x.getClass7Day());
-                    CurrentUser.setClass7Time(x.getClass7Time());
-                    CurrentUser.setClass8Data(x.getClass8Data());
-                    CurrentUser.setClass8Day(x.getClass8Day());
-                    CurrentUser.setClass8Time(x.getClass8Time());
-                    CurrentUser.setClass9Data(x.getClass9Data());
-                    CurrentUser.setClass9Day(x.getClass9Day());
-                    CurrentUser.setClass9Time(x.getClass9Time());
-                    CurrentUser.setClass10Data(x.getClass10Data());
-                    CurrentUser.setClass10Day(x.getClass10Day());
-                    CurrentUser.setClass10Time(x.getClass10Time());
-                    CurrentUser.setFriend1Name(x.getFriend1Name());
-                    CurrentUser.setFriend1Accesss(x.getFriend1Access());
-                    CurrentUser.setFriend2Name(x.getFriend2Name());
-                    CurrentUser.setFriend2Accesss(x.getFriend2Access());
-                    CurrentUser.setFriend3Name(x.getFriend3Name());
-                    CurrentUser.setFriend3Accesss(x.getFriend3Access());
-                    CurrentUser.setFriend4Name(x.getFriend4Name());
-                    CurrentUser.setFriend4Accesss(x.getFriend4Access());
-                    CurrentUser.setFriend5Name(x.getFriend5Name());
-                    CurrentUser.setFriend5Accesss(x.getFriend5Access());
-                    CurrentUser.setFriend6Name(x.getFriend6Name());
-                    CurrentUser.setFriend6Accesss(x.getFriend6Access());
-                    CurrentUser.setFriend7Name(x.getFriend7Name());
-                    CurrentUser.setFriend7Accesss(x.getFriend7Access());
-                    CurrentUser.setFriend8Name(x.getFriend8Name());
-                    CurrentUser.setFriend8Accesss(x.getFriend8Access());
-                    CurrentUser.setFriend9Name(x.getFriend9Name());
-                    CurrentUser.setFriend9Accesss(x.getFriend9Access());
-                    CurrentUser.setFriend10Name(x.getFriend10Name());
-                    CurrentUser.setFriend10Accesss(x.getFriend10Access());
-                }
-            }
         }
 
         mAdd.setOnClickListener(new View.OnClickListener() {

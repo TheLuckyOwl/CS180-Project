@@ -16,9 +16,4 @@ public class ClassroomModel {
         return Comment;
     }
 
-    public void setComment(String comment)
-    {
-        this.Comment = comment;
-    }
-
 }

@@ -39,7 +39,6 @@ public class ForgotLogin extends Activity {
             e.printStackTrace();
         }
 
-        boolean Exists = false;
         for(User x: returnValues)
         {
             if(x.getUsername().equals(username))
