@@ -24,7 +24,7 @@ public class AccountActivity extends Activity {
     private ImageButton mMapButton = null;
     private ImageButton mScheduleButton = null;
     private ImageButton mLibraryButton = null;
-    private ImageButton mRoomsButton = null;
+    //private ImageButton mRoomsButton = null;
     private ImageButton mILearnButton = null;
     private ImageButton mProfessorButton = null;
     private ImageButton mFoodMenuButton = null;
@@ -45,7 +45,7 @@ public class AccountActivity extends Activity {
 
         mILearnButton = (ImageButton)this.findViewById(R.id.iLearnButton);
         mProfessorButton = (ImageButton)this.findViewById(R.id.professorButton);
-        mRoomsButton = (ImageButton)this.findViewById(R.id.roomButton);
+        // mRoomsButton = (ImageButton)this.findViewById(R.id.roomButton);
 
         mFoodMenuButton = (ImageButton)this.findViewById(R.id.menuButton);
         mBuildingHoursButton = (ImageButton)this.findViewById(R.id.hoursButton);
@@ -119,12 +119,12 @@ public class AccountActivity extends Activity {
                 startActivity(i);
             }
         });
-        mRoomsButton.setOnClickListener(new View.OnClickListener() {
+        /*mRoomsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
                 startActivity((new Intent(AccountActivity.this, RateRoomActivity.class)));
             }
-        });
+        });*/
         mFoodMenuButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){

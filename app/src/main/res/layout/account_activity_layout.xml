@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- The main content view -->
+
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:weightSum="4.20"
-    android:background="#212121"
-    android:shrinkColumns="3">
+    android:shrinkColumns="3"
+    android:background="@drawable/account_bgd">
+
     <TableRow
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -25,6 +27,7 @@
                 android:layout_weight="1.8"
                 android:id="@+id/friendsButton"
                 android:src="@drawable/icon_friend"
+
                 android:scaleType="center"/>
             <TextView
                 android:layout_width="match_parent"
@@ -132,42 +135,13 @@
                 android:layout_weight="0.2"
                 android:textAlignment="center"
                 android:textColor="@color/colorText"
-                android:text="Professor"/>
+                android:text="Prof. Ratings"/>
         </LinearLayout>
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_column="2"
-            android:layout_weight="1"
-            android:weightSum="2">
-            <ImageButton
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1.8"
-                android:id="@+id/roomButton"
-                android:src="@drawable/icon_room"
-                android:scaleType="center"
-                />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.2"
-                android:textAlignment="center"
-                android:textColor="@color/colorText"
-                android:text="Rooms"/>
-        </LinearLayout>
-    </TableRow>
-    <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1">
-
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_column="0"
             android:layout_weight="1"
             android:weightSum="2">
             <ImageButton
@@ -186,12 +160,17 @@
                 android:textColor="@color/colorText"
                 android:text="Menus"/>
         </LinearLayout>
+    </TableRow>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
 
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_column="1"
+            android:layout_column="0"
             android:layout_weight="1"
             android:weightSum="2">
             <ImageButton
@@ -208,13 +187,14 @@
                 android:layout_weight="0.2"
                 android:textAlignment="center"
                 android:textColor="@color/colorText"
-                android:text="Hours"/>
+                android:text="Building Hours"/>
         </LinearLayout>
+
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_column="2"
+            android:layout_column="1"
             android:layout_weight="1"
             android:weightSum="2">
             <ImageButton
@@ -231,7 +211,30 @@
                 android:layout_weight="0.2"
                 android:textAlignment="center"
                 android:textColor="@color/colorText"
-                android:text="Location"/>
+                android:text="Food Trucks"/>
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_column="2"
+            android:layout_weight="1"
+            android:weightSum="2">
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.8"
+                android:id="@+id/libraryButton"
+                android:src="@drawable/icon_books"
+                android:scaleType="center"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:textAlignment="center"
+                android:textColor="@color/colorText"
+                android:text="Study Rooms"/>
         </LinearLayout>
     </TableRow>
     <TableRow
@@ -250,30 +253,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1.8"
-                android:id="@+id/libraryButton"
-                android:src="@drawable/icon_books"
-                android:scaleType="center"
-                />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.2"
-                android:textAlignment="center"
-                android:textColor="@color/colorText"
-                android:text="Library"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_column="1"
-            android:layout_weight="1"
-            android:weightSum="2">
-            <ImageButton
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1.8"
                 android:id="@+id/aboutButton"
                 android:src="@drawable/icon_settings"
                 android:scaleType="center"
@@ -286,11 +265,12 @@
                 android:textColor="@color/colorText"
                 android:text="Settings"/>
         </LinearLayout>
+
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_column="2"
+            android:layout_column="1"
             android:layout_weight="1"
             android:weightSum="2">
             <ImageButton
@@ -309,46 +289,29 @@
                 android:textColor="@color/colorText"
                 android:text="Safety"/>
         </LinearLayout>
-    </TableRow>
-    <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight=".2">
-
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_column="0"
-            android:layout_weight=".3">
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_column="1"
-            android:layout_weight="2.40">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="Log Out"
-                android:textSize="16sp"
-                android:textAlignment="center"
-                android:textColor="#000000"
-                android:textStyle="bold"
-                android:background="#505051"
-                android:id="@+id/logoutButton"
-                android:clickable="true" />
-        </LinearLayout>
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_column="2"
-            android:layout_weight=".3">
-
+            android:layout_weight="1"
+            android:weightSum="2">
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.8"
+                android:id="@+id/logoutButton"
+                android:src="@drawable/lock_img"
+                android:scaleType="center"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:textAlignment="center"
+                android:textColor="@color/colorText"
+                android:text="Log Out"/>
         </LinearLayout>
     </TableRow>
+
 </TableLayout>
