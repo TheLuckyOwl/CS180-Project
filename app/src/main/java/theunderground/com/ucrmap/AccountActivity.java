@@ -7,6 +7,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -32,7 +33,8 @@ public class AccountActivity extends Activity {
     private ImageButton mFoodTruckButton = null;
     private ImageButton mAboutButton = null;
     private ImageButton mSafetyButton = null;
-    private TextView mSignOutButton = null;
+    private ImageButton mSignOutButton = null;
+    //private TextView mSignOutButton = null;
     @Override
     protected void onCreate(Bundle saveInstanceState){
         super.onCreate(saveInstanceState);
@@ -55,7 +57,8 @@ public class AccountActivity extends Activity {
         mAboutButton = (ImageButton)this.findViewById(R.id.aboutButton);
         mSafetyButton = (ImageButton)this.findViewById(R.id.safetyButton);
 
-        mSignOutButton = (TextView)this.findViewById(R.id.logoutButton);
+        //mSignOutButton = (TextView)this.findViewById(R.id.logoutButton);
+        mSignOutButton = (ImageButton)this.findViewById(R.id.logoutButton);
 
         mFriendsButton.setOnClickListener(new View.OnClickListener() {
             @Override
