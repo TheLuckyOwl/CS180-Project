@@ -20,7 +20,6 @@ public class RateRoomActivity extends Activity {
     private Button mGo = null;
     private Button mAdd = null;
     private EditText mSearch = null;
-    private String LoggedinUser = LoginActivity.LoggedUser;
     private boolean isFound = false;
 
     @Override
@@ -60,7 +59,6 @@ public class RateRoomActivity extends Activity {
                 }
 
                 if (!isFound) {
-                    //Toast.makeText(getApplicationContext(), "Class not found. Try adding it!", Toast.LENGTH_LONG).show();
                     new AlertDialog.Builder(RateRoomActivity.this)
                             .setIcon(android.R.drawable.ic_dialog_alert)
                             .setTitle("Class not found.")

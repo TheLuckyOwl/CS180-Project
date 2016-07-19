@@ -49,6 +49,7 @@ public class QueryBuilder {
         return getBaseUrl()+documentRequest()+docApiKeyUrl(doc_id);
     }
 
+//    THESE FUNCTIONS ARE EXACTLY THE SAME
     public String createContact(User contact)
     {
         return String.format("{\"FirstName\" : \"%s\", "

@@ -52,15 +52,11 @@ import static java.util.Arrays.asList;
  * Created by Larry Parsons on 4/14/2016.
  */
 public class LoginActivity extends Activity {
-    public static final String LOG_TAG = "LoginActivity";
     public static final String LOGGED_IN_PREF = "loggedIn";
     public static final String USER_ID_PREF = "user";
 
     private EditText mUserId = null;
     private EditText mPassword = null;
-    private TextView mWelcome = null;
-    private TextView mUser = null;
-    private TextView mPass = null;
     private CheckBox mLog = null;
     private Button mLoginButton = null; //match with the ones made
     private Button mForgotId = null;
@@ -85,7 +81,6 @@ public class LoginActivity extends Activity {
             e.printStackTrace();
         }
 
-        boolean Exists = false;
         for(User x: returnValues)
         {
             if(x.getUsername().equals(userId))
@@ -124,8 +119,6 @@ public class LoginActivity extends Activity {
 
         mUserId = (EditText)findViewById(R.id.etUsername);
         mPassword = (EditText)findViewById(R.id.etPassword);
-        mUser = (TextView)findViewById(R.id.tvLogin_text);
-        mPass = (TextView)findViewById(R.id.tvPassword_text);
         mForgotId = (Button)findViewById(R.id.bForgotLog);
         mLoginButton = (Button)findViewById(R.id.bLogin);
         mRegister = (Button)findViewById(R.id.bRegister);

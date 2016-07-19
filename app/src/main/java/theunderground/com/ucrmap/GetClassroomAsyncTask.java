@@ -17,7 +17,6 @@ import java.util.ArrayList;
  */
 public class GetClassroomAsyncTask extends AsyncTask<Classroom, Void, ArrayList<Classroom>> {
     static BasicDBObject user = null;
-    static String OriginalObject = "";
     static String server_output = null;
 
     ClassRoomQueryBuilder qb = new ClassRoomQueryBuilder();

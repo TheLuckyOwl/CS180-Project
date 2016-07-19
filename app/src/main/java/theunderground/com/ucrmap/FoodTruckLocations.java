@@ -66,7 +66,6 @@ public class FoodTruckLocations extends Activity{
         String url = null;
         if (firstChoice == 0){
             url = "http://vcsaweb.ucr.edu/foodtruck-location/Home/GoogleMap?truckName=CulinaryChameleon";
-
         }
         else if (firstChoice == 1){
             url = "http://vcsaweb.ucr.edu/foodtruck-location/Home/GoogleMap?truckName=moomoo";

@@ -22,7 +22,4 @@ public class TabsWizardModel {
     public int getImageUrl() {
         return imageUrl;
     }
-    public void setImageUrl( int imageUrl) {
-        this.imageUrl = imageUrl;
-    }
 }

@@ -24,15 +24,8 @@ public class ScheduleModel {
     public CharSequence getdays() {
         return days;
     }
-    public void setdays(String days) {
-        this.days = days;
-    }
 
     public CharSequence getTimes() {
         return times;
-    }
-
-    public void setTimes(String times) {
-        this.times = times;
     }
 }
