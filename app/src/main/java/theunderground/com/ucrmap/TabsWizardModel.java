@@ -4,8 +4,8 @@ package theunderground.com.ucrmap;
  * Created by Sara on 5/1/16.
  */
 public class TabsWizardModel {
-    private String title;
-    private int imageUrl;
+    protected String title;
+    protected int imageUrl;
 
     public TabsWizardModel(String title, int imageUrl) {
 
@@ -13,7 +13,7 @@ public class TabsWizardModel {
         this.imageUrl = imageUrl;
     }
     // getters & setters
-    public CharSequence getTitle() {
+    public String getTitle() {
         return title;
     }
     public void setTitle(String title) {

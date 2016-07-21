@@ -131,7 +131,7 @@ public class AccountActivity extends Activity {
         mFoodMenuButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
-                startActivity((new Intent(AccountActivity.this, DinningHallActivity.class)));
+                startActivity((new Intent(AccountActivity.this, DiningHallActivity.class)));
             }
         });
         mBuildingHoursButton.setOnClickListener(new View.OnClickListener() {

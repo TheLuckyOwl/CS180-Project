@@ -6,16 +6,16 @@
 
     <!-- icon -->
     <ImageView
-    android:id="@+id/item_icon"
-    android:layout_width="36dp"
-    android:layout_height="36dp"
-    android:layout_alignParentLeft="true"
-    android:layout_centerVertical="true"
-    android:layout_marginLeft="8dp"
-    android:layout_marginRight="8dp"
-    android:layout_marginTop="1dp"
-    android:layout_marginBottom="10dp"
-    android:contentDescription="icon"/>
+        android:id="@+id/item_icon"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="10dp"
+        android:contentDescription="icon"/>
 
     <!-- title -->
     <TextView
