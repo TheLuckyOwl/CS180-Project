@@ -15,7 +15,6 @@
         android:scaleType="fitCenter"
         android:tint="@color/colorTextDark"
         android:src="@drawable/back"
-        android:background="@color/colorPrimary"
         android:id="@+id/backButton"
         android:focusable="false" />
     <TextView

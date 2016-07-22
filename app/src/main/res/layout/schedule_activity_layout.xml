@@ -55,7 +55,8 @@
             android:text="Add Class"
             android:textColor="@color/colorText"
             android:layout_weight="1"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:background="@color/colorPrimary"/>
 
         <Button
             android:layout_width="match_parent"
@@ -64,7 +65,8 @@
             android:text="Remove Class"
             android:textColor="@color/colorText"
             android:layout_weight="1"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:background="@color/colorPrimary"/>
 
     </LinearLayout>
 </RelativeLayout>
