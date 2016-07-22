@@ -12,7 +12,8 @@
         android:textAlignment="center"
         android:textColor="@color/colorTextDark"
         android:textStyle="bold"
-        android:textIsSelectable="false" />
+        android:textIsSelectable="false"
+        android:background="@drawable/account_bgd"/>
 
     <EditText
         android:layout_width="wrap_content"

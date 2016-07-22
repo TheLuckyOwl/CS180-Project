@@ -15,7 +15,8 @@
         android:paddingBottom="20dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
-        android:textColor="@color/colorTextDark" />
+        android:textColor="@color/colorTextDark"
+        android:background="@drawable/account_bgd"/>
 
     <EditText
         android:layout_width="wrap_content"

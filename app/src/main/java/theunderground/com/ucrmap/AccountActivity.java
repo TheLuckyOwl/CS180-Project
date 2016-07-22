@@ -19,7 +19,6 @@ import java.util.concurrent.ExecutionException;
  */
 public class AccountActivity extends Activity {
 
-
     SharedPreferences prefs = null;
     private ImageButton mFriendsButton = null;
     private ImageButton mMapButton = null;
@@ -34,12 +33,17 @@ public class AccountActivity extends Activity {
     private ImageButton mAboutButton = null;
     private ImageButton mSafetyButton = null;
     private ImageButton mSignOutButton = null;
+    private TextView mTitle = null;
+
     //private TextView mSignOutButton = null;
     @Override
     protected void onCreate(Bundle saveInstanceState){
         super.onCreate(saveInstanceState);
         prefs = this.getSharedPreferences("Login", Context.MODE_PRIVATE);
         setContentView(R.layout.account_activity_layout);
+
+        mTitle = (TextView)findViewById(R.id.menuTitle);
+        mTitle.setText("UCR Student ToolBox");
 
         mFriendsButton = (ImageButton)this.findViewById(R.id.friendsButton);
         mMapButton = (ImageButton)this.findViewById(R.id.mapButton);

@@ -45,7 +45,8 @@ public class DiningHallActivity extends Activity {
         expandableListView = (ExpandableListView) findViewById(R.id.expandableListView);
         expandableListDetail = ExpandableListDataPump.getData();
 
-        final TabsWizardModel dininghall_data[] = {new TabsWizardModel("AI", R.drawable.ai),
+        final TabsWizardModel dininghall_data[] = {
+                new TabsWizardModel("AI", R.drawable.ai),
                 new TabsWizardModel("Lothian", R.drawable.lothian),
                 new TabsWizardModel("Spinelli's", R.drawable.spinelli),
                 new TabsWizardModel("Glen Mor Market Shop", R.drawable.gmshop),

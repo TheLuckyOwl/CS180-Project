@@ -9,13 +9,12 @@
         android:id="@+id/item_icon"
         android:layout_width="36dp"
         android:layout_height="36dp"
-        android:layout_alignParentLeft="true"
-        android:layout_centerVertical="true"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginTop="1dp"
-        android:layout_marginBottom="10dp"
-        android:contentDescription="icon"/>
+        android:contentDescription="icon"
+        android:layout_centerVertical="true"
+        android:layout_alignStart="@+id/view"
+        android:layout_marginStart="42dp" />
 
     <!-- title -->
     <TextView
@@ -29,7 +28,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginTop="8dp"
         android:textSize="32sp"
-        android:textColor="@color/colorText"/>
+        android:textColor="@color/colorTextDark"/>
 
     <View
         android:layout_width="match_parent"

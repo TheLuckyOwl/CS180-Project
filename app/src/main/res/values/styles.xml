@@ -5,7 +5,10 @@
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-
+        <item name="android:textStyle">bold</item>
+        <item name="android:color">@color/colorText</item>
+        <item name="android:fontFamily">Athelas</item>
+        <item name="android:gravity">center</item>
     </style>
 
 </resources>

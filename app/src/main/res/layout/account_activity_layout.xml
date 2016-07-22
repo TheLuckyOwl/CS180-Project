@@ -7,7 +7,20 @@
     android:orientation="vertical"
     android:weightSum="4.20"
     android:shrinkColumns="3"
-    android:background="@drawable/account_bgd">
+    android:paddingRight="-2dp"
+    android:paddingLeft="-2dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TITLE"
+        android:textSize="30sp"
+        android:id="@+id/menuTitle"
+        android:textColor="@color/colorTextDark"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:background="@drawable/account_bgd"
+        android:paddingLeft="-2dp" />
 
     <TableRow
         android:layout_width="match_parent"
@@ -27,13 +40,13 @@
                 android:layout_weight="1.8"
                 android:id="@+id/friendsButton"
                 android:src="@drawable/icon_friend"
-
                 android:scaleType="center"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.2"
                 android:textAlignment="center"
+                android:textStyle="bold"
                 android:textColor="@color/colorText"
                 android:text="Friends"/>
         </LinearLayout>
@@ -58,6 +71,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.2"
                 android:textAlignment="center"
+                android:textStyle="bold"
                 android:textColor="@color/colorText"
                 android:text="Map"/>
         </LinearLayout>
@@ -81,6 +95,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.2"
                 android:textAlignment="center"
+                android:textStyle="bold"
                 android:textColor="@color/colorText"
                 android:text="Schedule"/>
         </LinearLayout>
@@ -110,6 +125,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.2"
                 android:textAlignment="center"
+                android:textStyle="bold"
                 android:textColor="@color/colorText"
                 android:text="ILearn"/>
         </LinearLayout>
@@ -134,6 +150,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.2"
                 android:textAlignment="center"
+                android:textStyle="bold"
                 android:textColor="@color/colorText"
                 android:text="Prof. Ratings"/>
         </LinearLayout>
@@ -157,6 +174,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.2"
                 android:textAlignment="center"
+                android:textStyle="bold"
                 android:textColor="@color/colorText"
                 android:text="Menus"/>
         </LinearLayout>
@@ -186,6 +204,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.2"
                 android:textAlignment="center"
+                android:textStyle="bold"
                 android:textColor="@color/colorText"
                 android:text="Building Hours"/>
         </LinearLayout>
@@ -210,6 +229,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.2"
                 android:textAlignment="center"
+                android:textStyle="bold"
                 android:textColor="@color/colorText"
                 android:text="Food Trucks"/>
         </LinearLayout>
@@ -233,6 +253,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.2"
                 android:textAlignment="center"
+                android:textStyle="bold"
                 android:textColor="@color/colorText"
                 android:text="Study Rooms"/>
         </LinearLayout>
@@ -262,6 +283,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.2"
                 android:textAlignment="center"
+                android:textStyle="bold"
                 android:textColor="@color/colorText"
                 android:text="Settings"/>
         </LinearLayout>
@@ -286,6 +308,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.2"
                 android:textAlignment="center"
+                android:textStyle="bold"
                 android:textColor="@color/colorText"
                 android:text="Safety"/>
         </LinearLayout>
@@ -302,13 +325,13 @@
                 android:layout_weight="1.8"
                 android:id="@+id/logoutButton"
                 android:src="@drawable/lock_img"
-                android:scaleType="center"
-                />
+                android:scaleType="center" />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.2"
                 android:textAlignment="center"
+                android:textStyle="bold"
                 android:textColor="@color/colorText"
                 android:text="Log Out"/>
         </LinearLayout>

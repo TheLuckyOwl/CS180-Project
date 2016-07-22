@@ -21,7 +21,7 @@ public class ServiceHours extends Activity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.dining_hall_activity_layout);
+        setContentView(R.layout.food_truck_layout);
         RecyclerView recyclerView = (RecyclerView) this.findViewById(R.id.recyclerViewTab);
         TabServiceAdapter mAdapter;
         mTitle = (TextView)findViewById(R.id.diningTitle);

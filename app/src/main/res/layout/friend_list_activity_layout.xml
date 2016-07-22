@@ -14,7 +14,9 @@
         android:tint="@color/colorTextDark"
         android:src="@drawable/back"
         android:background="@color/colorPrimary"
-        android:id="@+id/backImage" />
+        android:id="@+id/backImage"
+        android:adjustViewBounds="false"
+        android:focusable="false" />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -25,7 +27,9 @@
         android:textColor="@color/colorTextDark"
         android:textStyle="bold"
         android:textIsSelectable="false"
-        android:layout_marginTop="20dp"/>
+        android:background="@drawable/account_bgd"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
 
     <android.support.v7.widget.RecyclerView
         xmlns:android="http://schemas.android.com/apk/res/android"

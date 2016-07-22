@@ -28,7 +28,8 @@
         android:text="Add a building name:"
         android:id="@+id/tvBuildingN"
         android:layout_below="@+id/tvAddRoom"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:background="@drawable/account_bgd"/>
 
     <Spinner
         android:layout_width="wrap_content"

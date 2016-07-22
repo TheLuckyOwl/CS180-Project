@@ -4,7 +4,8 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/colorPrimary"
-    android:id="@+id/map_title">
+    android:id="@+id/map_title"
+    android:paddingTop="2dp">
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -24,7 +25,8 @@
         android:id="@+id/libraryTitle"
         android:textAlignment="center"
         android:textColor="@color/colorTextDark"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:background="@drawable/account_bgd"/>
     <fragment
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"

@@ -24,13 +24,15 @@
         android:textSize="30sp"
         android:id="@+id/diningTitle"
         android:textAlignment="center"
-        android:textColor="@color/colorTextDark"
-        android:textStyle="bold"/>
+        android:textColor="@color/colorText"
+        android:textStyle="bold"
+        android:background="@drawable/account_bgd" />
 
     <ExpandableListView
         android:id="@+id/expandableListView"
         android:layout_height="match_parent"
         android:layout_width="match_parent"
+        android:background="@color/colorPrimary"
         android:indicatorLeft="?android:attr/expandableListPreferredItemIndicatorLeft"
         android:divider="@android:color/darker_gray"
         android:dividerHeight="0.5dp" />

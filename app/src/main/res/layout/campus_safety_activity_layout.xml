@@ -9,8 +9,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:paddingTop="20dp"
-        android:paddingBottom="20dp">
+        android:paddingBottom="20dp"
+        android:paddingLeft="-2dp"
+        android:paddingRight="-2dp">
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -28,13 +29,13 @@
             android:textStyle="bold"
             android:text="Safety Resources"
             android:id="@+id/textView3"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
             android:height="50dp"
             android:textAlignment="center"
             android:textColor="@color/colorTextDark"
-            android:textSize="36sp" />
+            android:textSize="36sp"
+            android:background="@drawable/account_bgd"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true" />
 
         <TextView
             android:layout_width="wrap_content"

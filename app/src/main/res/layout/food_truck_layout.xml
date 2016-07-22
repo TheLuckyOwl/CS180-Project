@@ -22,7 +22,8 @@
         android:id="@+id/diningTitle"
         android:textAlignment="center"
         android:textColor="@color/colorTextDark"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        android:background="@drawable/account_bgd"/>
     <!-- A RecyclerView with some commonly used attributes -->
     <android.support.v7.widget.RecyclerView
         xmlns:android="http://schemas.android.com/apk/res/android"
