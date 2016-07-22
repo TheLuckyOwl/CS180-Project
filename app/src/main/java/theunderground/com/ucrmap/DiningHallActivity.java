@@ -43,7 +43,7 @@ public class DiningHallActivity extends Activity {
             }
         });
         expandableListView = (ExpandableListView) findViewById(R.id.expandableListView);
-        expandableListDetail = ExpandableListDataPump.getData();
+        expandableListDetail = DiningHoursList.getData();
 
         final TabsWizardModel dininghall_data[] = {
                 new TabsWizardModel("AI", R.drawable.ai),
