@@ -11,12 +11,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_alignBottom="@+id/diningTitle"
-        android:layout_alignTop="@+id/diningTitle"
         android:scaleType="fitCenter"
-        android:tint="@color/colorTextDark"
         android:src="@drawable/back"
         android:id="@+id/backButton"
-        android:focusable="false" />
+        android:focusable="false"
+        android:layout_alignTop="@+id/diningTitle" />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

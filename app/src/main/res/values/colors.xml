@@ -5,5 +5,5 @@
     <color name="colorPrimaryDark">#040099</color>
     <color name="colorText">#4B4139</color>
     <color name="colorTextHint">#989898</color>
-    <color name="colorTextDark">#B0A187</color>
+    <color name="colorTextDark">#fff</color>
 </resources>

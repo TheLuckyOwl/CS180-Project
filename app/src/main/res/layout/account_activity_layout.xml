@@ -8,7 +8,8 @@
     android:weightSum="4.20"
     android:shrinkColumns="3"
     android:paddingRight="-2dp"
-    android:paddingLeft="-2dp">
+    android:paddingLeft="-2dp"
+    android:background="@color/colorPrimary">
 
     <TextView
         android:layout_width="match_parent"
@@ -16,17 +17,18 @@
         android:text="TITLE"
         android:textSize="30sp"
         android:id="@+id/menuTitle"
-        android:textColor="@color/colorTextDark"
+        android:textColor="#fff"
         android:gravity="center"
         android:textStyle="bold"
         android:background="@drawable/account_bgd"
-        android:paddingLeft="-2dp" />
+        android:paddingLeft="-2dp"
+        android:layout_marginTop="-5dp"/>
 
     <TableRow
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:background="@color/colorPrimary">
+        >
 
         <LinearLayout
             android:orientation="vertical"
@@ -50,7 +52,11 @@
                 android:textAlignment="center"
                 android:textStyle="bold"
                 android:textColor="@color/colorText"
-                android:text="Friends"/>
+                android:text="Friends"
+                android:shadowColor="#A6A1A1"
+                android:shadowDx="6"
+                android:shadowDy="8"
+                android:shadowRadius="10"/>
         </LinearLayout>
 
         <LinearLayout
@@ -76,7 +82,11 @@
                 android:textAlignment="center"
                 android:textStyle="bold"
                 android:textColor="@color/colorText"
-                android:text="Map"/>
+                android:text="Map"
+                android:shadowColor="#A6A1A1"
+                android:shadowDx="6"
+                android:shadowDy="8"
+                android:shadowRadius="10"/>
         </LinearLayout>
         <LinearLayout
             android:orientation="vertical"
@@ -101,14 +111,31 @@
                 android:textAlignment="center"
                 android:textStyle="bold"
                 android:textColor="@color/colorText"
-                android:text="Schedule"/>
+                android:text="Schedule"
+                android:shadowColor="#A6A1A1"
+                android:shadowDx="6"
+                android:shadowDy="8"
+                android:shadowRadius="10"/>
         </LinearLayout>
+
     </TableRow>
+
+    <View
+        android:layout_height="2dip"
+        android:background="#D8D6D6"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp" />
+    <View
+        android:layout_height="2dip"
+        android:background="#D8D6D6"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" />
+
     <TableRow
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:background="@color/colorPrimary">
+        android:layout_weight="1">
 
         <LinearLayout
             android:orientation="vertical"
@@ -133,7 +160,11 @@
                 android:textAlignment="center"
                 android:textStyle="bold"
                 android:textColor="@color/colorText"
-                android:text="ILearn"/>
+                android:text="ILearn"
+                android:shadowColor="#A6A1A1"
+                android:shadowDx="6"
+                android:shadowDy="8"
+                android:shadowRadius="10"/>
         </LinearLayout>
 
         <LinearLayout
@@ -159,7 +190,11 @@
                 android:textAlignment="center"
                 android:textStyle="bold"
                 android:textColor="@color/colorText"
-                android:text="Prof. Ratings"/>
+                android:text="Prof. Ratings"
+                android:shadowColor="#A6A1A1"
+                android:shadowDx="6"
+                android:shadowDy="8"
+                android:shadowRadius="10"/>
         </LinearLayout>
         <LinearLayout
             android:orientation="vertical"
@@ -184,14 +219,30 @@
                 android:textAlignment="center"
                 android:textStyle="bold"
                 android:textColor="@color/colorText"
-                android:text="Menus"/>
+                android:text="Menus"
+                android:shadowColor="#A6A1A1"
+                android:shadowDx="6"
+                android:shadowDy="8"
+                android:shadowRadius="10"/>
         </LinearLayout>
     </TableRow>
+
+    <View
+        android:layout_height="2dip"
+        android:background="#D8D6D6"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp" />
+    <View
+        android:layout_height="2dip"
+        android:background="#D8D6D6"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp" />
+
     <TableRow
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:background="@color/colorPrimary">
+        android:layout_weight="1">
 
         <LinearLayout
             android:orientation="vertical"
@@ -216,7 +267,11 @@
                 android:textAlignment="center"
                 android:textStyle="bold"
                 android:textColor="@color/colorText"
-                android:text="Building Hours"/>
+                android:text="Building Hours"
+                android:shadowColor="#A6A1A1"
+                android:shadowDx="6"
+                android:shadowDy="8"
+                android:shadowRadius="10"/>
         </LinearLayout>
 
         <LinearLayout
@@ -242,7 +297,11 @@
                 android:textAlignment="center"
                 android:textStyle="bold"
                 android:textColor="@color/colorText"
-                android:text="Food Trucks"/>
+                android:text="Food Trucks"
+                android:shadowColor="#A6A1A1"
+                android:shadowDx="6"
+                android:shadowDy="8"
+                android:shadowRadius="10"/>
         </LinearLayout>
         <LinearLayout
             android:orientation="vertical"
@@ -267,14 +326,32 @@
                 android:textAlignment="center"
                 android:textStyle="bold"
                 android:textColor="@color/colorText"
-                android:text="Study Rooms"/>
+                android:text="Study Rooms"
+                android:shadowColor="#A6A1A1"
+                android:shadowDx="6"
+                android:shadowDy="8"
+                android:shadowRadius="10"/>
         </LinearLayout>
     </TableRow>
+
+    <View
+        android:layout_height="1dip"
+        android:background="#A5A5A5"
+        android:layout_marginBottom="10dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp" />
+    <View
+        android:layout_height="1dip"
+        android:background="#ACAAAA"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" />
+
     <TableRow
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:background="@color/colorPrimary">
+        android:layout_weight="1">
 
         <LinearLayout
             android:orientation="vertical"
@@ -299,7 +376,11 @@
                 android:textAlignment="center"
                 android:textStyle="bold"
                 android:textColor="@color/colorText"
-                android:text="Settings"/>
+                android:text="Settings"
+                android:shadowColor="#A6A1A1"
+                android:shadowDx="6"
+                android:shadowDy="8"
+                android:shadowRadius="10"/>
         </LinearLayout>
 
         <LinearLayout
@@ -325,7 +406,11 @@
                 android:textAlignment="center"
                 android:textStyle="bold"
                 android:textColor="@color/colorText"
-                android:text="Safety"/>
+                android:text="Safety"
+                android:shadowColor="#A6A1A1"
+                android:shadowDx="6"
+                android:shadowDy="8"
+                android:shadowRadius="10"/>
         </LinearLayout>
         <LinearLayout
             android:orientation="vertical"
@@ -349,7 +434,11 @@
                 android:textAlignment="center"
                 android:textStyle="bold"
                 android:textColor="@color/colorText"
-                android:text="Log Out"/>
+                android:text="Log Out"
+                android:shadowColor="#A6A1A1"
+                android:shadowDx="6"
+                android:shadowDy="8"
+                android:shadowRadius="10"/>
         </LinearLayout>
     </TableRow>
 
