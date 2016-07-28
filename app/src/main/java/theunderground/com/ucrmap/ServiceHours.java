@@ -49,15 +49,15 @@ public class ServiceHours extends Activity{
         expandableListView = (ExpandableListView) findViewById(R.id.expandableListView);
         expandableListDetail = ServiceHoursList.getData();
 
-        final TabsWizardModel dininghall_data[] = {
+        final TabsWizardModel servicebuilding_data[] = {
                 new TabsWizardModel("Orbach Library", R.drawable.library),
                 new TabsWizardModel("Rivera Library", R.drawable.library),
                 new TabsWizardModel("Student Recreation Center", R.drawable.gym),
                 new TabsWizardModel("Bookstore", R.drawable.bookstore),
                 new TabsWizardModel("Student Services", R.drawable.service),
-                new TabsWizardModel("Botanical Gardens", R.drawable.garden),
+                new TabsWizardModel("Botanical Gardens", R.drawable.garden)
         };
-        expandableListAdapter = new CustomExpandableListAdapter(this, dininghall_data, expandableListDetail);
+        expandableListAdapter = new CustomExpandableListAdapter(this, servicebuilding_data, expandableListDetail);
         expandableListView.setAdapter(expandableListAdapter);
 
         expandableListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
@@ -66,10 +66,10 @@ public class ServiceHours extends Activity{
                                         int groupPosition, int childPosition, long id) {
                 Toast.makeText(
                         getApplicationContext(),
-                        dininghall_data[groupPosition]
+                        servicebuilding_data[groupPosition]
                                 + " -> "
                                 + expandableListDetail.get(
-                                dininghall_data[groupPosition]).get(
+                                servicebuilding_data[groupPosition]).get(
                                 childPosition), Toast.LENGTH_SHORT
                 ).show();
                 return false;

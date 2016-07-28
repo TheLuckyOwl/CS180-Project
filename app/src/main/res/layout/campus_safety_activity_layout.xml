@@ -73,7 +73,7 @@
             android:shadowColor="#c2c2c2"
             android:textAlignment="center"
             android:clickable="true"
-            android:textColor="@color/colorText"
+            android:textColor="@color/colorTextDark"
             android:layout_below="@+id/textView4"
             android:layout_centerHorizontal="true" />
 
@@ -97,7 +97,7 @@
             android:id="@+id/textView9"
             android:layout_below="@+id/textView7"
             android:layout_alignParentStart="true"
-            android:textColor="@color/colorPrimaryLight"
+            android:textColor="@color/colorTextMenu"
             android:paddingLeft="13dp"
             android:paddingRight="13dp"
             android:paddingBottom="5dp"
@@ -138,7 +138,7 @@
             android:background="#6a6a6a"
             android:textAlignment="center"
             android:clickable="true"
-            android:textColor="@color/colorText"
+            android:textColor="@color/colorTextDark"
             android:layout_below="@+id/textView11"
             android:layout_centerHorizontal="true" />
 
@@ -163,7 +163,7 @@
             android:background="#dfb427"
             android:textAlignment="center"
             android:clickable="true"
-            android:textColor="@color/colorText"
+            android:textColor="@color/colorTextDark"
             android:layout_below="@+id/textView17"
             android:layout_centerHorizontal="true" />
 

@@ -28,7 +28,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginTop="8dp"
         android:textSize="32sp"
-        android:textColor="@color/colorTextDark"/>
+        android:textColor="@color/colorText"/>
 
     <View
         android:layout_width="match_parent"

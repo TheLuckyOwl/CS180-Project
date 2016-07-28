@@ -10,6 +10,6 @@
         android:paddingLeft="?android:attr/expandableListPreferredChildPaddingLeft"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
-        android:color="@color/colorTextDark"
+        android:color="@color/colorTextMenu"
         android:textStyle="italic"/>
 </LinearLayout>

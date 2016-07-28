@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="@color/colorPrimary"
-    >
+    tools:context=".FriendListActivity">
 
     <ImageButton
         android:layout_width="wrap_content"
@@ -17,6 +19,7 @@
         android:id="@+id/backImage"
         android:adjustViewBounds="false"
         android:focusable="false" />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -29,20 +32,21 @@
         android:textIsSelectable="false"
         android:background="@drawable/account_bgd"
         android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:foregroundGravity="fill_horizontal" />
 
-    <android.support.v7.widget.RecyclerView
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
+    <ExpandableListView
+        android:id="@+id/expandableListView"
         android:layout_height="match_parent"
-        android:id="@+id/FriendlistView"
-        tools:context=".FriendListActivity"
-        android:background= "@color/colorPrimary"
-        android:layout_above="@+id/buttonBar"
-        android:layout_below="@+id/scheduleTitle"
+        android:layout_width="match_parent"
+        android:background="@color/colorPrimary"
+        android:indicatorLeft="?android:attr/expandableListPreferredItemIndicatorLeft"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="0.5dp"
+        android:layout_below="@+id/backImage"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/buttonBar" />
 
-        />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dip"
@@ -59,7 +63,8 @@
             android:text="Add Friend"
             android:textColor="@color/colorText"
             android:layout_weight="1"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:background="@color/colorPrimary"/>
 
         <Button
             android:layout_width="match_parent"
@@ -68,7 +73,8 @@
             android:text="Friend Search"
             android:textColor="@color/colorText"
             android:layout_weight="1"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:background="@color/colorPrimary"/>
 
     </LinearLayout>
 

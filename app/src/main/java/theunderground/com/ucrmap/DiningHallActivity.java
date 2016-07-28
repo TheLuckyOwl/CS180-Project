@@ -28,6 +28,7 @@ public class DiningHallActivity extends Activity {
     SharedPreferences prefs = null;
     private ImageButton mBackButton = null;
     private TextView mTitle = null;
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -72,7 +73,7 @@ public class DiningHallActivity extends Activity {
                 new TabsWizardModel("Chameleon", R.drawable.chameleon),
                 new TabsWizardModel("Moo Moo", R.drawable.moomoo),
                 new TabsWizardModel("Highlander", R.drawable.highlander),
-                new TabsWizardModel("Bear Tracks", R.drawable.beartracks),
+                new TabsWizardModel("Bear Tracks", R.drawable.beartracks)
         };
         expandableListAdapter = new CustomExpandableListAdapter(this, dininghall_data, expandableListDetail);
         expandableListView.setAdapter(expandableListAdapter);

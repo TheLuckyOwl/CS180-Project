@@ -1,10 +1,5 @@
 package theunderground.com.ucrmap;
 
-/**
- * Created by sarahu on 7/21/16.
- */
-import java.util.HashMap;
-import java.util.List;
 import android.content.Context;
 import android.graphics.Typeface;
 import android.view.LayoutInflater;
@@ -14,13 +9,19 @@ import android.widget.BaseExpandableListAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class CustomExpandableListAdapter extends BaseExpandableListAdapter {
+import java.util.HashMap;
+import java.util.List;
+
+/**
+ * Created by sarahu on 7/28/16.
+ */
+public class CustomExpandableListHtmlAdapter extends BaseExpandableListAdapter {
 
     private Context context;
     private TabsWizardModel expandableListTitle [];
     private HashMap<String, List<String>> expandableListDetail;
 
-    public CustomExpandableListAdapter(Context context, TabsWizardModel list_data [],
+    public CustomExpandableListHtmlAdapter(Context context, TabsWizardModel list_data [],
                                        HashMap<String, List<String>> expandableListDetail) {
         this.context = context;
         this.expandableListTitle = list_data;
@@ -102,6 +103,6 @@ public class CustomExpandableListAdapter extends BaseExpandableListAdapter {
 
     @Override
     public boolean isChildSelectable(int listPosition, int expandedListPosition) {
-        return false;
+        return true;
     }
 }
