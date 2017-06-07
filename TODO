@@ -1,6 +1,7 @@
 /*TODO
   -First and formost, we need to erase all the old files, i'll handle that for the most part. I.e. the raterooms and stuff
   -Remove Friends functionality
+  -Remove all Rodgers database crap he screwed up
   -Make database for users
     -Possibly using Amazon Incognito
     -Info Needed:
@@ -19,4 +20,44 @@
     -We crawl that page for the predefined text fields and return it.
   -Fix foodtrucks to open in the app
   -Add all the map functionality 
+  
+  
+  
+  -REMOVING THESE FILES AND REFERENCES
+      -AddClassActivity.java
+      -AddCommentActivity.java
+      -AddFriendActivity.java
+      -AddRoomActivity.java
+      -ClassroomQueryBuilder.ajav
+      -Classroom.java
+      -ClassroomAdapter.java
+      -ClassroomModel.java
+      -FriendsList.java
+      -FriendsListAdapter.java
+      -FriendsListModel.java
+      -FriendSearchActivity.java
+      -GetClassroomAsyncTask.java
+      -GetUsersAsyncTask.java
+      -RateRoomActivity.java
+      -RemoveClassActivity.java
+      -RoomPageActivity.java
+      -ScheduleAdapter.java
+      -ScheduleActivity.java
+      -ScheduleModel.java
+      -UpdateClassroom.java
+      -ViewFriendSchedule.java
+      -add_class_layout.xml
+      -add_friend_activity_layout.xml
+      -add_comment_activity_layout.xml
+      -class_list_items_layout.xml
+      -classroom_list_items.xml
+      -friend_list_activity_layout.xml
+      -friend_list_items.xml
+      -friend_search_activity_layout.xml
+      -rate_room_activity_layout.xml
+      -remove_class_activity_layout.xml
+      -schedule_activity_layout.xml
+      -schedule_display_items.xml
+      -view_friend_schedule_activity_class.xml
+      
   */
