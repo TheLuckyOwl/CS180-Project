@@ -1,0 +1,22 @@
+/*TODO
+  -First and formost, we need to erase all the old files, i'll handle that for the most part. I.e. the raterooms and stuff
+  -Remove Friends functionality
+  -Make database for users
+    -Possibly using Amazon Incognito
+    -Info Needed:
+      -Major (Selected from drop down)
+      -Netid/Pass (Store it locally)
+      -A username
+      -A password
+  -Change schedule to have the current class offerings list
+    -Like default to the search page of the classes when we register. 
+    -Maybe build our own mobile friendly version that in the backend interacts with the crappy Rweb one
+  -Stabilze Ilearn page
+  -Fix Rate my professor (It's broken)
+  -Fix Library reservation form (It's broken? I think?)
+  -Add advisor hours based on users selected major
+    -We can do this by having if statments and presetting a page to crawl based on the users major. 
+    -We crawl that page for the predefined text fields and return it.
+  -Fix foodtrucks to open in the app
+  -Add all the map functionality 
+  */
