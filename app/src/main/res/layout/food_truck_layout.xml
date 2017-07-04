@@ -3,17 +3,7 @@
     android:layout_width="match_parent" android:layout_height="match_parent"
     android:background="@color/colorPrimary">
 
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_alignBottom="@+id/diningTitle"
-        android:layout_alignTop="@+id/diningTitle"
-        android:scaleType="fitCenter"
-        android:tint="@color/colorTextDark"
-        android:src="@drawable/back"
-        android:background="@color/colorPrimary"
-        android:id="@+id/backButton" />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -24,6 +14,16 @@
         android:textColor="@color/colorTextDark"
         android:textStyle="bold"
         android:background="@drawable/account_bgd"/>
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_alignBottom="@+id/diningTitle"
+        android:layout_alignTop="@+id/diningTitle"
+        android:scaleType="fitCenter"
+        android:tint="@color/colorTextDark"
+        android:src="@drawable/back"
+        android:id="@+id/backButton" />
     <!-- A RecyclerView with some commonly used attributes -->
     <android.support.v7.widget.RecyclerView
         xmlns:android="http://schemas.android.com/apk/res/android"

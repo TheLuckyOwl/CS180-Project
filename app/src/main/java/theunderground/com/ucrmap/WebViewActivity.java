@@ -23,6 +23,10 @@ public class WebViewActivity extends Activity {
         setContentView(R.layout.web_view_layout);
         mWebView = (WebView) findViewById(R.id.displayView);
         mWebView.setLayerType(View.LAYER_TYPE_SOFTWARE, null);
+        WebView myWebView = (WebView) findViewById(R.id.displayView);
+        myWebView.setWebViewClient(new WebViewClient());
+
+
         mTextView = (TextView) findViewById(R.id.libraryTitle);
         Bundle bundle = getIntent().getExtras();
         String filePath = bundle.getString("Path");

@@ -20,11 +20,11 @@ import java.util.concurrent.ExecutionException;
 public class AccountActivity extends Activity {
 
     SharedPreferences prefs = null;
-    private ImageButton mFriendsButton = null;
+
     private ImageButton mMapButton = null;
     private ImageButton mScheduleButton = null;
     private ImageButton mLibraryButton = null;
-    //private ImageButton mRoomsButton = null;
+
     private ImageButton mILearnButton = null;
     private ImageButton mProfessorButton = null;
     private ImageButton mFoodMenuButton = null;
@@ -45,9 +45,8 @@ public class AccountActivity extends Activity {
         mTitle = (TextView)findViewById(R.id.menuTitle);
         mTitle.setText("UCR Student ToolBox");
 
-        mFriendsButton = (ImageButton)this.findViewById(R.id.friendsButton);
         mMapButton = (ImageButton)this.findViewById(R.id.mapButton);
-        mScheduleButton = (ImageButton)this.findViewById(R.id.scheduleButton);
+        //mScheduleButton = (ImageButton)this.findViewById(R.id.scheduleButton);
 
         mILearnButton = (ImageButton)this.findViewById(R.id.iLearnButton);
         mProfessorButton = (ImageButton)this.findViewById(R.id.professorButton);
@@ -64,24 +63,20 @@ public class AccountActivity extends Activity {
         //mSignOutButton = (TextView)this.findViewById(R.id.logoutButton);
         mSignOutButton = (ImageButton)this.findViewById(R.id.logoutButton);
 
-        mFriendsButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view){
-                startActivity((new Intent(AccountActivity.this, FriendListActivity.class)));
-            }
-        });
+
         mMapButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
                 startActivity((new Intent(AccountActivity.this, UCRMapActivity.class)));
             }
         });
-        mScheduleButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view){
-                startActivity((new Intent(AccountActivity.this, ScheduleActivity.class)));
-            }
-        });
+        //TODO Make class schedule
+        //mScheduleButton.setOnClickListener(new View.OnClickListener() {
+        //    @Override
+        //    public void onClick(View view){
+        //        startActivity((new Intent(AccountActivity.this, ScheduleActivity.class)));
+        //    }
+        //});
         mILearnButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
@@ -121,17 +116,17 @@ public class AccountActivity extends Activity {
             @Override
             public void onClick(View view){
                 Intent i = new Intent(AccountActivity.this, WebViewActivity.class);
-                i.putExtra("Path", "http://www.ratemyprofessors.com/campusRatings.jsp?sid=1076");
+                i.putExtra("Path", "http://www.ratemyprofessors.com/mobile/professor_search");
                 i.putExtra("Title", "Rate My Professor");
+                i.putExtra("JavaScript", "javascript: {" +
+                        "var elements = document.getElementsByClassName('mobileAppPromo');" +
+                        "    while(elements.length > 0){\n" +
+                        "        elements[0].parentNode.removeChild(elements[0]);\n" +
+                        "    }};");
                 startActivity(i);
             }
         });
-        /*mRoomsButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view){
-                startActivity((new Intent(AccountActivity.this, RateRoomActivity.class)));
-            }
-        });*/
+
         mFoodMenuButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){

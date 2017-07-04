@@ -4,17 +4,7 @@
     android:layout_height="match_parent"
     android:background="@color/colorPrimary">
 
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_alignBottom="@+id/libraryTitle"
-        android:layout_alignTop="@+id/libraryTitle"
-        android:scaleType="fitCenter"
-        android:tint="@color/colorTextDark"
-        android:src="@drawable/back"
-        android:background="@color/colorPrimary"
-        android:id="@+id/backButton" />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -25,11 +15,21 @@
         android:textColor="@color/colorTextDark"
         android:textStyle="bold"
         android:background="@drawable/account_bgd"/>
-
-    <WebView
-        android:id="@+id/displayView"
+    <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_alignBottom="@+id/libraryTitle"
+        android:layout_alignTop="@+id/libraryTitle"
+        android:scaleType="fitCenter"
+        android:tint="@color/colorTextDark"
+        android:src="@drawable/back"
+
+        android:id="@+id/backButton" />
+    <WebView
+        android:id="@+id/displayView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
         android:layout_below="@+id/libraryTitle"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"

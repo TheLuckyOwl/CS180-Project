@@ -83,7 +83,7 @@
         android:layout_marginTop="6dp"
         android:src="@drawable/logout"
         android:tint="@color/colorText"
-        android:layout_below="@+id/swNot"
+        android:layout_below="@+id/view5"
         android:layout_toStartOf="@+id/emailLink" />
 
 
@@ -99,20 +99,9 @@
         android:clickable="true"
         android:layout_marginLeft="10dip"
         android:textColor="@color/colorText"
-        android:layout_below="@+id/swNot"
+        android:layout_below="@+id/view5"
         android:layout_toEndOf="@+id/imageView2"/>
 
-    <Switch
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/colorText"
-        android:text="Notifications"
-        android:id="@+id/swNot"
-        android:checked="false"
-        android:layout_marginBottom="20dp"
-        android:layout_marginTop="6dp"
-        android:layout_below="@+id/view5"
-        android:layout_alignStart="@+id/view5" />
 
     <Button
         android:layout_width="wrap_content"

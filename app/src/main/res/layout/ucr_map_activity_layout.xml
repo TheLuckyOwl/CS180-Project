@@ -5,17 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/colorPrimary"
     android:id="@+id/map_title">
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_alignBottom="@+id/libraryTitle"
-        android:layout_alignTop="@+id/libraryTitle"
-        android:scaleType="fitCenter"
-        android:tint="@color/colorTextDark"
-        android:src="@drawable/back"
-        android:background="@color/colorPrimary"
-        android:id="@+id/backButton" />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -26,6 +16,17 @@
         android:textColor="@color/colorTextDark"
         android:textStyle="bold"
         android:background="@drawable/account_bgd" />
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_alignBottom="@+id/libraryTitle"
+        android:layout_alignTop="@+id/libraryTitle"
+        android:scaleType="fitCenter"
+        android:tint="@color/colorTextDark"
+        android:src="@drawable/back"
+
+        android:id="@+id/backButton" />
     <fragment
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"

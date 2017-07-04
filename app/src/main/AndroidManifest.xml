@@ -101,36 +101,6 @@
                 android:value="theunderground.com.ucrmap.ContactUsActivity" />
         </activity>
         <activity
-            android:name=".RateRoomActivity"
-            android:label="@string/app_name"
-            android:parentActivityName=".AccountActivity">
-
-            <!-- Parent activity meta-data to support 4.0 and lower -->
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="theunderground.com.ucrmap.AccountActivity" />
-        </activity>
-        <activity
-            android:name=".AddRoomActivity"
-            android:label="@string/app_name"
-            android:parentActivityName=".RateRoomActivity">
-
-            <!-- Parent activity meta-data to support 4.0 and lower -->
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="theunderground.com.ucrmap.RateRoomActivity" />
-        </activity>
-        <activity
-            android:name=".RoomPageActivity"
-            android:label="@string/app_name"
-            android:parentActivityName=".RateRoomActivity">
-
-            <!-- Parent activity meta-data to support 4.0 and lower -->
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="theunderground.com.ucrmap.RateRoomActivity" />
-        </activity>
-        <activity
             android:name=".DiningHallActivity"
             android:label="@string/app_name"
             android:parentActivityName=".AccountActivity">
@@ -144,33 +114,7 @@
             android:name=".WebViewActivity"
             android:label="@string/app_name">
         </activity>
-        <activity
-            android:name=".ScheduleActivity"
-            android:label="@string/app_name"
-            android:parentActivityName="theunderground.com.ucrmap.AccountActivity">
-            <!-- Parent activity meta-data to support 4.0 and lower -->
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="theunderground.com.ucrmap.AccountActivity" />
-        </activity>
-        <activity
-            android:name=".AddClassActivity"
-            android:label="@string/app_name"
-            android:parentActivityName="theunderground.com.ucrmap.ScheduleActivity">
-            <!-- Parent activity meta-data to support 4.0 and lower -->
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="theunderground.com.ucrmap.ScheduleActivity" />
-        </activity>
-        <activity
-            android:name=".RemoveClassActivity"
-            android:label="@string/app_name"
-            android:parentActivityName="theunderground.com.ucrmap.ScheduleActivity">
-            <!-- Parent activity meta-data to support 4.0 and lower -->
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="theunderground.com.ucrmap.ScheduleActivity" />
-        </activity>
+
         <receiver android:name=".AlarmReceiver" >
         </receiver>
         <activity
@@ -190,42 +134,6 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="theunderground.com.ucrmap.AccountActivity" />
-        </activity>
-        <activity
-            android:name=".FriendListActivity"
-            android:label="@string/app_name"
-            android:parentActivityName="theunderground.com.ucrmap.AccountActivity">
-            <!-- Parent activity meta-data to support 4.0 and lower -->
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="theunderground.com.ucrmap.AccountActivity" />
-        </activity>
-        <activity
-            android:name=".FriendSearchActivity"
-            android:label="@string/app_name"
-            android:parentActivityName="theunderground.com.ucrmap.FriendListActivity">
-            <!-- Parent activity meta-data to support 4.0 and lower -->
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="theunderground.com.ucrmap.FriendListActivity" />
-        </activity>
-        <activity
-            android:name=".AddFriendActivity"
-            android:label="@string/app_name"
-            android:parentActivityName="theunderground.com.ucrmap.FriendListActivity">
-            <!-- Parent activity meta-data to support 4.0 and lower -->
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="theunderground.com.ucrmap.FriendListActivity" />
-        </activity>
-        <activity
-            android:name=".ViewFriendSchedule"
-            android:label="@string/app_name"
-            android:parentActivityName="theunderground.com.ucrmap.FriendListActivity">
-            <!-- Parent activity meta-data to support 4.0 and lower -->
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="theunderground.com.ucrmap.FriendListActivity" />
         </activity>
 
         <!--
