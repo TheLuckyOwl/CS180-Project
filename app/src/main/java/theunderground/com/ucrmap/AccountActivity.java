@@ -24,7 +24,7 @@ public class AccountActivity extends Activity {
     private ImageButton mMapButton = null;
     private ImageButton mScheduleButton = null;
     private ImageButton mLibraryButton = null;
-
+    private ImageButton mAdvisingButton = null;
     private ImageButton mILearnButton = null;
     private ImageButton mProfessorButton = null;
     private ImageButton mFoodMenuButton = null;
@@ -43,10 +43,11 @@ public class AccountActivity extends Activity {
         setContentView(R.layout.account_activity_layout);
 
         mTitle = (TextView)findViewById(R.id.menuTitle);
-        mTitle.setText("UCR Student ToolBox");
+        mTitle.setText("R'Mate");
 
         mMapButton = (ImageButton)this.findViewById(R.id.mapButton);
-        //mScheduleButton = (ImageButton)this.findViewById(R.id.scheduleButton);
+        mScheduleButton = (ImageButton)this.findViewById(R.id.scheduleButton);
+        mAdvisingButton = (ImageButton) this.findViewById(R.id.friendsButton);
 
         mILearnButton = (ImageButton)this.findViewById(R.id.iLearnButton);
         mProfessorButton = (ImageButton)this.findViewById(R.id.professorButton);
@@ -71,12 +72,22 @@ public class AccountActivity extends Activity {
             }
         });
         //TODO Make class schedule
-        //mScheduleButton.setOnClickListener(new View.OnClickListener() {
-        //    @Override
-        //    public void onClick(View view){
-        //        startActivity((new Intent(AccountActivity.this, ScheduleActivity.class)));
-        //    }
-        //});
+        mScheduleButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view){
+                Intent i = new Intent(AccountActivity.this, ComingSoonActivity.class);
+                i.putExtra("Title", "Schedule");
+                startActivity(i);
+            }
+        });
+        mAdvisingButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view){
+                Intent i = new Intent(AccountActivity.this, ComingSoonActivity.class);
+                i.putExtra("Title", "Advising");
+                startActivity(i);
+            }
+        });
         mILearnButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){

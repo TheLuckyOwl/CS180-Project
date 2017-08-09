@@ -28,7 +28,8 @@
 
         <activity
             android:name=".SplashActivity"
-            android:label="@string/app_name">
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -38,14 +39,16 @@
 
         <activity
             android:name=".LoginActivity"
-            android:label="@string/app_name">
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
 
         </activity>
 
         <activity
             android:name=".ForgotLogin"
             android:label="@string/app_name"
-            android:parentActivityName=".LoginActivity">
+            android:parentActivityName=".LoginActivity"
+            android:screenOrientation="portrait">
 
             <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data
@@ -55,7 +58,8 @@
         <activity
             android:name=".RegisterActivity"
             android:label="@string/app_name"
-            android:parentActivityName="theunderground.com.ucrmap.LoginActivity">
+            android:parentActivityName="theunderground.com.ucrmap.LoginActivity"
+            android:screenOrientation="portrait">
             <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -64,7 +68,8 @@
         <activity
             android:name=".AccountActivity"
             android:label="@string/app_name"
-            android:parentActivityName=".LoginActivity">
+            android:parentActivityName=".LoginActivity"
+            android:screenOrientation="portrait">
             <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -73,7 +78,8 @@
         <activity
             android:name=".CampusSafetyActivity"
             android:label="@string/app_name"
-            android:parentActivityName=".AccountActivity">
+            android:parentActivityName=".AccountActivity"
+            android:screenOrientation="portrait">
 
             <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data
@@ -83,7 +89,8 @@
         <activity
             android:name=".ContactUsActivity"
             android:label="@string/app_name"
-            android:parentActivityName=".AccountActivity">
+            android:parentActivityName=".AccountActivity"
+            android:screenOrientation="portrait">
 
             <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data
@@ -93,7 +100,8 @@
         <activity
             android:name=".UpdateIlearnActivity"
             android:label="@string/app_name"
-            android:parentActivityName=".ContactUsActivity">
+            android:parentActivityName=".ContactUsActivity"
+            android:screenOrientation="portrait">
 
             <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data
@@ -103,7 +111,8 @@
         <activity
             android:name=".DiningHallActivity"
             android:label="@string/app_name"
-            android:parentActivityName=".AccountActivity">
+            android:parentActivityName=".AccountActivity"
+            android:screenOrientation="portrait">
 
             <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data
@@ -112,7 +121,8 @@
         </activity>
         <activity
             android:name=".WebViewActivity"
-            android:label="@string/app_name">
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
         </activity>
 
         <receiver android:name=".AlarmReceiver" >
@@ -120,16 +130,28 @@
         <activity
             android:name=".FoodTruckLocations"
             android:label="@string/app_name"
-            android:parentActivityName="theunderground.com.ucrmap.AccountActivity">
+            android:parentActivityName="theunderground.com.ucrmap.AccountActivity"
+            android:screenOrientation="portrait">
         <!-- Parent activity meta-data to support 4.0 and lower -->
         <meta-data
             android:name="android.support.PARENT_ACTIVITY"
             android:value="theunderground.com.ucrmap.AccountActivity" />
         </activity>
         <activity
+            android:name=".ComingSoonActivity"
+            android:label="@string/app_name"
+            android:parentActivityName="theunderground.com.ucrmap.AccountActivity"
+            android:screenOrientation="portrait">
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="theunderground.com.ucrmap.AccountActivity" />
+        </activity>
+        <activity
             android:name=".ServiceHours"
             android:label="@string/app_name"
-            android:parentActivityName="theunderground.com.ucrmap.AccountActivity">
+            android:parentActivityName="theunderground.com.ucrmap.AccountActivity"
+            android:screenOrientation="portrait">
             <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -150,7 +172,8 @@
 
         <activity
             android:name=".UCRMapActivity"
-            android:label="@string/title_activity_ucrmap">
+            android:label="@string/title_activity_ucrmap"
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="theunderground.com.ucrmap.AccountActivity" />

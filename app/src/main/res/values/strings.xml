@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">UCR Map</string>
+    <string name="app_name">R'Mate</string>
     <string name="Login_welcome">Welcome</string>
     <string name="username_text">Username:</string>
     <string name="Password_text">Password:</string>
