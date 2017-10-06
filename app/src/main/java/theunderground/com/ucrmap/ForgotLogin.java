@@ -27,7 +27,7 @@ public class ForgotLogin extends Activity {
     private String CorrectUser = null;
     private String UsersName = null;
     ArrayList<User> returnValues = new ArrayList<User>();
-
+    private String Password;
     private boolean allCorrect(String email, String username) {
 
         GetUsersAsyncTask task = new GetUsersAsyncTask();
@@ -48,6 +48,7 @@ public class ForgotLogin extends Activity {
                     CorrectEmail = x.getEmail();
                     CorrectUser = x.getUsername();
                     UsersName = x.getFirst_name();
+                    Password = x.getPassword();
                     return true;
                 }
             }
@@ -76,12 +77,13 @@ public class ForgotLogin extends Activity {
 
                 if(allCorrect(email, username))
                 {
-                    Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts(
-                            "mailto","theucrmap@gmail.com", null));
-                    emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Login Credential Help");
-                    emailIntent.putExtra(Intent.EXTRA_TEXT, "Hello, my name is " + UsersName + " and my Username is " +
-                            CorrectUser + ". Please send my Login Information to " + CorrectEmail + ".");
-                    startActivity(Intent.createChooser(emailIntent, "Send email..."));
+//                    Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts(
+//                            "mailto","theucrmap@gmail.com", null));
+//                    emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Login Credential Help");
+//                    emailIntent.putExtra(Intent.EXTRA_TEXT, "Hello, my name is " + UsersName + " and my Username is " +
+//                            CorrectUser + ". Please send my Login Information to " + CorrectEmail + ".");
+//                    startActivity(Intent.createChooser(emailIntent, "Send email..."));
+                    Toast.makeText(ForgotLogin.this, "Your Password is: "+ Password, Toast.LENGTH_SHORT).show();
                 }
                 else
                 {

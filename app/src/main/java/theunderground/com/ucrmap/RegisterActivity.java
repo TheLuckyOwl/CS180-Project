@@ -41,17 +41,13 @@ import com.mongodb.*;
  */
 public class RegisterActivity extends Activity{
     Button bSubmit,bBack;
-    EditText etFirst, etMI, etLast, etUsername, etPassword, etIlearnUser, etIlearnPass, etEmail;
+    EditText etUsername, etPassword, etIlearnUser, etIlearnPass, etEmail;
     TextView tvReg, tvFName,tvInitial, tvLname, tvUser, tvPass;
     ArrayList<User> returnValues = new ArrayList<User>();
 
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.register_activity_layout);
-
-        etFirst = (EditText)this.findViewById(R.id.etFirst);
-        etMI = (EditText)this.findViewById(R.id.etMI);
-        etLast = (EditText) this.findViewById(R.id.etLast);
         etUsername = (EditText) this.findViewById(R.id.etUsername);
         etPassword = (EditText) this.findViewById(R.id.etPassword);
         etIlearnUser = (EditText) this.findViewById(R.id.etIlearnUser);
@@ -59,18 +55,11 @@ public class RegisterActivity extends Activity{
         etEmail = (EditText) this.findViewById(R.id.etEmailReg);
         bSubmit = (Button) this.findViewById(R.id.bSubmit);
         bBack = (Button) this.findViewById(R.id.bBackReg);
-        tvFName = (TextView) this.findViewById(R.id.tvF_Name);
-        tvReg = (TextView) this.findViewById(R.id.tvReg);
-        tvInitial = (TextView) this.findViewById(R.id.tvM_Initial);
-        tvLname = (TextView) this.findViewById(R.id.tvL_Name);
         tvUser = (TextView) this.findViewById(R.id.tvUser);
         tvPass = (TextView) this.findViewById(R.id.tvPassword);
 
         bSubmit.setOnClickListener (new View.OnClickListener(){
             public void onClick(View v){
-                final String FirstName = etFirst.getText().toString();
-                final String MiddleInitial = etMI.getText().toString();
-                final String LastName = etLast.getText().toString();
                 final String UserName = etUsername.getText().toString();
                 final String Password = etPassword.getText().toString();
                 final String IlearnUserF = etIlearnUser.getText().toString();
@@ -97,12 +86,9 @@ public class RegisterActivity extends Activity{
                     if (Exists) {
                         Toast.makeText(RegisterActivity.this, "Username has been taken", Toast.LENGTH_LONG).show();
                     } else {
-                        if (!FirstName.equals("")  && !LastName.equals("") && !UserName.equals("") && !Password.equals("") && !EmailF.equals(""))
+                        if (!UserName.equals("") && !Password.equals("") && !EmailF.equals(""))
                         {
                             User contact = new User();
-                            contact.First_name = FirstName;
-                            contact.Middle_initial = MiddleInitial;
-                            contact.Last_name = LastName;
                             contact.Username = UserName;
                             contact.Password = Password;
                             contact.IlearnUser = IlearnUserF;

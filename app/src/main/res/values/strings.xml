@@ -1,11 +1,11 @@
 <resources>
     <string name="app_name">R\'Mate</string>
     <string name="Login_welcome">Welcome</string>
-    <string name="username_text">Username:</string>
-    <string name="Password_text">Password:</string>
+    <string name="username_text">R\'Mate Username:</string>
+    <string name="Password_text">R\'Mate Password:</string>
     <string name="login">Login</string>
-    <string name="ForgotLog">Forgot your login information?</string>
-    <string name="login_register">Don\'t have an Account?</string>
+    <string name="ForgotLog">Recover Password</string>
+    <string name="login_register">Sign Up</string>
     <string name="Forgot_sub">Submit</string>
     <string name="Forgot_email">Enter Email:</string>
     <string name="loginRecover">Login Recovery</string>

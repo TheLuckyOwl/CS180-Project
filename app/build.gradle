@@ -11,7 +11,7 @@ android {
         applicationId "theunderground.com.ucrmap"
         minSdkVersion 19
         targetSdkVersion 25
-        versionCode 2
+        versionCode 3
         versionName "Alpha"
 
         multiDexEnabled true
@@ -28,7 +28,10 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
-    compile 'com.android.support:multidex:1.0.0'
+    compile 'com.android.support:multidex:1.0.1'
+
+
+
     compile 'com.android.support:appcompat-v7:24.1.0'
     compile 'com.android.support:recyclerview-v7:24.1.0'
     compile 'com.google.android.gms:play-services:9.2.1'
