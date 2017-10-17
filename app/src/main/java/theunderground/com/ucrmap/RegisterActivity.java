@@ -10,40 +10,21 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.mongodb.BasicDBObject;
-import com.mongodb.DB;
-import com.mongodb.DBCursor;
-import com.mongodb.DBObject;
-import com.mongodb.MongoClient;
-import com.mongodb.MongoClientURI;
-import com.mongodb.client.MongoCollection;
-import com.mongodb.client.MongoCursor;
-import com.mongodb.client.MongoDatabase;
-import com.mongodb.MongoException;
-import org.bson.Document;
-import java.text.ParseException;
-import static java.util.Arrays.asList;
-import com.mongodb.client.FindIterable;
+import com.amazonaws.ClientConfiguration;
+import com.amazonaws.mobileconnectors.cognitoidentityprovider.CognitoUser;
+import com.amazonaws.mobileconnectors.cognitoidentityprovider.CognitoUserAttributes;
+import com.amazonaws.mobileconnectors.cognitoidentityprovider.CognitoUserCodeDeliveryDetails;
+import com.amazonaws.mobileconnectors.cognitoidentityprovider.CognitoUserPool;
+import com.amazonaws.mobileconnectors.cognitoidentityprovider.handlers.SignUpHandler;
+import com.amazonaws.services.cognitoidentityprovider.model.AdminConfirmSignUpRequest;
 
-import static com.mongodb.client.model.Filters.*;
-import static com.mongodb.client.model.Sorts.ascending;
-import java.net.UnknownHostException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.concurrent.ExecutionException;
-
-
-import com.mongodb.*;
 
 /**
- * Created by Roger on 5/1/2016.
+ * Created by Larry on 10-16-17
  */
 public class RegisterActivity extends Activity{
     Button bSubmit,bBack;
-    EditText etUsername, etPassword, etIlearnUser, etIlearnPass, etEmail;
-    TextView tvReg, tvFName,tvInitial, tvLname, tvUser, tvPass;
-    ArrayList<User> returnValues = new ArrayList<User>();
+    EditText etUsername, etPassword, etIlearnUser, etIlearnPass, etEmail, etStudentIdNumber;
 
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -55,64 +36,66 @@ public class RegisterActivity extends Activity{
         etEmail = (EditText) this.findViewById(R.id.etEmailReg);
         bSubmit = (Button) this.findViewById(R.id.bSubmit);
         bBack = (Button) this.findViewById(R.id.bBackReg);
-        tvUser = (TextView) this.findViewById(R.id.tvUser);
-        tvPass = (TextView) this.findViewById(R.id.tvPassword);
+        etStudentIdNumber = (EditText) this.findViewById(R.id.spinner);
+
+        String poolId = getString(R.string.poolId);
+        String clientId = getString(R.string.clientId);
+        String clientSecret = getString(R.string.clientSecret);
+
+        ClientConfiguration clientConfiguration = new ClientConfiguration();
+
+        // Create a CognitoUserPool object to refer to your user pool
+        final CognitoUserPool userPool = new CognitoUserPool(this, poolId, clientId, clientSecret, clientConfiguration);
+
+        // Create a CognitoUserAttributes object and add user attributes
+        final CognitoUserAttributes userAttributes = new CognitoUserAttributes();
+
 
         bSubmit.setOnClickListener (new View.OnClickListener(){
             public void onClick(View v){
-                final String UserName = etUsername.getText().toString();
-                final String Password = etPassword.getText().toString();
-                final String IlearnUserF = etIlearnUser.getText().toString();
-                final String IlearnPassF = etIlearnPass.getText().toString();
-                final String EmailF = etEmail.getText().toString();
+                String userName = etUsername.getText().toString();
+                String password = etPassword.getText().toString();
+                String IlearnUserF = etIlearnUser.getText().toString();
+                String IlearnPassF = etIlearnPass.getText().toString();
+                String EmailF = etEmail.getText().toString();
+                String studentIdNumber = etStudentIdNumber.getText().toString();
 
-                if(UserName.length() >= 6) {
-                    GetUsersAsyncTask task = new GetUsersAsyncTask();
-                    try {
-                        returnValues = task.execute().get();
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    } catch (ExecutionException e) {
-                        e.printStackTrace();
-                    }
 
-                    boolean Exists = false;
-                    for (User x : returnValues) {
-                        if (x.getUsername().equals(UserName)) {
-                            Exists = true;
-                        }
-                    }
+                int idNumber = Integer.parseInt(studentIdNumber);
 
-                    if (Exists) {
-                        Toast.makeText(RegisterActivity.this, "Username has been taken", Toast.LENGTH_LONG).show();
-                    } else {
-                        if (!UserName.equals("") && !Password.equals("") && !EmailF.equals(""))
-                        {
-                            User contact = new User();
-                            contact.Username = UserName;
-                            contact.Password = Password;
-                            contact.IlearnUser = IlearnUserF;
-                            contact.IlearnPass = IlearnPassF;
-                            contact.Email = EmailF;
-
-                            SaveAsyncTask tsk = new SaveAsyncTask();
-                            tsk.execute(contact);
-                            Toast.makeText(RegisterActivity.this, "Registered Successfully. Returning to Login", Toast.LENGTH_LONG).show();
-                            Intent i = new Intent(RegisterActivity.this, LoginActivity.class);
-                            i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                            RegisterActivity.this.startActivity(i);
-                        }
-                        else
-                        {
-                            Toast.makeText(RegisterActivity.this, "Please fill in all required fields", Toast.LENGTH_LONG).show();
-                        }
-                    }
+                if(userName.isEmpty() || password.isEmpty() || EmailF.isEmpty() || studentIdNumber.isEmpty())
+                {
+                    Toast.makeText(RegisterActivity.this, "Please fill in all required fields", Toast.LENGTH_LONG).show();
+                    return;
+                }
+                else if (password.length() < 6)
+                {
+                    Toast.makeText(RegisterActivity.this, "Length of password must be at least 6.", Toast.LENGTH_LONG).show();
+                    return;
+                }
+                else if(idNumber <= 100000000)
+                {
+                    Toast.makeText(RegisterActivity.this, "Please fill in correct Student ID", Toast.LENGTH_LONG).show();
+                    return;
+                }
+                else if(!EmailF.substring(EmailF.length() -3).equals("edu"))
+                {
+                    Toast.makeText(RegisterActivity.this, "Please Enter correct UCR Email", Toast.LENGTH_LONG).show();
+                    return;
                 }
                 else
                 {
-                    if(UserName.length() < 6) {
-                        Toast.makeText(RegisterActivity.this, "Username must be at least 6 characters long", Toast.LENGTH_LONG).show();
+                    userAttributes.addAttribute("custom:studentIdNumber", studentIdNumber);
+                    userAttributes.addAttribute("email", EmailF);
+                    if(!IlearnPassF.isEmpty())
+                    {
+                        userAttributes.addAttribute("custom:iLearnPassword", IlearnPassF);
                     }
+                    if(!IlearnUserF.isEmpty())
+                    {
+                        userAttributes.addAttribute("custom:netId", IlearnUserF);
+                    }
+                    userPool.signUpInBackground(userName, password, userAttributes,null,signUpHandler);
                 }
             }
         });
@@ -127,6 +110,25 @@ public class RegisterActivity extends Activity{
             }
         });
     }
+    SignUpHandler signUpHandler = new SignUpHandler() {
+        @Override
+        public void onSuccess(CognitoUser user, boolean signUpConfirmationState,
+                              CognitoUserCodeDeliveryDetails cognitoUserCodeDeliveryDetails) {
+
+            Toast.makeText(RegisterActivity.this, "Registered Successfully. Returning to Login", Toast.LENGTH_LONG).show();
+
+
+            Intent i = new Intent(RegisterActivity.this, LoginActivity.class);
+            i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            RegisterActivity.this.startActivity(i);
+        }
+
+        @Override
+        public void onFailure(Exception exception) {
+            Toast.makeText(RegisterActivity.this, "Sign up failed. Please try again.", Toast.LENGTH_LONG).show();
+            Toast.makeText(RegisterActivity.this, exception.toString(), Toast.LENGTH_LONG).show();
+        }
+    };
 }
 
 

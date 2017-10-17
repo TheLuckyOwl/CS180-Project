@@ -4,49 +4,21 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
-import android.net.Uri;
-import android.os.AsyncTask;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
-import android.widget.TextView;
+
 import android.widget.Toast;
 
-import org.json.JSONException;
-import org.json.JSONObject;
+import com.amazonaws.ClientConfiguration;
+import com.amazonaws.mobile.auth.core.IdentityManager;
+import com.amazonaws.mobile.auth.core.StartupAuthResult;
+import com.amazonaws.mobile.auth.core.StartupAuthResultHandler;
+import com.amazonaws.mobile.config.AWSConfiguration;
+import com.amazonaws.mobileconnectors.cognitoidentityprovider.CognitoUserPool;
 
-import java.io.BufferedInputStream;
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.net.URI;
-import java.net.URL;
-import java.net.URLConnection;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.concurrent.ExecutionException;
-
-import org.bson.Document;
-import com.mongodb.Block;
-import com.mongodb.DBCollection;
-import com.mongodb.DBCursor;
-import com.mongodb.DBObject;
-import com.mongodb.MongoClient;
-import com.mongodb.MongoClientURI;
-import com.mongodb.client.FindIterable;
-import com.mongodb.client.MongoCollection;
-import com.mongodb.client.MongoCursor;
-import com.mongodb.client.MongoDatabase;
-
-import static com.mongodb.client.model.Filters.*;
-import static com.mongodb.client.model.Sorts.ascending;
-import static java.util.Arrays.asList;
 
 /**
  * Created by Larry Parsons on 4/14/2016.
@@ -61,40 +33,12 @@ public class LoginActivity extends Activity {
     private Button mLoginButton = null; //match with the ones made
     private Button mForgotId = null;
     private Button mRegister = null;
-    private
-    ArrayList<User> returnValues = new ArrayList<User>();
     public static String LoggedUser;
     public String Name;
 
     private boolean checkUserId(String userId, String userPass) {
-        //User Ids must be at least 6 characters long add this to the register check before uncommenting it
-        if (userId.length() < 6) {
-            return false;
-        }
 
-        GetUsersAsyncTask task = new GetUsersAsyncTask();
-        try {
-            returnValues = task.execute().get();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        } catch (ExecutionException e) {
-            e.printStackTrace();
-        }
-
-        for(User x: returnValues)
-        {
-            if(x.getUsername().equals(userId))
-            {
-                if(x.getPassword().equals(userPass))
-                {
-                    LoggedUser = x.getUsername();
-                    Name = x.getFirst_name();
-                    return true;
-                }
-            }
-        }
-
-        return false;
+        return true;
     }
 
     public void save(String user, String pass)
@@ -123,6 +67,32 @@ public class LoginActivity extends Activity {
         mLoginButton = (Button)findViewById(R.id.bLogin);
         mRegister = (Button)findViewById(R.id.bRegister);
         mLog = (CheckBox) findViewById(R.id.cbLog);
+
+        String poolId = getString(R.string.poolId);
+        String clientId = getString(R.string.clientId);
+        String clientSecret = getString(R.string.clientSecret);
+
+
+//         May need this code.
+//
+//
+//        Context appContext = getApplicationContext();
+//        AWSConfiguration awsConfig = new AWSConfiguration(appContext);
+//        IdentityManager identityManager = new IdentityManager(appContext, awsConfig);
+//        IdentityManager.setDefaultIdentityManager(identityManager);
+//        identityManager.doStartupAuth(this, new StartupAuthResultHandler() {
+//            @Override
+//            public void onComplete(StartupAuthResult startupAuthResult) {
+//                // User identity is ready as unauthenticated user or previously signed-in user.
+//            }
+//        });
+
+        ClientConfiguration clientConfiguration = new ClientConfiguration();
+
+        // Create a CognitoUserPool object to refer to your user pool
+        CognitoUserPool userPool = new CognitoUserPool(this, poolId, clientId, clientSecret, clientConfiguration);
+
+
         if(load())
         {
             SharedPreferences sharedPref = getSharedPreferences("LogData", Context.MODE_PRIVATE);

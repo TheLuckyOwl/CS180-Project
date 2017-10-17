@@ -91,27 +91,12 @@ public class AccountActivity extends Activity {
         mILearnButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
-                User CurrentUser = new User();
+
                 String LoggedinUser = LoginActivity.LoggedUser;
-                ArrayList<User> returnValues = new ArrayList<User>();
-                GetUsersAsyncTask task = new GetUsersAsyncTask();
-                try {
-                    returnValues = task.execute().get();
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                } catch (ExecutionException e) {
-                    e.printStackTrace();
-                }
-                for (User x : returnValues) {
-                    {
-                        if (x.getUsername().equals(LoggedinUser)) {
-                            CurrentUser.setIlearnUser(x.getIlearnUser());
-                            CurrentUser.setIlearnPass(x.getIlearnPass());
-                        }
-                    }
-                }
-                final String password = CurrentUser.getIlearnPass();
-                final String uname = CurrentUser.getIlearnUser();
+                //TODO Uname Pass
+                final String password = "";     // = CurrentUser.getIlearnPass();
+                final String uname = "";        // = CurrentUser.getIlearnUser();
+
                 Intent i = new Intent(AccountActivity.this, WebViewActivity.class);
                 i.putExtra("Path", "https://ilearn.ucr.edu/webapps/bb-auth-provider-cas-bb_bb60/execute/casLogin?cmd=login&authProviderId=_102_1&redirectUrl=https%3A%2F%2Filearn.ucr.edu%2F\"");
                 i.putExtra("Title", "ILearn");

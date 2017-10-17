@@ -18,6 +18,12 @@
     <string name="google_app_id">AIzaSyB0Fmm7HcwTu1vue0__ImDS9btiRKPP3yg</string>
     <string name="support_email">theucrmap@gmail.com</string>
     <string name="titleSize">36sp</string>
+    <string name="poolId">us-east-1_ije3UcENE</string>
+    <string name="clientId">5q521o40ii94gh5q5skhgb8h2u</string>
+    <string name="clientSecret">3lfr1eqodpvbljncndaul6mfp5p16ru12t09beggs0rvogk1peh</string>
+
+
+
 
     <string-array name="Building_Names">
         <item>WCH</item>

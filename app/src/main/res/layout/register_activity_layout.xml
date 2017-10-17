@@ -18,7 +18,6 @@
         android:background="@drawable/account_bgd"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true" />
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -70,44 +69,11 @@
         android:layout_alignParentEnd="true"
         android:textColor="@color/colorTextMenu"
         android:layout_marginLeft="4dp" />
-
-    <Button
-        android:layout_width="180dp"
-        android:layout_height="wrap_content"
-        android:text="@string/Forgot_sub"
-        android:id="@+id/bSubmit"
-        android:textColor="@color/colorTextMenu"
-        android:textStyle="bold"
-        android:layout_alignParentBottom="true"/>
-
-    <Button
-        android:layout_width="180dp"
-        android:layout_height="wrap_content"
-        android:text="@string/backReg"
-        android:id="@+id/bBackReg"
-        android:layout_alignBottom="@+id/bSubmit"
-        android:layout_alignParentEnd="true"
-        android:textColor="@color/colorTextMenu"
-        android:textStyle="bold" />
-
-
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="(optional)"
-        android:id="@+id/tvOp2"
-        android:textColor="@color/colorTextMenu"
-        android:layout_marginLeft="4dp"
-        android:layout_below="@+id/etIlearnUser"
-        android:layout_alignParentStart="true" />
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Email:"
+        android:text="UCR Email:"
         android:id="@+id/tvEmailReg"
         android:textColor="@color/colorTextMenu"
         android:layout_marginLeft="4dp"
@@ -130,12 +96,34 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="(optional)"
-        android:id="@+id/tvOp"
+        android:id="@+id/tvOp2"
         android:textColor="@color/colorTextMenu"
         android:layout_marginLeft="4dp"
-        android:layout_below="@+id/etIlearnPass"
+        android:layout_below="@+id/etIlearnUser"
+        android:layout_alignParentStart="true" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Student ID Number:"
+        android:id="@+id/tvStudentIdNumber"
+        android:textColor="@color/colorTextMenu"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="4dp"
+        android:textStyle="bold"
+        android:layout_below="@+id/etEmailReg"
         android:layout_alignParentStart="true" />
 
+    <EditText
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorTextMenu"
+        android:inputType="number"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="4dp"
+        android:textAlignment="textStart"
+        android:layout_below="@+id/tvStudentIdNumber" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -146,10 +134,9 @@
         android:layout_marginLeft="4dp"
         android:layout_marginTop="4dp"
         android:textStyle="bold"
-        android:layout_below="@+id/etEmailReg"
+        android:layout_below="@+id/spinner"
         android:layout_alignParentEnd="true"
         android:layout_alignParentStart="true" />
-
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -163,7 +150,16 @@
         android:layout_below="@+id/tvIlearnUser"
         android:layout_alignParentEnd="true"
         android:layout_alignParentStart="true" />
-
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="(optional)"
+        android:id="@+id/tvOp"
+        android:textColor="@color/colorTextMenu"
+        android:layout_marginLeft="4dp"
+        android:layout_below="@+id/etIlearnPass"
+        android:layout_alignParentStart="true" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -176,7 +172,6 @@
         android:layout_below="@+id/tvOp2"
         android:layout_alignParentEnd="true"
         android:layout_alignParentStart="true" />
-
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -188,28 +183,21 @@
         android:layout_below="@+id/tvIlearnPass"
         android:layout_alignParentEnd="true"
         android:layout_alignParentStart="true" />
-    <!--TextView
-        android:layout_width="wrap_content"
+    <Button
+        android:layout_width="180dp"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Major:"
-        android:id="@+id/tvMajor"
+        android:text="@string/Forgot_sub"
+        android:id="@+id/bSubmit"
         android:textColor="@color/colorTextMenu"
-        android:layout_marginLeft="4dp"
-        android:layout_marginTop="4dp"
         android:textStyle="bold"
-        android:layout_below="@+id/etEmailReg"
-        android:layout_alignParentStart="true" />
-
-    <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"/>
+    <Button
+        android:layout_width="180dp"
         android:layout_height="wrap_content"
+        android:text="@string/backReg"
+        android:id="@+id/bBackReg"
+        android:layout_alignBottom="@+id/bSubmit"
+        android:layout_alignParentEnd="true"
         android:textColor="@color/colorTextMenu"
-        android:layout_marginLeft="4dp"
-        android:layout_marginTop="4dp"
-        android:textAlignment="textStart"
-        android:layout_below="@+id/tvMajor" /-->
-
-
+        android:textStyle="bold" />
 </RelativeLayout>

@@ -34,14 +34,8 @@ public class ContactUsActivity extends Activity {
     TextView mLogOut = null;
     private Button Change = null;
     private Button BackButton = null;
-    private Switch NotSwitch = null;
-    private User CurrentUser = new User();
     private String LoggedinUser = LoginActivity.LoggedUser;
-    AlarmManager alarm_manager = null;
-    AlarmManager[]  amArray = new AlarmManager[30];
-    ArrayList<PendingIntent> intentArray = new ArrayList<PendingIntent>();
-    ArrayList<Calendar> CalArray = new ArrayList<Calendar>();
-    ArrayList<User> returnValues = new ArrayList<User>();
+
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,13 +57,13 @@ public class ContactUsActivity extends Activity {
             }
         });
 
-        Change.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(ContactUsActivity.this, UpdateIlearnActivity.class);
-                ContactUsActivity.this.startActivity(i);
-            }
-        });
+//        Change.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent i = new Intent(ContactUsActivity.this, UpdateIlearnActivity.class);
+//                ContactUsActivity.this.startActivity(i);
+//            }
+//        });
 
         mEmail.setOnClickListener(new View.OnClickListener() {
             @Override
