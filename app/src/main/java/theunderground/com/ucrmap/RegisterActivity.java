@@ -85,6 +85,7 @@ public class RegisterActivity extends Activity{
                 }
                 else
                 {
+
                     userAttributes.addAttribute("custom:studentIdNumber", studentIdNumber);
                     userAttributes.addAttribute("email", EmailF);
                     if(!IlearnPassF.isEmpty())
@@ -96,6 +97,7 @@ public class RegisterActivity extends Activity{
                         userAttributes.addAttribute("custom:netId", IlearnUserF);
                     }
                     userPool.signUpInBackground(userName, password, userAttributes,null,signUpHandler);
+
                 }
             }
         });

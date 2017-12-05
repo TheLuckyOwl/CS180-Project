@@ -32,47 +32,7 @@ public class ForgotLogin extends Activity {
     private EditText sId = null;
     private String password = null;
 
-    private void allCorrect(String userId,final String sId) {
 
-        String poolId = getString(R.string.poolId);
-        String clientId = getString(R.string.clientId);
-        String clientSecret = getString(R.string.clientSecret);
-
-        ClientConfiguration clientConfiguration = new ClientConfiguration();
-
-        // Create a CognitoUserPool object to refer to your user pool
-        CognitoUserPool userPool = new CognitoUserPool(this, poolId, clientId, clientSecret, clientConfiguration);
-
-        // Create a CognitoUserAttributes object and add user attributes
-        CognitoUserAttributes userAttributes = new CognitoUserAttributes();
-        CognitoUser user = userPool.getUser(userId);
-
-        GetDetailsHandler handler = new GetDetailsHandler() {
-            @Override
-            public void onSuccess(final CognitoUserDetails list) {
-                // Successfully retrieved user details
-                Map details = list.getAttributes().getAttributes();
-                String studentID = details.get("custom:studentIdNumber").toString();
-                if(studentID.equals(sId) )
-                {
-                    Toast.makeText(ForgotLogin.this, "Your Password is: "+ password, Toast.LENGTH_SHORT).show();
-                }
-                else
-                {
-                    Toast.makeText(ForgotLogin.this, "The Username and Student ID do not match. Please try again", Toast.LENGTH_LONG).show();
-                }
-            }
-
-            @Override
-            public void onFailure(final Exception exception) {
-                // Failed to retrieve the user details, probe exception for the cause
-                Toast.makeText(ForgotLogin.this, , Toast.LENGTH_LONG).show();
-            }
-        };
-
-        user.getDetails(handler);
-
-    }
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -89,7 +49,7 @@ public class ForgotLogin extends Activity {
                 String userID = userId.getText().toString();
                 String studentId = sId.getText().toString();
 
-                allCorrect(userID, studentId);
+                //TODO Need to implement recovery.
 
             }
         });
