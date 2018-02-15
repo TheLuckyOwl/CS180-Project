@@ -7,4 +7,8 @@
     <color name="colorTextMenu">#4B4139</color>
     <color name="colorTextHint">#989898</color>
     <color name="colorTextDark">#fff</color>
+    <color name="colorUCRBlue">#2D6CC0</color>
+    <color name="colorUCRGold">#FBB731</color>
+    <color name="colorUCRWhite">#FEFFFF</color>
+    <color name="colorUCRGray">#7A6E67</color>
 </resources>

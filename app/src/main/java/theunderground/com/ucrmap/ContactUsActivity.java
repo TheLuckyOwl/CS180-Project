@@ -33,7 +33,7 @@ public class ContactUsActivity extends Activity {
     TextView mEmail = null;
     TextView mLogOut = null;
     private Button Change = null;
-    private Button BackButton = null;
+    private ImageButton BackButton = null;
     private String LoggedinUser = LoginActivity.LoggedUser;
 
 
@@ -45,7 +45,7 @@ public class ContactUsActivity extends Activity {
         mEmail = (TextView)findViewById(R.id.emailLink);
         mLogOut = (TextView)findViewById(R.id.logOutText);
         Change = (Button) findViewById(R.id.bChange);
-        BackButton = (Button) findViewById(R.id.bBackSet);
+        BackButton = (ImageButton) findViewById(R.id.backButton);
 
 
         BackButton.setOnClickListener(new View.OnClickListener() {
@@ -70,7 +70,7 @@ public class ContactUsActivity extends Activity {
             public void onClick(View view) {
                 // Something to do
                 Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts(
-                        "mailto",getString(R.string.support_email), null));
+                        "mailto",getString(R.string.contactEmail), null));
                 startActivity(Intent.createChooser(emailIntent, "Send email..."));
             }
         });

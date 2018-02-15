@@ -1,9 +1,10 @@
-<resources>
+<resources>\
+    <!-- General App -->
     <string name="app_name">R\'Mate</string>
     <string name="Login_welcome">Welcome</string>
-    <string name="username_text">R\'Mate Username:</string>
-    <string name="Password_text">R\'Mate Password:</string>
     <string name="login">Login</string>
+    <string name="usernameHeader">R\'Mate Username:</string>
+    <string name="passwordHeader">R\'Mate Password:</string>
     <string name="ForgotLog">Recover Password</string>
     <string name="login_register">Sign Up</string>
     <string name="Forgot_sub">Submit</string>
@@ -16,13 +17,60 @@
     <string name="backReg">Back</string>
     <string name="title_activity_ucrmap">Map Of UCR</string>
     <string name="google_app_id">AIzaSyB0Fmm7HcwTu1vue0__ImDS9btiRKPP3yg</string>
-    <string name="support_email">theucrmap@gmail.com</string>
     <string name="titleSize">36sp</string>
     <string name="poolId">us-east-1_ije3UcENE</string>
     <string name="clientId">5q521o40ii94gh5q5skhgb8h2u</string>
     <string name="clientSecret">3lfr1eqodpvbljncndaul6mfp5p16ru12t09beggs0rvogk1peh</string>
+    <string name="titlePlaceholder">Title</string>
+    <string name="optionalText">(optional)</string>
 
+    <!-- Account Menu -->
+    <string name="mapHeader">Map</string>
+    <string name="advisingHeader">Advising</string>
+    <string name="scheduleHeader">Schedule</string>
+    <string name="ilearnHeader">iLearn</string>
+    <string name="safetyHeader">Safety</string>
+    <string name="diningHeader">Dining</string>
+    <string name="buildingHeader">Building Hours</string>
+    <string name="foodtruckHeader">Food Trucks</string>
+    <string name="studyHeader">Study Rooms</string>
+    <string name="rateHeader">Rate My Professor</string>
+    <string name="settingsHeader">Settings</string>
+    <string name="logoutHeader">Log Out</string>
 
+    <!-- Webview -->
+    <string name="rateMyProfHeader">Rate My Professor</string>
+    <string name="reservationHeader">Library Reservation</string>
+
+    <!-- Registration -->
+    <string name="registerHeader">Register</string>
+    <string name="registerEmailHeader">UCR Email:</string>
+    <string name="registerStudentIDHeader">Student ID Number:</string>
+    <string name="registerNetIDHeader">NetID:</string>
+    <string name="registerILearnHeader">Ilearn Password:</string>
+
+    <!-- Campus Map -->
+    <string name="campusMapHeader">UCR Map</string>
+
+    <!-- Campus Safety -->
+    <string name="campusSafetyHeader">Safety Resources</string>
+    <string name="campusEscortHeader">Campus Safety Escort Services</string>
+    <string name="campusEscortPhoneInfo">The Campus Safety Escort Service (CSES) is safe and easy to use. It’s available to students, staff, faculty and anyone else who needs a safety escort. The service is free. To request a safety escort:</string>
+    <string name="campusEscortButton">Dial Dispatcher</string>
+    <string name="campusEscortLocationInfo">or stop by at the HUB information desk or CSES information desk at Rivera Library, or flag down a volunteer with a yellow jacket and an ID badge to help you reach your destination.</string>
+    <string name="campusEscortHours">Hours of operation: dusk to midnight - to request a safety escort past midnight, call the UCPD service number.</string>
+    <string name="campusPoliceHeader">UC Police Department</string>
+    <string name="campusPoliceInfo">For all non emergency and campus-related services:</string>
+    <string name="campusPoliceButton">Dial UCPD</string>
+
+    <!-- Contact Us -->
+    <string name="contactHeader">Contact Us</string>
+    <string name="contactEmailHeader">Drop us a line</string>
+    <string name="contactEmail">ucrmate@gmail.com</string>
+    <string name="contactLogoutHeader">Extras</string>
+    <string name="contactLogoutButton">Logout</string>
+    <string name="contactIlearnHeader">Change stored ilearn information:</string>
+    <string name="contactIlearnButton">Change</string>
 
 
     <string-array name="Building_Names">
@@ -60,4 +108,7 @@
         <item>UV</item>
         <item>CHUNG</item>
     </string-array>
+
+    <string name="emergencyInfo">In case of an emergency:</string>
+    <string name="emergencyButton">Dial 911</string>
 </resources>

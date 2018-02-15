@@ -13,15 +13,16 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:text="TITLE"
         android:textSize="30sp"
+        android:textAlignment="center"
+        android:elevation="8dp"
         android:id="@+id/menuTitle"
-        android:textColor="#fff"
+        android:textColor="@color/colorUCRWhite"
         android:gravity="center"
         android:textStyle="bold"
-        android:background="@drawable/account_bgd"
-        android:paddingLeft="-2dp"
+        android:background="@color/colorUCRBlue"
         android:layout_marginTop="-5dp"/>
 
     <TableRow
@@ -42,7 +43,7 @@
                 android:id="@+id/mapButton"
                 android:src="@drawable/icon_map"
                 android:scaleType="center"
-                android:tint="#2d6cc0"
+                android:tint="@color/colorUCRBlue"
                 android:background="@color/colorPrimary"
                 />
             <TextView
@@ -52,11 +53,7 @@
                 android:textAlignment="center"
                 android:textStyle="bold"
                 android:textColor="@color/colorTextMenu"
-                android:text="Map"
-                android:shadowColor="#A6A1A1"
-                android:shadowDx="6"
-                android:shadowDy="8"
-                android:shadowRadius="10"/>
+                android:text="@string/mapHeader"/>
         </LinearLayout>
 
         <LinearLayout
@@ -73,7 +70,7 @@
                 android:id="@+id/friendsButton"
                 android:src="@drawable/icon_friend"
                 android:scaleType="center"
-                android:tint="#2d6cc0"
+                android:tint="@color/colorUCRBlue"
                 android:background="@color/colorPrimary"/>
             <TextView
                 android:layout_width="match_parent"
@@ -82,11 +79,7 @@
                 android:textAlignment="center"
                 android:textStyle="bold"
                 android:textColor="@color/colorTextMenu"
-                android:text="Advising"
-                android:shadowColor="#A6A1A1"
-                android:shadowDx="6"
-                android:shadowDy="8"
-                android:shadowRadius="10"/>
+                android:text="@string/advisingHeader"/>
         </LinearLayout>
         <LinearLayout
             android:orientation="vertical"
@@ -102,7 +95,7 @@
                 android:id="@+id/iLearnButton"
                 android:src="@drawable/icon_ilearn"
                 android:scaleType="center"
-                android:tint="#2d6cc0"
+                android:tint="@color/colorUCRBlue"
                 android:background="@color/colorPrimary"
                 />
             <TextView
@@ -112,11 +105,7 @@
                 android:textAlignment="center"
                 android:textStyle="bold"
                 android:textColor="@color/colorTextMenu"
-                android:text="iLearn"
-                android:shadowColor="#A6A1A1"
-                android:shadowDx="6"
-                android:shadowDy="8"
-                android:shadowRadius="10"/>
+                android:text="@string/ilearnHeader"/>
         </LinearLayout>
     </TableRow>
 
@@ -151,7 +140,7 @@
                 android:id="@+id/scheduleButton"
                 android:src="@drawable/icon_schedule"
                 android:scaleType="center"
-                android:tint="#2d6cc0"
+                android:tint="@color/colorUCRBlue"
                 android:background="@color/colorPrimary"
                 />
             <TextView
@@ -161,11 +150,7 @@
                 android:textAlignment="center"
                 android:textStyle="bold"
                 android:textColor="@color/colorTextMenu"
-                android:text="Schedule"
-                android:shadowColor="#A6A1A1"
-                android:shadowDx="6"
-                android:shadowDy="8"
-                android:shadowRadius="10"/>
+                android:text="@string/scheduleHeader"/>
         </LinearLayout>
 
         <LinearLayout
@@ -182,7 +167,7 @@
                 android:id="@+id/safetyButton"
                 android:src="@drawable/icon_safety"
                 android:scaleType="center"
-                android:tint="#2d6cc0"
+                android:tint="@color/colorUCRBlue"
                 android:background="@color/colorPrimary"
                 />
             <TextView
@@ -192,11 +177,7 @@
                 android:textAlignment="center"
                 android:textStyle="bold"
                 android:textColor="@color/colorTextMenu"
-                android:text="Safety"
-                android:shadowColor="#A6A1A1"
-                android:shadowDx="6"
-                android:shadowDy="8"
-                android:shadowRadius="10"/>
+                android:text="@string/safetyHeader"/>
         </LinearLayout>
 
 
@@ -214,7 +195,7 @@
                 android:id="@+id/menuButton"
                 android:src="@drawable/icon_food"
                 android:scaleType="center"
-                android:tint="#2d6cc0"
+                android:tint="@color/colorUCRBlue"
                 android:background="@color/colorPrimary"
                 />
             <TextView
@@ -224,11 +205,7 @@
                 android:textAlignment="center"
                 android:textStyle="bold"
                 android:textColor="@color/colorTextMenu"
-                android:text="Dining"
-                android:shadowColor="#A6A1A1"
-                android:shadowDx="6"
-                android:shadowDy="8"
-                android:shadowRadius="10"/>
+                android:text="@string/diningHeader"/>
         </LinearLayout>
     </TableRow>
 
@@ -263,7 +240,7 @@
                 android:id="@+id/hoursButton"
                 android:src="@drawable/icon_time"
                 android:scaleType="center"
-                android:tint="#2d6cc0"
+                android:tint="@color/colorUCRBlue"
                 android:background="@color/colorPrimary"
                 />
             <TextView
@@ -273,11 +250,7 @@
                 android:textAlignment="center"
                 android:textStyle="bold"
                 android:textColor="@color/colorTextMenu"
-                android:text="Building Hours"
-                android:shadowColor="#A6A1A1"
-                android:shadowDx="6"
-                android:shadowDy="8"
-                android:shadowRadius="10"/>
+                android:text="@string/buildingHeader"/>
         </LinearLayout>
 
         <LinearLayout
@@ -294,7 +267,7 @@
                 android:id="@+id/foodTruckButton"
                 android:src="@drawable/icon_truck"
                 android:scaleType="center"
-                android:tint="#2d6cc0"
+                android:tint="@color/colorUCRBlue"
                 android:background="@color/colorPrimary"
                 />
             <TextView
@@ -304,11 +277,7 @@
                 android:textAlignment="center"
                 android:textStyle="bold"
                 android:textColor="@color/colorTextMenu"
-                android:text="Food Trucks"
-                android:shadowColor="#A6A1A1"
-                android:shadowDx="6"
-                android:shadowDy="8"
-                android:shadowRadius="10"/>
+                android:text="@string/foodtruckHeader"/>
         </LinearLayout>
         <LinearLayout
             android:orientation="vertical"
@@ -324,7 +293,7 @@
                 android:id="@+id/libraryButton"
                 android:src="@drawable/icon_books"
                 android:scaleType="center"
-                android:tint="#2d6cc0"
+                android:tint="@color/colorUCRBlue"
                 android:background="@color/colorPrimary"
                 />
             <TextView
@@ -334,11 +303,7 @@
                 android:textAlignment="center"
                 android:textStyle="bold"
                 android:textColor="@color/colorTextMenu"
-                android:text="Study Rooms"
-                android:shadowColor="#A6A1A1"
-                android:shadowDx="6"
-                android:shadowDy="8"
-                android:shadowRadius="10"/>
+                android:text="@string/studyHeader"/>
         </LinearLayout>
     </TableRow>
 
@@ -375,7 +340,7 @@
                 android:id="@+id/professorButton"
                 android:src="@drawable/icon_professor"
                 android:scaleType="center"
-                android:tint="#2d6cc0"
+                android:tint="@color/colorUCRBlue"
                 android:background="@color/colorPrimary"
                 />
             <TextView
@@ -385,11 +350,7 @@
                 android:textAlignment="center"
                 android:textStyle="bold"
                 android:textColor="@color/colorTextMenu"
-                android:text="Rate My Professor"
-                android:shadowColor="#A6A1A1"
-                android:shadowDx="6"
-                android:shadowDy="8"
-                android:shadowRadius="10"/>
+                android:text="@string/rateHeader"/>
         </LinearLayout>
 
         <LinearLayout
@@ -406,7 +367,7 @@
                 android:id="@+id/aboutButton"
                 android:src="@drawable/icon_settings"
                 android:scaleType="center"
-                android:tint="#2d6cc0"
+                android:tint="@color/colorUCRBlue"
                 android:background="@color/colorPrimary"
                 />
             <TextView
@@ -416,11 +377,7 @@
                 android:textAlignment="center"
                 android:textStyle="bold"
                 android:textColor="@color/colorTextMenu"
-                android:text="Settings"
-                android:shadowColor="#A6A1A1"
-                android:shadowDx="6"
-                android:shadowDy="8"
-                android:shadowRadius="10"/>
+                android:text="@string/settingsHeader"/>
         </LinearLayout>
 
 
@@ -438,7 +395,7 @@
                 android:id="@+id/logoutButton"
                 android:src="@drawable/lock_img"
                 android:scaleType="center"
-                android:tint="#2d6cc0"
+                android:tint="@color/colorUCRBlue"
                 android:background="@color/colorPrimary"/>
             <TextView
                 android:layout_width="match_parent"
@@ -447,11 +404,7 @@
                 android:textAlignment="center"
                 android:textStyle="bold"
                 android:textColor="@color/colorTextMenu"
-                android:text="Log Out"
-                android:shadowColor="#A6A1A1"
-                android:shadowDx="6"
-                android:shadowDy="8"
-                android:shadowRadius="10"/>
+                android:text="@string/logoutHeader"/>
         </LinearLayout>
     </TableRow>
 

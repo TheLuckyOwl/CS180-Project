@@ -7,25 +7,28 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="THIS IS THE TITLE"
+        android:layout_height="50dp"
+        android:text="TITLE"
         android:textSize="30sp"
+        android:elevation="8dp"
         android:id="@+id/libraryTitle"
         android:textAlignment="center"
         android:textColor="@color/colorTextDark"
         android:textStyle="bold"
-        android:background="@drawable/account_bgd"/>
+        android:background="@color/colorUCRBlue"/>
+
     <ImageButton
+        android:id="@+id/backButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_alignBottom="@+id/libraryTitle"
-        android:layout_alignTop="@+id/libraryTitle"
-        android:scaleType="fitCenter"
+        android:layout_above="@+id/displayView"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorUCRBlue"
         android:tint="@color/colorTextDark"
-        android:src="@drawable/back"
-
-        android:id="@+id/backButton" />
+        android:scaleType="fitCenter"
+        android:elevation="8dp"
+        android:src="@drawable/back" />
     <WebView
         android:id="@+id/displayView"
         android:layout_width="fill_parent"

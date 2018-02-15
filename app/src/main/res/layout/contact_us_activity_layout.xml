@@ -1,156 +1,164 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary">
+    android:background="@color/colorPrimary"
+    android:orientation="vertical">
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textStyle="bold"
-        android:text="Contact Us"
         android:id="@+id/contact"
-        android:height="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorUCRBlue"
+        android:text="@string/contactHeader"
         android:textAlignment="center"
         android:textColor="@color/colorTextDark"
-        android:textSize="36sp"
-        android:background="@drawable/account_bgd"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true" />
-    <TextView
+        android:textSize="30sp"
+        android:elevation="8dp"
+        android:textStyle="bold" />
+
+    <ImageButton
+        android:id="@+id/backButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textSize="24sp"
-        android:text="Drop us a line"
-        android:textColor="#000000"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorUCRBlue"
+        android:elevation="8dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/back"
+        android:tint="@color/colorTextDark" />
+
+    <TextView
         android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
         android:layout_below="@+id/contact"
         android:layout_marginLeft="10dip"
         android:layout_marginTop="15dip"
-        android:layout_alignParentStart="true" />
+        android:text="@string/contactEmailHeader"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#000000"
+        android:textSize="24sp" />
+
     <View
         android:layout_width="match_parent"
         android:layout_height="1dip"
-        android:background="@color/material_blue_grey_800"
+        android:layout_alignParentStart="true"
         android:layout_below="@+id/textView6"
         android:layout_marginLeft="10dip"
         android:layout_marginRight="10dip"
-        android:layout_alignParentStart="true" />
+        android:background="@color/material_blue_grey_800" />
 
     <ImageView
+        android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/imageView"
-        android:layout_below="@+id/textView6"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="15dip"
+        android:layout_below="@+id/textView6"
         android:layout_marginLeft="10dip"
         android:layout_marginRight="5dip"
+        android:layout_marginTop="15dip"
         android:src="@drawable/contact"
-        android:tint="@color/colorText"/>
+        android:tint="@color/colorText" />
+
     <TextView
+        android:id="@+id/emailLink"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textStyle="italic"
-        android:text="ucrmate@gmail.com"
-        android:id="@+id/emailLink"
         android:layout_below="@+id/textView6"
+        android:layout_marginLeft="10dip"
         android:layout_marginTop="15dip"
         android:layout_toEndOf="@+id/imageView"
         android:clickable="true"
-        android:layout_marginLeft="10dip"
-        android:textColor="@color/colorText" />
+        android:text="@string/contactEmail"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/colorText"
+        android:textStyle="italic" />
 
     <TextView
+        android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textSize="24sp"
-        android:text="Extras"
-        android:textColor="#000000"
-        android:id="@+id/textView8"
+        android:layout_alignParentStart="true"
         android:layout_below="@+id/emailLink"
         android:layout_marginLeft="10dip"
         android:layout_marginTop="15dip"
-        android:layout_alignParentStart="true" />
+        android:text="@string/contactLogoutHeader"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#000000"
+        android:textSize="24sp" />
+
     <View
+        android:id="@+id/view5"
         android:layout_width="match_parent"
         android:layout_height="1dip"
-        android:background="@color/material_blue_grey_800"
+        android:layout_alignParentStart="true"
         android:layout_below="@+id/textView8"
         android:layout_marginLeft="10dip"
         android:layout_marginRight="10dip"
-        android:layout_alignParentStart="true"
-        android:id="@+id/view5" />
+        android:background="@color/material_blue_grey_800" />
 
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view5"
+        android:layout_marginBottom="6dp"
+        android:layout_marginLeft="10dip"
         android:layout_marginRight="5dip"
-        android:layout_marginLeft="10dip"
-        android:layout_marginBottom="6dp"
         android:layout_marginTop="6dp"
+        android:layout_toStartOf="@+id/emailLink"
         android:src="@drawable/logout"
-        android:tint="@color/colorText"
-        android:layout_below="@+id/view5"
-        android:layout_toStartOf="@+id/emailLink" />
+        android:tint="@color/colorText" />
 
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Logout"
-        android:textStyle="italic"
-        android:layout_marginBottom="6dp"
-        android:layout_marginTop="6dp"
         android:id="@+id/logOutText"
-        android:clickable="true"
-        android:layout_marginLeft="10dip"
-        android:textColor="@color/colorText"
-        android:layout_below="@+id/view5"
-        android:layout_toEndOf="@+id/imageView2"/>
-
-
-    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Back"
-        android:id="@+id/bBackSet"
-        android:width="200dp"
+        android:layout_below="@+id/view5"
+        android:layout_marginBottom="6dp"
+        android:layout_marginLeft="10dip"
+        android:layout_marginTop="6dp"
+        android:layout_toEndOf="@+id/imageView2"
+        android:clickable="true"
+        android:text="@string/contactLogoutButton"
+        android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="@color/colorText"
-        android:textStyle="bold"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"/>
+        android:textStyle="italic" />
 
     <TextView
+        android:id="@+id/textView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Change stored ilearn information:"
-        android:id="@+id/textView12"
-        android:layout_below="@+id/imageView2"
         android:layout_alignEnd="@+id/view5"
         android:layout_alignStart="@+id/imageView2"
-        android:textColor="@color/colorText"
+        android:layout_below="@+id/imageView2"
         android:layout_marginBottom="6dp"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="20dp"
+        android:text="@string/contactIlearnHeader"
+        android:textColor="@color/colorText" />
 
     <Button
+        android:id="@+id/bChange"
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Change"
-        android:id="@+id/bChange"
-        android:layout_below="@+id/textView12"
-        android:layout_alignStart="@+id/textView12"
         android:layout_alignEnd="@+id/logOutText"
-        android:textColor="@color/colorText"
+        android:layout_alignStart="@+id/textView12"
+        android:layout_below="@+id/textView12"
         android:layout_marginBottom="6dp"
-        android:layout_marginTop="6dp"/>
+        android:layout_marginTop="6dp"
+        android:text="@string/contactIlearnButton"
+        android:textColor="@color/colorText" />
+
+    <TextView
+        android:layout_width = "match_parent"
+        android:layout_height = "match_parent" />
 
 </RelativeLayout>
